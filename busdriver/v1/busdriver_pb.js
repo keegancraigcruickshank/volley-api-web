@@ -20,6 +20,7 @@ export const GetMeResponse = proto3.makeMessageType(
   "busdriver.v1.GetMeResponse",
   () => [
     { no: 1, name: "user_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
