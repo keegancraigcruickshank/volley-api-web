@@ -6,17 +6,6 @@
 import {proto3} from "@bufbuild/protobuf";
 
 /**
- * @generated from enum users.v1.LoginStatus
- */
-export const LoginStatus = proto3.makeEnum(
-  "users.v1.LoginStatus",
-  [
-    {no: 0, name: "Failed"},
-    {no: 1, name: "Success"},
-  ],
-);
-
-/**
  * @generated from message users.v1.GetMeRequest
  */
 export const GetMeRequest = proto3.makeMessageType(
@@ -55,7 +44,7 @@ export const LoginRequest = proto3.makeMessageType(
 export const LoginResponse = proto3.makeMessageType(
   "users.v1.LoginResponse",
   () => [
-    { no: 1, name: "status", kind: "enum", T: proto3.getEnumType(LoginStatus) },
+    { no: 1, name: "status", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 
