@@ -27,3 +27,24 @@ export const GetMeResponse = proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message users.v1.LoginRequest
+ */
+export const LoginRequest = proto3.makeMessageType(
+  "users.v1.LoginRequest",
+  () => [
+    { no: 1, name: "username", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "password", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.LoginResponse
+ */
+export const LoginResponse = proto3.makeMessageType(
+  "users.v1.LoginResponse",
+  () => [
+    { no: 1, name: "status", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+);
+
