@@ -28,6 +28,11 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
+      - name: Create new tag
+        uses: rickstaa/action-create-tag@v1
+        with:
+          tag: ${{ steps.semvers.outputs.patch }}
+          message: "Latest release"
       - run: npm version ${{ steps.semvers.outputs.patch }}
       - run: yarn install
       - run: yarn publish
