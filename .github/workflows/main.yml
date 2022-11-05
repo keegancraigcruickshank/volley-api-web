@@ -11,6 +11,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - run: git config --global user.email "keegan@cloudpixel.com.au"
+      - run: git config --global user.name "Keegan Cruickshank"
       - name: 'Get Previous tag'
         id: previoustag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"
