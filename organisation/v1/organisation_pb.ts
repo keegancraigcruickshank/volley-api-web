@@ -10,6 +10,21 @@ import {Message, proto3} from "@bufbuild/protobuf";
  * @generated from message organisation.v1.CreateOrganisationRequest
  */
 export class CreateOrganisationRequest extends Message<CreateOrganisationRequest> {
+  /**
+   * @generated from field: string owner_id = 1;
+   */
+  ownerId = "";
+
+  /**
+   * @generated from field: string org_id = 2;
+   */
+  orgId = "";
+
+  /**
+   * @generated from field: string org_name = 3;
+   */
+  orgName = "";
+
   constructor(data?: PartialMessage<CreateOrganisationRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -18,6 +33,9 @@ export class CreateOrganisationRequest extends Message<CreateOrganisationRequest
   static readonly runtime = proto3;
   static readonly typeName = "organisation.v1.CreateOrganisationRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "owner_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateOrganisationRequest {
@@ -56,11 +74,6 @@ export class CreateOrganisationResponse extends Message<CreateOrganisationRespon
    */
   orgName = "";
 
-  /**
-   * @generated from field: repeated string org_members = 4;
-   */
-  orgMembers: string[] = [];
-
   constructor(data?: PartialMessage<CreateOrganisationResponse>) {
     super();
     proto3.util.initPartial(data, this);
@@ -72,7 +85,6 @@ export class CreateOrganisationResponse extends Message<CreateOrganisationRespon
     { no: 1, name: "owner_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "org_members", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateOrganisationResponse {
