@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {GetMeRequest, GetMeResponse} from "./users_pb.js";
+import {CreateOrganisationRequest, CreateOrganisationResponse, GetMeRequest, GetMeResponse} from "./users_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -19,6 +19,15 @@ export const UsersService = {
       name: "GetMe",
       I: GetMeRequest,
       O: GetMeResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.UsersService.CreateOrganisation
+     */
+    createOrganisation: {
+      name: "CreateOrganisation",
+      I: CreateOrganisationRequest,
+      O: CreateOrganisationResponse,
       kind: MethodKind.Unary,
     },
   }

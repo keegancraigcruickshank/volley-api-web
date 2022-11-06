@@ -104,3 +104,89 @@ export class GetMeResponse extends Message<GetMeResponse> {
   }
 }
 
+/**
+ * @generated from message users.v1.CreateOrganisationRequest
+ */
+export class CreateOrganisationRequest extends Message<CreateOrganisationRequest> {
+  constructor(data?: PartialMessage<CreateOrganisationRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime = proto3;
+  static readonly typeName = "users.v1.CreateOrganisationRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateOrganisationRequest {
+    return new CreateOrganisationRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateOrganisationRequest {
+    return new CreateOrganisationRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateOrganisationRequest {
+    return new CreateOrganisationRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: CreateOrganisationRequest | PlainMessage<CreateOrganisationRequest> | undefined, b: CreateOrganisationRequest | PlainMessage<CreateOrganisationRequest> | undefined): boolean {
+    return proto3.util.equals(CreateOrganisationRequest, a, b);
+  }
+}
+
+/**
+ * @generated from message users.v1.CreateOrganisationResponse
+ */
+export class CreateOrganisationResponse extends Message<CreateOrganisationResponse> {
+  /**
+   * @generated from field: string owner_id = 1;
+   */
+  ownerId = "";
+
+  /**
+   * @generated from field: string org_id = 2;
+   */
+  orgId = "";
+
+  /**
+   * @generated from field: string org_name = 3;
+   */
+  orgName = "";
+
+  /**
+   * @generated from field: repeated string org_members = 4;
+   */
+  orgMembers: string[] = [];
+
+  constructor(data?: PartialMessage<CreateOrganisationResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime = proto3;
+  static readonly typeName = "users.v1.CreateOrganisationResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "owner_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "org_members", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateOrganisationResponse {
+    return new CreateOrganisationResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateOrganisationResponse {
+    return new CreateOrganisationResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateOrganisationResponse {
+    return new CreateOrganisationResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: CreateOrganisationResponse | PlainMessage<CreateOrganisationResponse> | undefined, b: CreateOrganisationResponse | PlainMessage<CreateOrganisationResponse> | undefined): boolean {
+    return proto3.util.equals(CreateOrganisationResponse, a, b);
+  }
+}
+
