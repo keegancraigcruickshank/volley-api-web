@@ -11,19 +11,29 @@ import {Message, proto3} from "@bufbuild/protobuf";
  */
 export class CreateOrganisationRequest extends Message<CreateOrganisationRequest> {
   /**
-   * @generated from field: string owner_id = 1;
-   */
-  ownerId = "";
-
-  /**
-   * @generated from field: string org_id = 2;
-   */
-  orgId = "";
-
-  /**
-   * @generated from field: string org_name = 3;
+   * @generated from field: string org_name = 1;
    */
   orgName = "";
+
+  /**
+   * @generated from field: string first_name = 2;
+   */
+  firstName = "";
+
+  /**
+   * @generated from field: string last_name = 3;
+   */
+  lastName = "";
+
+  /**
+   * @generated from field: string email = 4;
+   */
+  email = "";
+
+  /**
+   * @generated from field: string password = 5;
+   */
+  password = "";
 
   constructor(data?: PartialMessage<CreateOrganisationRequest>) {
     super();
@@ -33,9 +43,11 @@ export class CreateOrganisationRequest extends Message<CreateOrganisationRequest
   static readonly runtime = proto3;
   static readonly typeName = "organisation.v1.CreateOrganisationRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "owner_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: "password", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateOrganisationRequest {
@@ -74,6 +86,21 @@ export class CreateOrganisationResponse extends Message<CreateOrganisationRespon
    */
   orgName = "";
 
+  /**
+   * @generated from field: string first_name = 4;
+   */
+  firstName = "";
+
+  /**
+   * @generated from field: string last_name = 5;
+   */
+  lastName = "";
+
+  /**
+   * @generated from field: string email = 6;
+   */
+  email = "";
+
   constructor(data?: PartialMessage<CreateOrganisationResponse>) {
     super();
     proto3.util.initPartial(data, this);
@@ -85,6 +112,9 @@ export class CreateOrganisationResponse extends Message<CreateOrganisationRespon
     { no: 1, name: "owner_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 6, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateOrganisationResponse {
