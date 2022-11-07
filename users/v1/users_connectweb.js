@@ -9,17 +9,17 @@ import {MethodKind} from "@bufbuild/protobuf";
 /**
  * @generated from service users.v1.UsersService
  */
-export declare const UsersService: {
-  readonly typeName: "users.v1.UsersService",
-  readonly methods: {
+export const UsersService = {
+  typeName: "users.v1.UsersService",
+  methods: {
     /**
      * @generated from rpc users.v1.UsersService.GetMe
      */
-    readonly getMe: {
-      readonly name: "GetMe",
-      readonly I: typeof GetMeRequest,
-      readonly O: typeof GetMeResponse,
-      readonly kind: MethodKind.Unary,
+    getMe: {
+      name: "GetMe",
+      I: GetMeRequest,
+      O: GetMeResponse,
+      kind: MethodKind.Unary,
     },
   }
 };

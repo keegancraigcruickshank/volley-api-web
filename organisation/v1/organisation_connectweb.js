@@ -9,17 +9,17 @@ import {MethodKind} from "@bufbuild/protobuf";
 /**
  * @generated from service organisation.v1.OrganisationService
  */
-export declare const OrganisationService: {
-  readonly typeName: "organisation.v1.OrganisationService",
-  readonly methods: {
+export const OrganisationService = {
+  typeName: "organisation.v1.OrganisationService",
+  methods: {
     /**
      * @generated from rpc organisation.v1.OrganisationService.CreateOrganisation
      */
-    readonly createOrganisation: {
-      readonly name: "CreateOrganisation",
-      readonly I: typeof CreateOrganisationRequest,
-      readonly O: typeof CreateOrganisationResponse,
-      readonly kind: MethodKind.Unary,
+    createOrganisation: {
+      name: "CreateOrganisation",
+      I: CreateOrganisationRequest,
+      O: CreateOrganisationResponse,
+      kind: MethodKind.Unary,
     },
   }
 };
