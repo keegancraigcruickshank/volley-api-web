@@ -55,34 +55,24 @@ export declare class CreateOrganisationRequest extends Message<CreateOrganisatio
  */
 export declare class CreateOrganisationResponse extends Message<CreateOrganisationResponse> {
   /**
-   * @generated from field: string owner_id = 1;
+   * @generated from field: string token = 1;
    */
-  ownerId: string;
+  token: string;
 
   /**
-   * @generated from field: string org_id = 2;
+   * @generated from field: string scope = 2;
    */
-  orgId: string;
+  scope: string;
 
   /**
-   * @generated from field: string org_name = 3;
+   * @generated from field: int32 expiry = 3;
    */
-  orgName: string;
+  expiry: number;
 
   /**
-   * @generated from field: string first_name = 4;
+   * @generated from field: string token_type = 4;
    */
-  firstName: string;
-
-  /**
-   * @generated from field: string last_name = 5;
-   */
-  lastName: string;
-
-  /**
-   * @generated from field: string email = 6;
-   */
-  email: string;
+  tokenType: string;
 
   constructor(data?: PartialMessage<CreateOrganisationResponse>);
 

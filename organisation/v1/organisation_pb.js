@@ -25,12 +25,10 @@ export const CreateOrganisationRequest = proto3.makeMessageType(
 export const CreateOrganisationResponse = proto3.makeMessageType(
   "organisation.v1.CreateOrganisationResponse",
   () => [
-    { no: 1, name: "owner_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 6, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "scope", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "expiry", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 4, name: "token_type", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
