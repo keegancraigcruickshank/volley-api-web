@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {CreateOrganisationRequest, CreateOrganisationResponse} from "./organisation_pb.js";
+import {CreateOrganisationRequest, CreateOrganisationResponse, OrgDoesExistRequest, OrgDoesExistResponse} from "./organisation_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -19,6 +19,15 @@ export declare const OrganisationService: {
       readonly name: "CreateOrganisation",
       readonly I: typeof CreateOrganisationRequest,
       readonly O: typeof CreateOrganisationResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc organisation.v1.OrganisationService.OrgDoesExist
+     */
+    readonly orgDoesExist: {
+      readonly name: "OrgDoesExist",
+      readonly I: typeof OrgDoesExistRequest,
+      readonly O: typeof OrgDoesExistResponse,
       readonly kind: MethodKind.Unary,
     },
   }

@@ -32,3 +32,24 @@ export const CreateOrganisationResponse = proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message organisation.v1.OrgDoesExistRequest
+ */
+export const OrgDoesExistRequest = proto3.makeMessageType(
+  "organisation.v1.OrgDoesExistRequest",
+  () => [
+    { no: 1, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "secret", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message organisation.v1.OrgDoesExistResponse
+ */
+export const OrgDoesExistResponse = proto3.makeMessageType(
+  "organisation.v1.OrgDoesExistResponse",
+  () => [
+    { no: 1, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
