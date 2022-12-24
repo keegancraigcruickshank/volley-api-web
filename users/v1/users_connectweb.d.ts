@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {CreateOrgRequest, CreateOrgResponse, GetMeRequest, GetMeResponse} from "./users_pb.js";
+import {GetMeRequest, GetMeResponse} from "./users_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -19,15 +19,6 @@ export declare const UsersService: {
       readonly name: "GetMe",
       readonly I: typeof GetMeRequest,
       readonly O: typeof GetMeResponse,
-      readonly kind: MethodKind.Unary,
-    },
-    /**
-     * @generated from rpc users.v1.UsersService.CreateOrg
-     */
-    readonly createOrg: {
-      readonly name: "CreateOrg",
-      readonly I: typeof CreateOrgRequest,
-      readonly O: typeof CreateOrgResponse,
       readonly kind: MethodKind.Unary,
     },
   }

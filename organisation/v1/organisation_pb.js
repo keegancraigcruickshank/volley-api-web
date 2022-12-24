@@ -6,29 +6,27 @@
 import {proto3} from "@bufbuild/protobuf";
 
 /**
- * @generated from message organisation.v1.CreateOrganisationRequest
+ * @generated from message organisation.v1.CreateOrgRequest
  */
-export const CreateOrganisationRequest = proto3.makeMessageType(
-  "organisation.v1.CreateOrganisationRequest",
+export const CreateOrgRequest = proto3.makeMessageType(
+  "organisation.v1.CreateOrgRequest",
   () => [
-    { no: 1, name: "org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "password", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "address", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "phone", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
 /**
- * @generated from message organisation.v1.CreateOrganisationResponse
+ * @generated from message organisation.v1.CreateOrgResponse
  */
-export const CreateOrganisationResponse = proto3.makeMessageType(
-  "organisation.v1.CreateOrganisationResponse",
+export const CreateOrgResponse = proto3.makeMessageType(
+  "organisation.v1.CreateOrgResponse",
   () => [
-    { no: 1, name: "token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "scope", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "expiry", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 4, name: "token_type", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "address", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "phone", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 

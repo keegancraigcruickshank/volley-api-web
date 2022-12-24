@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {CreateOrganisationRequest, CreateOrganisationResponse} from "./organisation_pb.js";
+import {CreateOrgRequest, CreateOrgResponse} from "./organisation_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -17,8 +17,8 @@ export declare const OrganisationService: {
      */
     readonly createOrganisation: {
       readonly name: "CreateOrganisation",
-      readonly I: typeof CreateOrganisationRequest,
-      readonly O: typeof CreateOrganisationResponse,
+      readonly I: typeof CreateOrgRequest,
+      readonly O: typeof CreateOrgResponse,
       readonly kind: MethodKind.Unary,
     },
   }
