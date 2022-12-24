@@ -74,3 +74,76 @@ export declare class GetMeResponse extends Message<GetMeResponse> {
   static equals(a: GetMeResponse | PlainMessage<GetMeResponse> | undefined, b: GetMeResponse | PlainMessage<GetMeResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.CreateOrgRequest
+ */
+export declare class CreateOrgRequest extends Message<CreateOrgRequest> {
+  /**
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string address = 2;
+   */
+  address: string;
+
+  /**
+   * @generated from field: string phone = 3;
+   */
+  phone: string;
+
+  constructor(data?: PartialMessage<CreateOrgRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.CreateOrgRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateOrgRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateOrgRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateOrgRequest;
+
+  static equals(a: CreateOrgRequest | PlainMessage<CreateOrgRequest> | undefined, b: CreateOrgRequest | PlainMessage<CreateOrgRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.CreateOrgResponse
+ */
+export declare class CreateOrgResponse extends Message<CreateOrgResponse> {
+  /**
+   * @generated from field: string org_id = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string address = 3;
+   */
+  address: string;
+
+  /**
+   * @generated from field: string phone = 4;
+   */
+  phone: string;
+
+  constructor(data?: PartialMessage<CreateOrgResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.CreateOrgResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateOrgResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateOrgResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateOrgResponse;
+
+  static equals(a: CreateOrgResponse | PlainMessage<CreateOrgResponse> | undefined, b: CreateOrgResponse | PlainMessage<CreateOrgResponse> | undefined): boolean;
+}
+

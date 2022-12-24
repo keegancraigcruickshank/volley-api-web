@@ -28,3 +28,28 @@ export const GetMeResponse = proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message users.v1.CreateOrgRequest
+ */
+export const CreateOrgRequest = proto3.makeMessageType(
+  "users.v1.CreateOrgRequest",
+  () => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "address", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "phone", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.CreateOrgResponse
+ */
+export const CreateOrgResponse = proto3.makeMessageType(
+  "users.v1.CreateOrgResponse",
+  () => [
+    { no: 1, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "address", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "phone", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
