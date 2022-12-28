@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {GetMeRequest, GetMeResponse} from "./users_pb.js";
+import {LoginUserRequest, LoginUserResponse, RegisterUserRequest, RegisterUserResponse} from "./users_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -13,12 +13,21 @@ export declare const UsersService: {
   readonly typeName: "users.v1.UsersService",
   readonly methods: {
     /**
-     * @generated from rpc users.v1.UsersService.GetMe
+     * @generated from rpc users.v1.UsersService.RegisterUser
      */
-    readonly getMe: {
-      readonly name: "GetMe",
-      readonly I: typeof GetMeRequest,
-      readonly O: typeof GetMeResponse,
+    readonly registerUser: {
+      readonly name: "RegisterUser",
+      readonly I: typeof RegisterUserRequest,
+      readonly O: typeof RegisterUserResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.UsersService.LoginUser
+     */
+    readonly loginUser: {
+      readonly name: "LoginUser",
+      readonly I: typeof LoginUserRequest,
+      readonly O: typeof LoginUserResponse,
       readonly kind: MethodKind.Unary,
     },
   }

@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {GetMeRequest, GetMeResponse} from "./users_pb.js";
+import {LoginUserRequest, LoginUserResponse, RegisterUserRequest, RegisterUserResponse} from "./users_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -13,12 +13,21 @@ export const UsersService = {
   typeName: "users.v1.UsersService",
   methods: {
     /**
-     * @generated from rpc users.v1.UsersService.GetMe
+     * @generated from rpc users.v1.UsersService.RegisterUser
      */
-    getMe: {
-      name: "GetMe",
-      I: GetMeRequest,
-      O: GetMeResponse,
+    registerUser: {
+      name: "RegisterUser",
+      I: RegisterUserRequest,
+      O: RegisterUserResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.UsersService.LoginUser
+     */
+    loginUser: {
+      name: "LoginUser",
+      I: LoginUserRequest,
+      O: LoginUserResponse,
       kind: MethodKind.Unary,
     },
   }

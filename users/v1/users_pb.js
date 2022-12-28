@@ -6,25 +6,52 @@
 import {proto3} from "@bufbuild/protobuf";
 
 /**
- * @generated from message users.v1.GetMeRequest
+ * @generated from message users.v1.RegisterUserRequest
  */
-export const GetMeRequest = proto3.makeMessageType(
-  "users.v1.GetMeRequest",
-  [],
+export const RegisterUserRequest = proto3.makeMessageType(
+  "users.v1.RegisterUserRequest",
+  () => [
+    { no: 1, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
 );
 
 /**
- * @generated from message users.v1.GetMeResponse
+ * @generated from message users.v1.RegisterUserResponse
  */
-export const GetMeResponse = proto3.makeMessageType(
-  "users.v1.GetMeResponse",
+export const RegisterUserResponse = proto3.makeMessageType(
+  "users.v1.RegisterUserResponse",
   () => [
     { no: 1, name: "user_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 5, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 6, name: "nickname", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.LoginUserRequest
+ */
+export const LoginUserRequest = proto3.makeMessageType(
+  "users.v1.LoginUserRequest",
+  () => [
+    { no: 1, name: "username", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "password", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.LoginUserResponse
+ */
+export const LoginUserResponse = proto3.makeMessageType(
+  "users.v1.LoginUserResponse",
+  () => [
+    { no: 1, name: "username", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "refresh", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 

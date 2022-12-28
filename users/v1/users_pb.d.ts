@@ -7,28 +7,48 @@ import type {BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMe
 import {Message, proto3} from "@bufbuild/protobuf";
 
 /**
- * @generated from message users.v1.GetMeRequest
+ * @generated from message users.v1.RegisterUserRequest
  */
-export declare class GetMeRequest extends Message<GetMeRequest> {
-  constructor(data?: PartialMessage<GetMeRequest>);
+export declare class RegisterUserRequest extends Message<RegisterUserRequest> {
+  /**
+   * @generated from field: string first_name = 1;
+   */
+  firstName: string;
+
+  /**
+   * @generated from field: string last_name = 2;
+   */
+  lastName: string;
+
+  /**
+   * @generated from field: string email = 3;
+   */
+  email: string;
+
+  /**
+   * @generated from field: string org_name = 4;
+   */
+  orgName: string;
+
+  constructor(data?: PartialMessage<RegisterUserRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "users.v1.GetMeRequest";
+  static readonly typeName = "users.v1.RegisterUserRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetMeRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RegisterUserRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetMeRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RegisterUserRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetMeRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RegisterUserRequest;
 
-  static equals(a: GetMeRequest | PlainMessage<GetMeRequest> | undefined, b: GetMeRequest | PlainMessage<GetMeRequest> | undefined): boolean;
+  static equals(a: RegisterUserRequest | PlainMessage<RegisterUserRequest> | undefined, b: RegisterUserRequest | PlainMessage<RegisterUserRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message users.v1.GetMeResponse
+ * @generated from message users.v1.RegisterUserResponse
  */
-export declare class GetMeResponse extends Message<GetMeResponse> {
+export declare class RegisterUserResponse extends Message<RegisterUserResponse> {
   /**
    * @generated from field: string user_id = 1;
    */
@@ -54,23 +74,81 @@ export declare class GetMeResponse extends Message<GetMeResponse> {
    */
   email: string;
 
-  /**
-   * @generated from field: string nickname = 6;
-   */
-  nickname: string;
-
-  constructor(data?: PartialMessage<GetMeResponse>);
+  constructor(data?: PartialMessage<RegisterUserResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "users.v1.GetMeResponse";
+  static readonly typeName = "users.v1.RegisterUserResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetMeResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RegisterUserResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetMeResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RegisterUserResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetMeResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RegisterUserResponse;
 
-  static equals(a: GetMeResponse | PlainMessage<GetMeResponse> | undefined, b: GetMeResponse | PlainMessage<GetMeResponse> | undefined): boolean;
+  static equals(a: RegisterUserResponse | PlainMessage<RegisterUserResponse> | undefined, b: RegisterUserResponse | PlainMessage<RegisterUserResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.LoginUserRequest
+ */
+export declare class LoginUserRequest extends Message<LoginUserRequest> {
+  /**
+   * @generated from field: string username = 1;
+   */
+  username: string;
+
+  /**
+   * @generated from field: string password = 2;
+   */
+  password: string;
+
+  constructor(data?: PartialMessage<LoginUserRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.LoginUserRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): LoginUserRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): LoginUserRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): LoginUserRequest;
+
+  static equals(a: LoginUserRequest | PlainMessage<LoginUserRequest> | undefined, b: LoginUserRequest | PlainMessage<LoginUserRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.LoginUserResponse
+ */
+export declare class LoginUserResponse extends Message<LoginUserResponse> {
+  /**
+   * @generated from field: string username = 1;
+   */
+  username: string;
+
+  /**
+   * @generated from field: string token = 2;
+   */
+  token: string;
+
+  /**
+   * @generated from field: string refresh = 3;
+   */
+  refresh: string;
+
+  constructor(data?: PartialMessage<LoginUserResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.LoginUserResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): LoginUserResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): LoginUserResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): LoginUserResponse;
+
+  static equals(a: LoginUserResponse | PlainMessage<LoginUserResponse> | undefined, b: LoginUserResponse | PlainMessage<LoginUserResponse> | undefined): boolean;
 }
 
