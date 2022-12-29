@@ -152,3 +152,56 @@ export declare class LoginUserResponse extends Message<LoginUserResponse> {
   static equals(a: LoginUserResponse | PlainMessage<LoginUserResponse> | undefined, b: LoginUserResponse | PlainMessage<LoginUserResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.public.RefreshUserRequest
+ */
+export declare class RefreshUserRequest extends Message<RefreshUserRequest> {
+  /**
+   * @generated from field: string refresh = 1;
+   */
+  refresh: string;
+
+  constructor(data?: PartialMessage<RefreshUserRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.public.RefreshUserRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RefreshUserRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RefreshUserRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RefreshUserRequest;
+
+  static equals(a: RefreshUserRequest | PlainMessage<RefreshUserRequest> | undefined, b: RefreshUserRequest | PlainMessage<RefreshUserRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.public.RefreshUserResponse
+ */
+export declare class RefreshUserResponse extends Message<RefreshUserResponse> {
+  /**
+   * @generated from field: string token = 1;
+   */
+  token: string;
+
+  /**
+   * @generated from field: string refresh = 2;
+   */
+  refresh: string;
+
+  constructor(data?: PartialMessage<RefreshUserResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.public.RefreshUserResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RefreshUserResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RefreshUserResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RefreshUserResponse;
+
+  static equals(a: RefreshUserResponse | PlainMessage<RefreshUserResponse> | undefined, b: RefreshUserResponse | PlainMessage<RefreshUserResponse> | undefined): boolean;
+}
+

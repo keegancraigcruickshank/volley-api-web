@@ -55,3 +55,24 @@ export const LoginUserResponse = proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message users.v1.public.RefreshUserRequest
+ */
+export const RefreshUserRequest = proto3.makeMessageType(
+  "users.v1.public.RefreshUserRequest",
+  () => [
+    { no: 1, name: "refresh", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.public.RefreshUserResponse
+ */
+export const RefreshUserResponse = proto3.makeMessageType(
+  "users.v1.public.RefreshUserResponse",
+  () => [
+    { no: 1, name: "token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "refresh", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+

@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {LoginUserRequest, LoginUserResponse, RegisterUserRequest, RegisterUserResponse} from "./users_pb.js";
+import {LoginUserRequest, LoginUserResponse, RefreshUserRequest, RefreshUserResponse, RegisterUserRequest, RegisterUserResponse} from "./users_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -28,6 +28,15 @@ export declare const PublicUsersService: {
       readonly name: "LoginUser",
       readonly I: typeof LoginUserRequest,
       readonly O: typeof LoginUserResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.public.PublicUsersService.RefreshUser
+     */
+    readonly refreshUser: {
+      readonly name: "RefreshUser",
+      readonly I: typeof RefreshUserRequest,
+      readonly O: typeof RefreshUserResponse,
       readonly kind: MethodKind.Unary,
     },
   }
