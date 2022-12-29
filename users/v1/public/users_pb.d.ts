@@ -26,7 +26,12 @@ export declare class RegisterUserRequest extends Message<RegisterUserRequest> {
   email: string;
 
   /**
-   * @generated from field: string org_name = 4;
+   * @generated from field: string password = 4;
+   */
+  password: string;
+
+  /**
+   * @generated from field: string org_name = 5;
    */
   orgName: string;
 
