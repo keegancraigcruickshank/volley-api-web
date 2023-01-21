@@ -31,9 +31,9 @@ export declare class CreateUserRequest extends Message<CreateUserRequest> {
   password: string;
 
   /**
-   * @generated from field: string companyName = 5;
+   * @generated from field: string orgName = 5;
    */
-  companyName: string;
+  orgName: string;
 
   constructor(data?: PartialMessage<CreateUserRequest>);
 
