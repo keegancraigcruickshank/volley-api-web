@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {MeRequest, MeResponse} from "./users_pb.js";
+import {GetMeRequest, GetMeResponse} from "./users_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -13,12 +13,12 @@ export const PrivateUsersService = {
   typeName: "users.v1.private.PrivateUsersService",
   methods: {
     /**
-     * @generated from rpc users.v1.private.PrivateUsersService.Me
+     * @generated from rpc users.v1.private.PrivateUsersService.GetMe
      */
-    me: {
-      name: "Me",
-      I: MeRequest,
-      O: MeResponse,
+    getMe: {
+      name: "GetMe",
+      I: GetMeRequest,
+      O: GetMeResponse,
       kind: MethodKind.Unary,
     },
   }

@@ -7,28 +7,28 @@ import type {BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMe
 import {Message, proto3} from "@bufbuild/protobuf";
 
 /**
- * @generated from message users.v1.private.MeRequest
+ * @generated from message users.v1.private.GetMeRequest
  */
-export declare class MeRequest extends Message<MeRequest> {
-  constructor(data?: PartialMessage<MeRequest>);
+export declare class GetMeRequest extends Message<GetMeRequest> {
+  constructor(data?: PartialMessage<GetMeRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "users.v1.private.MeRequest";
+  static readonly typeName = "users.v1.private.GetMeRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): MeRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetMeRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): MeRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetMeRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): MeRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetMeRequest;
 
-  static equals(a: MeRequest | PlainMessage<MeRequest> | undefined, b: MeRequest | PlainMessage<MeRequest> | undefined): boolean;
+  static equals(a: GetMeRequest | PlainMessage<GetMeRequest> | undefined, b: GetMeRequest | PlainMessage<GetMeRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message users.v1.private.MeResponse
+ * @generated from message users.v1.private.GetMeResponse
  */
-export declare class MeResponse extends Message<MeResponse> {
+export declare class GetMeResponse extends Message<GetMeResponse> {
   /**
    * @generated from field: string first_name = 1;
    */
@@ -44,18 +44,18 @@ export declare class MeResponse extends Message<MeResponse> {
    */
   email: string;
 
-  constructor(data?: PartialMessage<MeResponse>);
+  constructor(data?: PartialMessage<GetMeResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "users.v1.private.MeResponse";
+  static readonly typeName = "users.v1.private.GetMeResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): MeResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetMeResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): MeResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetMeResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): MeResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetMeResponse;
 
-  static equals(a: MeResponse | PlainMessage<MeResponse> | undefined, b: MeResponse | PlainMessage<MeResponse> | undefined): boolean;
+  static equals(a: GetMeResponse | PlainMessage<GetMeResponse> | undefined, b: GetMeResponse | PlainMessage<GetMeResponse> | undefined): boolean;
 }
 

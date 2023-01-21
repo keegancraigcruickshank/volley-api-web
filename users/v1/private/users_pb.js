@@ -6,18 +6,18 @@
 import {proto3} from "@bufbuild/protobuf";
 
 /**
- * @generated from message users.v1.private.MeRequest
+ * @generated from message users.v1.private.GetMeRequest
  */
-export const MeRequest = proto3.makeMessageType(
-  "users.v1.private.MeRequest",
+export const GetMeRequest = proto3.makeMessageType(
+  "users.v1.private.GetMeRequest",
   [],
 );
 
 /**
- * @generated from message users.v1.private.MeResponse
+ * @generated from message users.v1.private.GetMeResponse
  */
-export const MeResponse = proto3.makeMessageType(
-  "users.v1.private.MeResponse",
+export const GetMeResponse = proto3.makeMessageType(
+  "users.v1.private.GetMeResponse",
   () => [
     { no: 1, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
