@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {LoginRequest, LoginResponse, RefreshTokenRequest, RefreshTokenResponse} from "./users_pb.js";
+import {CreateUserRequest, CreateUserResponse, LoginRequest, LoginResponse, RefreshTokenRequest, RefreshTokenResponse} from "./users_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -28,6 +28,15 @@ export const PublicUsersService = {
       name: "RefreshToken",
       I: RefreshTokenRequest,
       O: RefreshTokenResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.public.PublicUsersService.CreateUser
+     */
+    createUser: {
+      name: "CreateUser",
+      I: CreateUserRequest,
+      O: CreateUserResponse,
       kind: MethodKind.Unary,
     },
   }
