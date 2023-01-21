@@ -26,7 +26,12 @@ export declare class CreateUserRequest extends Message<CreateUserRequest> {
   email: string;
 
   /**
-   * @generated from field: string companyName = 4;
+   * @generated from field: string password = 4;
+   */
+  password: string;
+
+  /**
+   * @generated from field: string companyName = 5;
    */
   companyName: string;
 

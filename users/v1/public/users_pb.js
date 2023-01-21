@@ -14,7 +14,8 @@ export const CreateUserRequest = proto3.makeMessageType(
     { no: 1, name: "firstName", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "lastName", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "companyName", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "password", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: "companyName", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
