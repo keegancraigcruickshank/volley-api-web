@@ -30,19 +30,29 @@ export declare class GetMeRequest extends Message<GetMeRequest> {
  */
 export declare class GetMeResponse extends Message<GetMeResponse> {
   /**
-   * @generated from field: string first_name = 1;
+   * @generated from field: string user_id = 1;
+   */
+  userId: string;
+
+  /**
+   * @generated from field: string first_name = 2;
    */
   firstName: string;
 
   /**
-   * @generated from field: string last_name = 2;
+   * @generated from field: string last_name = 3;
    */
   lastName: string;
 
   /**
-   * @generated from field: string email = 3;
+   * @generated from field: string email = 4;
    */
   email: string;
+
+  /**
+   * @generated from field: repeated string org_ids = 5;
+   */
+  orgIds: string[];
 
   constructor(data?: PartialMessage<GetMeResponse>);
 
