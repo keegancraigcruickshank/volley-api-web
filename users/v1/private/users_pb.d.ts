@@ -54,6 +54,11 @@ export declare class GetMeResponse extends Message<GetMeResponse> {
    */
   orgIds: string[];
 
+  /**
+   * @generated from field: int64 last_logout = 6;
+   */
+  lastLogout: bigint;
+
   constructor(data?: PartialMessage<GetMeResponse>);
 
   static readonly runtime: typeof proto3;

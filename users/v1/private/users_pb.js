@@ -24,6 +24,7 @@ export const GetMeResponse = proto3.makeMessageType(
     { no: 3, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 5, name: "org_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 6, name: "last_logout", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
   ],
 );
 
