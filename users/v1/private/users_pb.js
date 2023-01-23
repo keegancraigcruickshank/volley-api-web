@@ -27,3 +27,19 @@ export const GetMeResponse = proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message users.v1.private.LogoutRequest
+ */
+export const LogoutRequest = proto3.makeMessageType(
+  "users.v1.private.LogoutRequest",
+  [],
+);
+
+/**
+ * @generated from message users.v1.private.LogoutResponse
+ */
+export const LogoutResponse = proto3.makeMessageType(
+  "users.v1.private.LogoutResponse",
+  [],
+);
+

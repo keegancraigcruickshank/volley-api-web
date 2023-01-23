@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {GetMeRequest, GetMeResponse} from "./users_pb.js";
+import {GetMeRequest, GetMeResponse, LogoutRequest, LogoutResponse} from "./users_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -19,6 +19,15 @@ export declare const PrivateUsersService: {
       readonly name: "GetMe",
       readonly I: typeof GetMeRequest,
       readonly O: typeof GetMeResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.private.PrivateUsersService.Logout
+     */
+    readonly logout: {
+      readonly name: "Logout",
+      readonly I: typeof LogoutRequest,
+      readonly O: typeof LogoutResponse,
       readonly kind: MethodKind.Unary,
     },
   }
