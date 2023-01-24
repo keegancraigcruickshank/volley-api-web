@@ -41,14 +41,14 @@ export declare class User extends Message<User> {
   lastLogout: bigint;
 
   /**
-   * @generated from field: int64 created_at = 7;
+   * @generated from field: string created_at = 7;
    */
-  createdAt: bigint;
+  createdAt: string;
 
   /**
-   * @generated from field: int64 updated_at = 8;
+   * @generated from field: string updated_at = 8;
    */
-  updatedAt: bigint;
+  updatedAt: string;
 
   /**
    * @generated from field: string default_org = 9;
