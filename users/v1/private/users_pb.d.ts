@@ -7,28 +7,9 @@ import type {BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMe
 import {Message, proto3} from "@bufbuild/protobuf";
 
 /**
- * @generated from message users.v1.private.GetMeRequest
+ * @generated from message users.v1.private.User
  */
-export declare class GetMeRequest extends Message<GetMeRequest> {
-  constructor(data?: PartialMessage<GetMeRequest>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "users.v1.private.GetMeRequest";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetMeRequest;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetMeRequest;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetMeRequest;
-
-  static equals(a: GetMeRequest | PlainMessage<GetMeRequest> | undefined, b: GetMeRequest | PlainMessage<GetMeRequest> | undefined): boolean;
-}
-
-/**
- * @generated from message users.v1.private.GetMeResponse
- */
-export declare class GetMeResponse extends Message<GetMeResponse> {
+export declare class User extends Message<User> {
   /**
    * @generated from field: string user_id = 1;
    */
@@ -58,6 +39,107 @@ export declare class GetMeResponse extends Message<GetMeResponse> {
    * @generated from field: int64 last_logout = 6;
    */
   lastLogout: bigint;
+
+  /**
+   * @generated from field: int64 created_at = 7;
+   */
+  createdAt: bigint;
+
+  /**
+   * @generated from field: int64 updated_at = 8;
+   */
+  updatedAt: bigint;
+
+  /**
+   * @generated from field: string default_org = 9;
+   */
+  defaultOrg: string;
+
+  constructor(data?: PartialMessage<User>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.User";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): User;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): User;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): User;
+
+  static equals(a: User | PlainMessage<User> | undefined, b: User | PlainMessage<User> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.SetDefaultOrgRequest
+ */
+export declare class SetDefaultOrgRequest extends Message<SetDefaultOrgRequest> {
+  /**
+   * @generated from field: string default_org = 1;
+   */
+  defaultOrg: string;
+
+  constructor(data?: PartialMessage<SetDefaultOrgRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.SetDefaultOrgRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SetDefaultOrgRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SetDefaultOrgRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SetDefaultOrgRequest;
+
+  static equals(a: SetDefaultOrgRequest | PlainMessage<SetDefaultOrgRequest> | undefined, b: SetDefaultOrgRequest | PlainMessage<SetDefaultOrgRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.SetDefaultOrgResponse
+ */
+export declare class SetDefaultOrgResponse extends Message<SetDefaultOrgResponse> {
+  constructor(data?: PartialMessage<SetDefaultOrgResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.SetDefaultOrgResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SetDefaultOrgResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SetDefaultOrgResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SetDefaultOrgResponse;
+
+  static equals(a: SetDefaultOrgResponse | PlainMessage<SetDefaultOrgResponse> | undefined, b: SetDefaultOrgResponse | PlainMessage<SetDefaultOrgResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.GetMeRequest
+ */
+export declare class GetMeRequest extends Message<GetMeRequest> {
+  constructor(data?: PartialMessage<GetMeRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.GetMeRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetMeRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetMeRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetMeRequest;
+
+  static equals(a: GetMeRequest | PlainMessage<GetMeRequest> | undefined, b: GetMeRequest | PlainMessage<GetMeRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.GetMeResponse
+ */
+export declare class GetMeResponse extends Message<GetMeResponse> {
+  /**
+   * @generated from field: users.v1.private.User user = 1;
+   */
+  user?: User;
 
   constructor(data?: PartialMessage<GetMeResponse>);
 

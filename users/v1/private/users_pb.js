@@ -6,6 +6,42 @@
 import {proto3} from "@bufbuild/protobuf";
 
 /**
+ * @generated from message users.v1.private.User
+ */
+export const User = proto3.makeMessageType(
+  "users.v1.private.User",
+  () => [
+    { no: 1, name: "user_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: "org_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 6, name: "last_logout", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    { no: 7, name: "created_at", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    { no: 8, name: "updated_at", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    { no: 9, name: "default_org", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.SetDefaultOrgRequest
+ */
+export const SetDefaultOrgRequest = proto3.makeMessageType(
+  "users.v1.private.SetDefaultOrgRequest",
+  () => [
+    { no: 1, name: "default_org", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.SetDefaultOrgResponse
+ */
+export const SetDefaultOrgResponse = proto3.makeMessageType(
+  "users.v1.private.SetDefaultOrgResponse",
+  [],
+);
+
+/**
  * @generated from message users.v1.private.GetMeRequest
  */
 export const GetMeRequest = proto3.makeMessageType(
@@ -19,12 +55,7 @@ export const GetMeRequest = proto3.makeMessageType(
 export const GetMeResponse = proto3.makeMessageType(
   "users.v1.private.GetMeResponse",
   () => [
-    { no: 1, name: "user_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "org_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-    { no: 6, name: "last_logout", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    { no: 1, name: "user", kind: "message", T: User },
   ],
 );
 

@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {GetMeRequest, GetMeResponse, LogoutRequest, LogoutResponse} from "./users_pb.js";
+import {GetMeRequest, GetMeResponse, LogoutRequest, LogoutResponse, SetDefaultOrgRequest, SetDefaultOrgResponse} from "./users_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -28,6 +28,15 @@ export declare const PrivateUsersService: {
       readonly name: "Logout",
       readonly I: typeof LogoutRequest,
       readonly O: typeof LogoutResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.private.PrivateUsersService.SetDefaultOrg
+     */
+    readonly setDefaultOrg: {
+      readonly name: "SetDefaultOrg",
+      readonly I: typeof SetDefaultOrgRequest,
+      readonly O: typeof SetDefaultOrgResponse,
       readonly kind: MethodKind.Unary,
     },
   }
