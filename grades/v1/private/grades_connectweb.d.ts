@@ -7,13 +7,13 @@ import {CreateGradeRequest, CreateGradeResponse, ListGradesRequest, ListGradesRe
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
- * @generated from service grades.v1.private.PrivateTeamsService
+ * @generated from service grades.v1.private.PrivateGradesService
  */
-export declare const PrivateTeamsService: {
-  readonly typeName: "grades.v1.private.PrivateTeamsService",
+export declare const PrivateGradesService: {
+  readonly typeName: "grades.v1.private.PrivateGradesService",
   readonly methods: {
     /**
-     * @generated from rpc grades.v1.private.PrivateTeamsService.CreateGrade
+     * @generated from rpc grades.v1.private.PrivateGradesService.CreateGrade
      */
     readonly createGrade: {
       readonly name: "CreateGrade",
@@ -22,7 +22,7 @@ export declare const PrivateTeamsService: {
       readonly kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc grades.v1.private.PrivateTeamsService.ListGrades
+     * @generated from rpc grades.v1.private.PrivateGradesService.ListGrades
      */
     readonly listGrades: {
       readonly name: "ListGrades",
