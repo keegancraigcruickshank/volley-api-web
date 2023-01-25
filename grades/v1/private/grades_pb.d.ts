@@ -16,6 +16,11 @@ export declare class Grade extends Message<Grade> {
   name: string;
 
   /**
+   * @generated from field: string organisation = 2;
+   */
+  organisation: string;
+
+  /**
    * @generated from field: string grade_id = 3;
    */
   gradeId: string;
