@@ -108,3 +108,46 @@ export declare class CreateTeamResponse extends Message<CreateTeamResponse> {
   static equals(a: CreateTeamResponse | PlainMessage<CreateTeamResponse> | undefined, b: CreateTeamResponse | PlainMessage<CreateTeamResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message teams.v1.private.ListTeamsRequest
+ */
+export declare class ListTeamsRequest extends Message<ListTeamsRequest> {
+  constructor(data?: PartialMessage<ListTeamsRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "teams.v1.private.ListTeamsRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListTeamsRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListTeamsRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListTeamsRequest;
+
+  static equals(a: ListTeamsRequest | PlainMessage<ListTeamsRequest> | undefined, b: ListTeamsRequest | PlainMessage<ListTeamsRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message teams.v1.private.ListTeamsResponse
+ */
+export declare class ListTeamsResponse extends Message<ListTeamsResponse> {
+  /**
+   * @generated from field: repeated teams.v1.private.Team teams = 1;
+   */
+  teams: Team[];
+
+  constructor(data?: PartialMessage<ListTeamsResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "teams.v1.private.ListTeamsResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListTeamsResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListTeamsResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListTeamsResponse;
+
+  static equals(a: ListTeamsResponse | PlainMessage<ListTeamsResponse> | undefined, b: ListTeamsResponse | PlainMessage<ListTeamsResponse> | undefined): boolean;
+}
+

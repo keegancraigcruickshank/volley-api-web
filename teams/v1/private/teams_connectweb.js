@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {CreateTeamRequest, CreateTeamResponse} from "./teams_pb.js";
+import {CreateTeamRequest, CreateTeamResponse, ListTeamsRequest, ListTeamsResponse} from "./teams_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -19,6 +19,15 @@ export const PrivateTeamsService = {
       name: "CreateTeam",
       I: CreateTeamRequest,
       O: CreateTeamResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc teams.v1.private.PrivateTeamsService.ListTeams
+     */
+    listTeams: {
+      name: "ListTeams",
+      I: ListTeamsRequest,
+      O: ListTeamsResponse,
       kind: MethodKind.Unary,
     },
   }

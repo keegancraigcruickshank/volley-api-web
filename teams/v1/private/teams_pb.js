@@ -41,3 +41,21 @@ export const CreateTeamResponse = proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message teams.v1.private.ListTeamsRequest
+ */
+export const ListTeamsRequest = proto3.makeMessageType(
+  "teams.v1.private.ListTeamsRequest",
+  [],
+);
+
+/**
+ * @generated from message teams.v1.private.ListTeamsResponse
+ */
+export const ListTeamsResponse = proto3.makeMessageType(
+  "teams.v1.private.ListTeamsResponse",
+  () => [
+    { no: 1, name: "teams", kind: "message", T: Team, repeated: true },
+  ],
+);
+
