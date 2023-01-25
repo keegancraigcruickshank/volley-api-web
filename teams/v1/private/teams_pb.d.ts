@@ -11,9 +11,19 @@ import {Message, proto3} from "@bufbuild/protobuf";
  */
 export declare class Team extends Message<Team> {
   /**
-   * @generated from field: string name = 3;
+   * @generated from field: string name = 1;
    */
   name: string;
+
+  /**
+   * @generated from field: string organisation = 2;
+   */
+  organisation: string;
+
+  /**
+   * @generated from field: string id = 3;
+   */
+  id: string;
 
   constructor(data?: PartialMessage<Team>);
 
@@ -35,9 +45,9 @@ export declare class Team extends Message<Team> {
  */
 export declare class CreateTeamRequest extends Message<CreateTeamRequest> {
   /**
-   * @generated from field: teams.v1.private.Team team = 1;
+   * @generated from field: string name = 1;
    */
-  team?: Team;
+  name: string;
 
   constructor(data?: PartialMessage<CreateTeamRequest>);
 

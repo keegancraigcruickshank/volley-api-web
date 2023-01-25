@@ -11,7 +11,9 @@ import {proto3} from "@bufbuild/protobuf";
 export const Team = proto3.makeMessageType(
   "teams.v1.private.Team",
   () => [
-    { no: 3, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "organisation", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
@@ -21,7 +23,7 @@ export const Team = proto3.makeMessageType(
 export const CreateTeamRequest = proto3.makeMessageType(
   "teams.v1.private.CreateTeamRequest",
   () => [
-    { no: 1, name: "team", kind: "message", T: Team },
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
