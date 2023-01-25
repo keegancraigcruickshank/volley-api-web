@@ -11,16 +11,6 @@ import {Message, proto3} from "@bufbuild/protobuf";
  */
 export declare class Team extends Message<Team> {
   /**
-   * @generated from field: string organisation = 1;
-   */
-  organisation: string;
-
-  /**
-   * @generated from field: string id = 2;
-   */
-  id: string;
-
-  /**
    * @generated from field: string name = 3;
    */
   name: string;
