@@ -25,6 +25,16 @@ export declare class Team extends Message<Team> {
    */
   id: string;
 
+  /**
+   * @generated from field: string day = 4;
+   */
+  day: string;
+
+  /**
+   * @generated from field: string grade_id = 5;
+   */
+  gradeId: string;
+
   constructor(data?: PartialMessage<Team>);
 
   static readonly runtime: typeof proto3;
@@ -48,6 +58,16 @@ export declare class CreateTeamRequest extends Message<CreateTeamRequest> {
    * @generated from field: string name = 1;
    */
   name: string;
+
+  /**
+   * @generated from field: string day = 2;
+   */
+  day: string;
+
+  /**
+   * @generated from field: string grade_id = 3;
+   */
+  gradeId: string;
 
   constructor(data?: PartialMessage<CreateTeamRequest>);
 

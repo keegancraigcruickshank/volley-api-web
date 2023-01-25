@@ -14,6 +14,8 @@ export const Team = proto3.makeMessageType(
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "organisation", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "day", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: "grade_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
@@ -24,6 +26,8 @@ export const CreateTeamRequest = proto3.makeMessageType(
   "teams.v1.private.CreateTeamRequest",
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "day", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "grade_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
