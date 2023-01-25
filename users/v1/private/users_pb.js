@@ -75,3 +75,24 @@ export const LogoutResponse = proto3.makeMessageType(
   [],
 );
 
+/**
+ * @generated from message users.v1.private.SetActiveOrgRequest
+ */
+export const SetActiveOrgRequest = proto3.makeMessageType(
+  "users.v1.private.SetActiveOrgRequest",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.SetActiveOrgResponse
+ */
+export const SetActiveOrgResponse = proto3.makeMessageType(
+  "users.v1.private.SetActiveOrgResponse",
+  () => [
+    { no: 1, name: "bearerToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "refreshToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+

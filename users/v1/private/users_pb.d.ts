@@ -194,3 +194,56 @@ export declare class LogoutResponse extends Message<LogoutResponse> {
   static equals(a: LogoutResponse | PlainMessage<LogoutResponse> | undefined, b: LogoutResponse | PlainMessage<LogoutResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.private.SetActiveOrgRequest
+ */
+export declare class SetActiveOrgRequest extends Message<SetActiveOrgRequest> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  constructor(data?: PartialMessage<SetActiveOrgRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.SetActiveOrgRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SetActiveOrgRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SetActiveOrgRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SetActiveOrgRequest;
+
+  static equals(a: SetActiveOrgRequest | PlainMessage<SetActiveOrgRequest> | undefined, b: SetActiveOrgRequest | PlainMessage<SetActiveOrgRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.SetActiveOrgResponse
+ */
+export declare class SetActiveOrgResponse extends Message<SetActiveOrgResponse> {
+  /**
+   * @generated from field: string bearerToken = 1;
+   */
+  bearerToken: string;
+
+  /**
+   * @generated from field: string refreshToken = 2;
+   */
+  refreshToken: string;
+
+  constructor(data?: PartialMessage<SetActiveOrgResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.SetActiveOrgResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SetActiveOrgResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SetActiveOrgResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SetActiveOrgResponse;
+
+  static equals(a: SetActiveOrgResponse | PlainMessage<SetActiveOrgResponse> | undefined, b: SetActiveOrgResponse | PlainMessage<SetActiveOrgResponse> | undefined): boolean;
+}
+

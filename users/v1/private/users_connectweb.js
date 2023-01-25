@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {GetMeRequest, GetMeResponse, LogoutRequest, LogoutResponse, SetDefaultOrgRequest, SetDefaultOrgResponse} from "./users_pb.js";
+import {GetMeRequest, GetMeResponse, LogoutRequest, LogoutResponse, SetActiveOrgRequest, SetActiveOrgResponse, SetDefaultOrgRequest, SetDefaultOrgResponse} from "./users_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -19,6 +19,15 @@ export const PrivateUsersService = {
       name: "GetMe",
       I: GetMeRequest,
       O: GetMeResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.private.PrivateUsersService.SetActiveOrg
+     */
+    setActiveOrg: {
+      name: "SetActiveOrg",
+      I: SetActiveOrgRequest,
+      O: SetActiveOrgResponse,
       kind: MethodKind.Unary,
     },
     /**
