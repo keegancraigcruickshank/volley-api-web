@@ -12,7 +12,6 @@ export const Grade = proto3.makeMessageType(
   "grades.v1.private.Grade",
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "organisation", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "grade_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
