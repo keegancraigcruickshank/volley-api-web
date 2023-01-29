@@ -7,25 +7,25 @@ import {CreateCourtRequest, CreateCourtResponse, ListCourtsRequest, ListCourtsRe
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
- * @generated from service courts.v1.private.PrivateGradesService
+ * @generated from service courts.v1.private.PrivateCourtsService
  */
-export const PrivateGradesService = {
-  typeName: "courts.v1.private.PrivateGradesService",
+export const PrivateCourtsService = {
+  typeName: "courts.v1.private.PrivateCourtsService",
   methods: {
     /**
-     * @generated from rpc courts.v1.private.PrivateGradesService.CreateGrade
+     * @generated from rpc courts.v1.private.PrivateCourtsService.CreateCourt
      */
-    createGrade: {
-      name: "CreateGrade",
+    createCourt: {
+      name: "CreateCourt",
       I: CreateCourtRequest,
       O: CreateCourtResponse,
       kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc courts.v1.private.PrivateGradesService.ListGrades
+     * @generated from rpc courts.v1.private.PrivateCourtsService.ListCourts
      */
-    listGrades: {
-      name: "ListGrades",
+    listCourts: {
+      name: "ListCourts",
       I: ListCourtsRequest,
       O: ListCourtsResponse,
       kind: MethodKind.Unary,
