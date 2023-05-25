@@ -7,6 +7,35 @@ import type {BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMe
 import {Message, proto3} from "@bufbuild/protobuf";
 
 /**
+ * @generated from message locations.v1.private.Location
+ */
+export declare class Location extends Message<Location> {
+  /**
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string id = 2;
+   */
+  id: string;
+
+  constructor(data?: PartialMessage<Location>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "locations.v1.private.Location";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Location;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Location;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Location;
+
+  static equals(a: Location | PlainMessage<Location> | undefined, b: Location | PlainMessage<Location> | undefined): boolean;
+}
+
+/**
  * @generated from message locations.v1.private.AddLocationRequest
  */
 export declare class AddLocationRequest extends Message<AddLocationRequest> {
@@ -57,6 +86,74 @@ export declare class AddLocationResponse extends Message<AddLocationResponse> {
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AddLocationResponse;
 
   static equals(a: AddLocationResponse | PlainMessage<AddLocationResponse> | undefined, b: AddLocationResponse | PlainMessage<AddLocationResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message locations.v1.private.ListLocationsRequest
+ */
+export declare class ListLocationsRequest extends Message<ListLocationsRequest> {
+  /**
+   * @generated from field: optional string query = 1;
+   */
+  query?: string;
+
+  /**
+   * @generated from field: optional int32 page = 2;
+   */
+  page?: number;
+
+  /**
+   * @generated from field: optional int32 pageSize = 3;
+   */
+  pageSize?: number;
+
+  /**
+   * @generated from field: optional string sortDirection = 4;
+   */
+  sortDirection?: string;
+
+  constructor(data?: PartialMessage<ListLocationsRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "locations.v1.private.ListLocationsRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListLocationsRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListLocationsRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListLocationsRequest;
+
+  static equals(a: ListLocationsRequest | PlainMessage<ListLocationsRequest> | undefined, b: ListLocationsRequest | PlainMessage<ListLocationsRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message locations.v1.private.ListLocationsResponse
+ */
+export declare class ListLocationsResponse extends Message<ListLocationsResponse> {
+  /**
+   * @generated from field: repeated locations.v1.private.Location locations = 1;
+   */
+  locations: Location[];
+
+  /**
+   * @generated from field: int32 totalCount = 2;
+   */
+  totalCount: number;
+
+  constructor(data?: PartialMessage<ListLocationsResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "locations.v1.private.ListLocationsResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListLocationsResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListLocationsResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListLocationsResponse;
+
+  static equals(a: ListLocationsResponse | PlainMessage<ListLocationsResponse> | undefined, b: ListLocationsResponse | PlainMessage<ListLocationsResponse> | undefined): boolean;
 }
 
 /**

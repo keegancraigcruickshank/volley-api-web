@@ -6,6 +6,17 @@
 import {proto3} from "@bufbuild/protobuf";
 
 /**
+ * @generated from message locations.v1.private.Location
+ */
+export const Location = proto3.makeMessageType(
+  "locations.v1.private.Location",
+  () => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
  * @generated from message locations.v1.private.AddLocationRequest
  */
 export const AddLocationRequest = proto3.makeMessageType(
@@ -23,6 +34,30 @@ export const AddLocationResponse = proto3.makeMessageType(
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message locations.v1.private.ListLocationsRequest
+ */
+export const ListLocationsRequest = proto3.makeMessageType(
+  "locations.v1.private.ListLocationsRequest",
+  () => [
+    { no: 1, name: "query", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 2, name: "page", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
+    { no: 3, name: "pageSize", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
+    { no: 4, name: "sortDirection", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+  ],
+);
+
+/**
+ * @generated from message locations.v1.private.ListLocationsResponse
+ */
+export const ListLocationsResponse = proto3.makeMessageType(
+  "locations.v1.private.ListLocationsResponse",
+  () => [
+    { no: 1, name: "locations", kind: "message", T: Location, repeated: true },
+    { no: 2, name: "totalCount", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 
