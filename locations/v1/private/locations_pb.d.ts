@@ -7,9 +7,9 @@ import type {BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMe
 import {Message, proto3} from "@bufbuild/protobuf";
 
 /**
- * @generated from message locations.v1.private.Location
+ * @generated from message locations.v1.private.SiteLocation
  */
-export declare class Location extends Message<Location> {
+export declare class SiteLocation extends Message<SiteLocation> {
   /**
    * @generated from field: string name = 1;
    */
@@ -20,19 +20,19 @@ export declare class Location extends Message<Location> {
    */
   id: string;
 
-  constructor(data?: PartialMessage<Location>);
+  constructor(data?: PartialMessage<SiteLocation>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "locations.v1.private.Location";
+  static readonly typeName = "locations.v1.private.SiteLocation";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Location;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SiteLocation;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Location;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SiteLocation;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Location;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SiteLocation;
 
-  static equals(a: Location | PlainMessage<Location> | undefined, b: Location | PlainMessage<Location> | undefined): boolean;
+  static equals(a: SiteLocation | PlainMessage<SiteLocation> | undefined, b: SiteLocation | PlainMessage<SiteLocation> | undefined): boolean;
 }
 
 /**
@@ -175,9 +175,9 @@ export declare class ListLocationsRequest extends Message<ListLocationsRequest> 
  */
 export declare class ListLocationsResponse extends Message<ListLocationsResponse> {
   /**
-   * @generated from field: repeated locations.v1.private.Location locations = 1;
+   * @generated from field: repeated locations.v1.private.SiteLocation locations = 1;
    */
-  locations: Location[];
+  locations: SiteLocation[];
 
   /**
    * @generated from field: int32 totalCount = 2;

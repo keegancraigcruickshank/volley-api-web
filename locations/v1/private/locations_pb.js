@@ -6,10 +6,10 @@
 import {proto3} from "@bufbuild/protobuf";
 
 /**
- * @generated from message locations.v1.private.Location
+ * @generated from message locations.v1.private.SiteLocation
  */
-export const Location = proto3.makeMessageType(
-  "locations.v1.private.Location",
+export const SiteLocation = proto3.makeMessageType(
+  "locations.v1.private.SiteLocation",
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
@@ -74,7 +74,7 @@ export const ListLocationsRequest = proto3.makeMessageType(
 export const ListLocationsResponse = proto3.makeMessageType(
   "locations.v1.private.ListLocationsResponse",
   () => [
-    { no: 1, name: "locations", kind: "message", T: Location, repeated: true },
+    { no: 1, name: "locations", kind: "message", T: SiteLocation, repeated: true },
     { no: 2, name: "totalCount", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
