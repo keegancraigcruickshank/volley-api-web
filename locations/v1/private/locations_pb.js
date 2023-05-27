@@ -22,7 +22,7 @@ export const Location = proto3.makeMessageType(
 export const RemoveLocationsRequest = proto3.makeMessageType(
   "locations.v1.private.RemoveLocationsRequest",
   () => [
-    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 1, name: "locationIds", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ],
 );
 

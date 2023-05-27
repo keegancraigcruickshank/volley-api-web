@@ -40,9 +40,9 @@ export declare class Location extends Message<Location> {
  */
 export declare class RemoveLocationsRequest extends Message<RemoveLocationsRequest> {
   /**
-   * @generated from field: repeated string id = 1;
+   * @generated from field: repeated string locationIds = 1;
    */
-  id: string[];
+  locationIds: string[];
 
   constructor(data?: PartialMessage<RemoveLocationsRequest>);
 
