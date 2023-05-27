@@ -17,6 +17,24 @@ export const Location = proto3.makeMessageType(
 );
 
 /**
+ * @generated from message locations.v1.private.RemoveLocationsRequest
+ */
+export const RemoveLocationsRequest = proto3.makeMessageType(
+  "locations.v1.private.RemoveLocationsRequest",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message locations.v1.private.RemoveLocationsResponse
+ */
+export const RemoveLocationsResponse = proto3.makeMessageType(
+  "locations.v1.private.RemoveLocationsResponse",
+  [],
+);
+
+/**
  * @generated from message locations.v1.private.AddLocationRequest
  */
 export const AddLocationRequest = proto3.makeMessageType(

@@ -3,7 +3,7 @@
 /* eslint-disable */
 /* @ts-nocheck */
 
-import {AddLocationRequest, AddLocationResponse, ModifyLocationRequest, ModifyLocationResponse} from "./locations_pb.js";
+import {AddLocationRequest, AddLocationResponse, ListLocationsRequest, ListLocationsResponse, ModifyLocationRequest, ModifyLocationResponse, RemoveLocationsRequest, RemoveLocationsResponse} from "./locations_pb.js";
 import {MethodKind} from "@bufbuild/protobuf";
 
 /**
@@ -28,6 +28,24 @@ export const PublicUsersService = {
       name: "ModifyLocation",
       I: ModifyLocationRequest,
       O: ModifyLocationResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc locations.v1.private.PublicUsersService.ListLocations
+     */
+    listLocations: {
+      name: "ListLocations",
+      I: ListLocationsRequest,
+      O: ListLocationsResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc locations.v1.private.PublicUsersService.RemoveLocations
+     */
+    removeLocations: {
+      name: "RemoveLocations",
+      I: RemoveLocationsRequest,
+      O: RemoveLocationsResponse,
       kind: MethodKind.Unary,
     },
   }

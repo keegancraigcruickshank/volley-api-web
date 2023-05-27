@@ -36,6 +36,49 @@ export declare class Location extends Message<Location> {
 }
 
 /**
+ * @generated from message locations.v1.private.RemoveLocationsRequest
+ */
+export declare class RemoveLocationsRequest extends Message<RemoveLocationsRequest> {
+  /**
+   * @generated from field: repeated string id = 1;
+   */
+  id: string[];
+
+  constructor(data?: PartialMessage<RemoveLocationsRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "locations.v1.private.RemoveLocationsRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RemoveLocationsRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RemoveLocationsRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RemoveLocationsRequest;
+
+  static equals(a: RemoveLocationsRequest | PlainMessage<RemoveLocationsRequest> | undefined, b: RemoveLocationsRequest | PlainMessage<RemoveLocationsRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message locations.v1.private.RemoveLocationsResponse
+ */
+export declare class RemoveLocationsResponse extends Message<RemoveLocationsResponse> {
+  constructor(data?: PartialMessage<RemoveLocationsResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "locations.v1.private.RemoveLocationsResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RemoveLocationsResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RemoveLocationsResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RemoveLocationsResponse;
+
+  static equals(a: RemoveLocationsResponse | PlainMessage<RemoveLocationsResponse> | undefined, b: RemoveLocationsResponse | PlainMessage<RemoveLocationsResponse> | undefined): boolean;
+}
+
+/**
  * @generated from message locations.v1.private.AddLocationRequest
  */
 export declare class AddLocationRequest extends Message<AddLocationRequest> {
