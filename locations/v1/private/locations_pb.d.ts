@@ -7,6 +7,21 @@ import type {BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMe
 import {Message, proto3} from "@bufbuild/protobuf";
 
 /**
+ * @generated from enum locations.v1.private.SortDirection
+ */
+export declare enum SortDirection {
+  /**
+   * @generated from enum value: ASC = 0;
+   */
+  ASC = 0,
+
+  /**
+   * @generated from enum value: DESC = 1;
+   */
+  DESC = 1,
+}
+
+/**
  * @generated from message locations.v1.private.SiteLocation
  */
 export declare class SiteLocation extends Message<SiteLocation> {
@@ -151,9 +166,9 @@ export declare class ListLocationsRequest extends Message<ListLocationsRequest> 
   pageSize?: number;
 
   /**
-   * @generated from field: optional string sortDirection = 4;
+   * @generated from field: optional locations.v1.private.SortDirection sortDirection = 4;
    */
-  sortDirection?: string;
+  sortDirection?: SortDirection;
 
   constructor(data?: PartialMessage<ListLocationsRequest>);
 

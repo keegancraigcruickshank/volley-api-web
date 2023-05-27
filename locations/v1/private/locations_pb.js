@@ -6,6 +6,17 @@
 import {proto3} from "@bufbuild/protobuf";
 
 /**
+ * @generated from enum locations.v1.private.SortDirection
+ */
+export const SortDirection = proto3.makeEnum(
+  "locations.v1.private.SortDirection",
+  [
+    {no: 0, name: "ASC"},
+    {no: 1, name: "DESC"},
+  ],
+);
+
+/**
  * @generated from message locations.v1.private.SiteLocation
  */
 export const SiteLocation = proto3.makeMessageType(
@@ -64,7 +75,7 @@ export const ListLocationsRequest = proto3.makeMessageType(
     { no: 1, name: "query", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 2, name: "page", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
     { no: 3, name: "pageSize", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
-    { no: 4, name: "sortDirection", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 4, name: "sortDirection", kind: "enum", T: proto3.getEnumType(SortDirection), opt: true },
   ],
 );
 
