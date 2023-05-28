@@ -24,10 +24,7 @@ export const CreateUserRequest = proto3.makeMessageType(
  */
 export const CreateUserResponse = proto3.makeMessageType(
   "users.v1.public.CreateUserResponse",
-  () => [
-    { no: 1, name: "bearerToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "refreshToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
+  [],
 );
 
 /**
@@ -45,10 +42,7 @@ export const RefreshTokenRequest = proto3.makeMessageType(
  */
 export const RefreshTokenResponse = proto3.makeMessageType(
   "users.v1.public.RefreshTokenResponse",
-  () => [
-    { no: 1, name: "refreshToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "bearerToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
+  [],
 );
 
 /**
@@ -67,9 +61,6 @@ export const LoginRequest = proto3.makeMessageType(
  */
 export const LoginResponse = proto3.makeMessageType(
   "users.v1.public.LoginResponse",
-  () => [
-    { no: 1, name: "bearerToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "refreshToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
+  [],
 );
 

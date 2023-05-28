@@ -90,9 +90,6 @@ export const SetActiveOrgRequest = proto3.makeMessageType(
  */
 export const SetActiveOrgResponse = proto3.makeMessageType(
   "users.v1.private.SetActiveOrgResponse",
-  () => [
-    { no: 1, name: "bearerToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "refreshToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
+  [],
 );
 

@@ -54,16 +54,6 @@ export declare class CreateUserRequest extends Message<CreateUserRequest> {
  * @generated from message users.v1.public.CreateUserResponse
  */
 export declare class CreateUserResponse extends Message<CreateUserResponse> {
-  /**
-   * @generated from field: string bearerToken = 1;
-   */
-  bearerToken: string;
-
-  /**
-   * @generated from field: string refreshToken = 2;
-   */
-  refreshToken: string;
-
   constructor(data?: PartialMessage<CreateUserResponse>);
 
   static readonly runtime: typeof proto3;
@@ -107,16 +97,6 @@ export declare class RefreshTokenRequest extends Message<RefreshTokenRequest> {
  * @generated from message users.v1.public.RefreshTokenResponse
  */
 export declare class RefreshTokenResponse extends Message<RefreshTokenResponse> {
-  /**
-   * @generated from field: string refreshToken = 1;
-   */
-  refreshToken: string;
-
-  /**
-   * @generated from field: string bearerToken = 2;
-   */
-  bearerToken: string;
-
   constructor(data?: PartialMessage<RefreshTokenResponse>);
 
   static readonly runtime: typeof proto3;
@@ -165,16 +145,6 @@ export declare class LoginRequest extends Message<LoginRequest> {
  * @generated from message users.v1.public.LoginResponse
  */
 export declare class LoginResponse extends Message<LoginResponse> {
-  /**
-   * @generated from field: string bearerToken = 1;
-   */
-  bearerToken: string;
-
-  /**
-   * @generated from field: string refreshToken = 2;
-   */
-  refreshToken: string;
-
   constructor(data?: PartialMessage<LoginResponse>);
 
   static readonly runtime: typeof proto3;

@@ -222,16 +222,6 @@ export declare class SetActiveOrgRequest extends Message<SetActiveOrgRequest> {
  * @generated from message users.v1.private.SetActiveOrgResponse
  */
 export declare class SetActiveOrgResponse extends Message<SetActiveOrgResponse> {
-  /**
-   * @generated from field: string bearerToken = 1;
-   */
-  bearerToken: string;
-
-  /**
-   * @generated from field: string refreshToken = 2;
-   */
-  refreshToken: string;
-
   constructor(data?: PartialMessage<SetActiveOrgResponse>);
 
   static readonly runtime: typeof proto3;
