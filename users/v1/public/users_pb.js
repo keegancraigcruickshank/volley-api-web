@@ -32,9 +32,7 @@ export const CreateUserResponse = proto3.makeMessageType(
  */
 export const RefreshTokenRequest = proto3.makeMessageType(
   "users.v1.public.RefreshTokenRequest",
-  () => [
-    { no: 1, name: "refreshToken", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
+  [],
 );
 
 /**

@@ -73,11 +73,6 @@ export declare class CreateUserResponse extends Message<CreateUserResponse> {
  * @generated from message users.v1.public.RefreshTokenRequest
  */
 export declare class RefreshTokenRequest extends Message<RefreshTokenRequest> {
-  /**
-   * @generated from field: string refreshToken = 1;
-   */
-  refreshToken: string;
-
   constructor(data?: PartialMessage<RefreshTokenRequest>);
 
   static readonly runtime: typeof proto3;
