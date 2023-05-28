@@ -36,19 +36,19 @@ export declare class User extends Message<User> {
   orgIds: string[];
 
   /**
-   * @generated from field: int64 last_logout = 6;
+   * @generated from field: int32 last_logout = 6;
    */
-  lastLogout: bigint;
+  lastLogout: number;
 
   /**
-   * @generated from field: int64 created_at = 7;
+   * @generated from field: int32 created_at = 7;
    */
-  createdAt: bigint;
+  createdAt: number;
 
   /**
-   * @generated from field: int64 updated_at = 8;
+   * @generated from field: int32 updated_at = 8;
    */
-  updatedAt: bigint;
+  updatedAt: number;
 
   /**
    * @generated from field: string default_org = 9;
