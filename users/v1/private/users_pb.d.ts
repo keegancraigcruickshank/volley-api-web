@@ -55,6 +55,16 @@ export declare class User extends Message<User> {
    */
   defaultOrg: string;
 
+  /**
+   * @generated from field: string active_org = 10;
+   */
+  activeOrg: string;
+
+  /**
+   * @generated from field: string active_org_name = 11;
+   */
+  activeOrgName: string;
+
   constructor(data?: PartialMessage<User>);
 
   static readonly runtime: typeof proto3;

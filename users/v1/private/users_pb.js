@@ -20,6 +20,8 @@ export const User = proto3.makeMessageType(
     { no: 7, name: "created_at", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 8, name: "updated_at", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 9, name: "default_org", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 10, name: "active_org", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 11, name: "active_org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
