@@ -65,6 +65,11 @@ export declare class User extends Message<User> {
    */
   activeOrgName: string;
 
+  /**
+   * @generated from field: bool verified = 12;
+   */
+  verified: boolean;
+
   constructor(data?: PartialMessage<User>);
 
   static readonly runtime: typeof proto3;

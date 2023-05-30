@@ -22,6 +22,7 @@ export const User = proto3.makeMessageType(
     { no: 9, name: "default_org", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 10, name: "active_org", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 11, name: "active_org_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 12, name: "verified", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
