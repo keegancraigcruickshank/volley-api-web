@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { GetMeRequest, GetMeResponse, LogoutRequest, LogoutResponse, SetActiveOrgRequest, SetActiveOrgResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
+import { GetMeRequest, GetMeResponse, LogoutRequest, LogoutResponse, ResendVerificationRequest, ResendVerificationResponse, SetActiveOrgRequest, SetActiveOrgResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -19,6 +19,15 @@ export declare const PrivateUsersService: {
       readonly name: "GetMe",
       readonly I: typeof GetMeRequest,
       readonly O: typeof GetMeResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.private.PrivateUsersService.ResendVerification
+     */
+    readonly resendVerification: {
+      readonly name: "ResendVerification",
+      readonly I: typeof ResendVerificationRequest,
+      readonly O: typeof ResendVerificationResponse,
       readonly kind: MethodKind.Unary,
     },
     /**

@@ -96,3 +96,19 @@ export const SetActiveOrgResponse = proto3.makeMessageType(
   [],
 );
 
+/**
+ * @generated from message users.v1.private.ResendVerificationRequest
+ */
+export const ResendVerificationRequest = proto3.makeMessageType(
+  "users.v1.private.ResendVerificationRequest",
+  [],
+);
+
+/**
+ * @generated from message users.v1.private.ResendVerificationResponse
+ */
+export const ResendVerificationResponse = proto3.makeMessageType(
+  "users.v1.private.ResendVerificationResponse",
+  [],
+);
+

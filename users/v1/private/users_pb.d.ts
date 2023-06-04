@@ -252,3 +252,41 @@ export declare class SetActiveOrgResponse extends Message<SetActiveOrgResponse> 
   static equals(a: SetActiveOrgResponse | PlainMessage<SetActiveOrgResponse> | undefined, b: SetActiveOrgResponse | PlainMessage<SetActiveOrgResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.private.ResendVerificationRequest
+ */
+export declare class ResendVerificationRequest extends Message<ResendVerificationRequest> {
+  constructor(data?: PartialMessage<ResendVerificationRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.ResendVerificationRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ResendVerificationRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ResendVerificationRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ResendVerificationRequest;
+
+  static equals(a: ResendVerificationRequest | PlainMessage<ResendVerificationRequest> | undefined, b: ResendVerificationRequest | PlainMessage<ResendVerificationRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.ResendVerificationResponse
+ */
+export declare class ResendVerificationResponse extends Message<ResendVerificationResponse> {
+  constructor(data?: PartialMessage<ResendVerificationResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.ResendVerificationResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ResendVerificationResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ResendVerificationResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ResendVerificationResponse;
+
+  static equals(a: ResendVerificationResponse | PlainMessage<ResendVerificationResponse> | undefined, b: ResendVerificationResponse | PlainMessage<ResendVerificationResponse> | undefined): boolean;
+}
+
