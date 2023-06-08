@@ -80,3 +80,40 @@ export const VerifyEmailResponse = proto3.makeMessageType(
   [],
 );
 
+/**
+ * @generated from message users.v1.public.SendResetPasswordLinkRequest
+ */
+export const SendResetPasswordLinkRequest = proto3.makeMessageType(
+  "users.v1.public.SendResetPasswordLinkRequest",
+  () => [
+    { no: 1, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.public.SendResetPasswordLinkResponse
+ */
+export const SendResetPasswordLinkResponse = proto3.makeMessageType(
+  "users.v1.public.SendResetPasswordLinkResponse",
+  [],
+);
+
+/**
+ * @generated from message users.v1.public.ResetPasswordRequest
+ */
+export const ResetPasswordRequest = proto3.makeMessageType(
+  "users.v1.public.ResetPasswordRequest",
+  () => [
+    { no: 1, name: "userId", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "password", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.public.ResetPasswordResponse
+ */
+export const ResetPasswordResponse = proto3.makeMessageType(
+  "users.v1.public.ResetPasswordResponse",
+  [],
+);
+

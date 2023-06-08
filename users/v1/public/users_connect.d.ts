@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateUserRequest, CreateUserResponse, LoginRequest, LoginResponse, RefreshTokenRequest, RefreshTokenResponse, VerifyEmailRequest, VerifyEmailResponse } from "./users_pb.js";
+import { CreateUserRequest, CreateUserResponse, LoginRequest, LoginResponse, RefreshTokenRequest, RefreshTokenResponse, ResetPasswordRequest, ResetPasswordResponse, SendResetPasswordLinkRequest, SendResetPasswordLinkResponse, VerifyEmailRequest, VerifyEmailResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -46,6 +46,24 @@ export declare const PublicUsersService: {
       readonly name: "VerifyEmail",
       readonly I: typeof VerifyEmailRequest,
       readonly O: typeof VerifyEmailResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.public.PublicUsersService.SendResetPasswordLink
+     */
+    readonly sendResetPasswordLink: {
+      readonly name: "SendResetPasswordLink",
+      readonly I: typeof SendResetPasswordLinkRequest,
+      readonly O: typeof SendResetPasswordLinkResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.public.PublicUsersService.ResetPassword
+     */
+    readonly resetPassword: {
+      readonly name: "ResetPassword",
+      readonly I: typeof ResetPasswordRequest,
+      readonly O: typeof ResetPasswordResponse,
       readonly kind: MethodKind.Unary,
     },
   }

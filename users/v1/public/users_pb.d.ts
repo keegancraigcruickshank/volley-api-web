@@ -198,3 +198,94 @@ export declare class VerifyEmailResponse extends Message<VerifyEmailResponse> {
   static equals(a: VerifyEmailResponse | PlainMessage<VerifyEmailResponse> | undefined, b: VerifyEmailResponse | PlainMessage<VerifyEmailResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.public.SendResetPasswordLinkRequest
+ */
+export declare class SendResetPasswordLinkRequest extends Message<SendResetPasswordLinkRequest> {
+  /**
+   * @generated from field: string email = 1;
+   */
+  email: string;
+
+  constructor(data?: PartialMessage<SendResetPasswordLinkRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.public.SendResetPasswordLinkRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SendResetPasswordLinkRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SendResetPasswordLinkRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SendResetPasswordLinkRequest;
+
+  static equals(a: SendResetPasswordLinkRequest | PlainMessage<SendResetPasswordLinkRequest> | undefined, b: SendResetPasswordLinkRequest | PlainMessage<SendResetPasswordLinkRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.public.SendResetPasswordLinkResponse
+ */
+export declare class SendResetPasswordLinkResponse extends Message<SendResetPasswordLinkResponse> {
+  constructor(data?: PartialMessage<SendResetPasswordLinkResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.public.SendResetPasswordLinkResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SendResetPasswordLinkResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SendResetPasswordLinkResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SendResetPasswordLinkResponse;
+
+  static equals(a: SendResetPasswordLinkResponse | PlainMessage<SendResetPasswordLinkResponse> | undefined, b: SendResetPasswordLinkResponse | PlainMessage<SendResetPasswordLinkResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.public.ResetPasswordRequest
+ */
+export declare class ResetPasswordRequest extends Message<ResetPasswordRequest> {
+  /**
+   * @generated from field: string userId = 1;
+   */
+  userId: string;
+
+  /**
+   * @generated from field: string password = 2;
+   */
+  password: string;
+
+  constructor(data?: PartialMessage<ResetPasswordRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.public.ResetPasswordRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ResetPasswordRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ResetPasswordRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ResetPasswordRequest;
+
+  static equals(a: ResetPasswordRequest | PlainMessage<ResetPasswordRequest> | undefined, b: ResetPasswordRequest | PlainMessage<ResetPasswordRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.public.ResetPasswordResponse
+ */
+export declare class ResetPasswordResponse extends Message<ResetPasswordResponse> {
+  constructor(data?: PartialMessage<ResetPasswordResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.public.ResetPasswordResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ResetPasswordResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ResetPasswordResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ResetPasswordResponse;
+
+  static equals(a: ResetPasswordResponse | PlainMessage<ResetPasswordResponse> | undefined, b: ResetPasswordResponse | PlainMessage<ResetPasswordResponse> | undefined): boolean;
+}
+
