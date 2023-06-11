@@ -246,9 +246,9 @@ export declare class SendResetPasswordLinkResponse extends Message<SendResetPass
  */
 export declare class ResetPasswordRequest extends Message<ResetPasswordRequest> {
   /**
-   * @generated from field: string userId = 1;
+   * @generated from field: string id = 1;
    */
-  userId: string;
+  id: string;
 
   /**
    * @generated from field: string password = 2;

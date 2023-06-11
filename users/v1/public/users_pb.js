@@ -104,7 +104,7 @@ export const SendResetPasswordLinkResponse = proto3.makeMessageType(
 export const ResetPasswordRequest = proto3.makeMessageType(
   "users.v1.public.ResetPasswordRequest",
   () => [
-    { no: 1, name: "userId", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "password", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
