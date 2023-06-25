@@ -7,13 +7,13 @@ import { AddLocationRequest, AddLocationResponse, ListLocationsRequest, ListLoca
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
- * @generated from service locations.v1.private.PublicUsersService
+ * @generated from service locations.v1.private.PrivateLocationsService
  */
-export const PublicUsersService = {
-  typeName: "locations.v1.private.PublicUsersService",
+export const PrivateLocationsService = {
+  typeName: "locations.v1.private.PrivateLocationsService",
   methods: {
     /**
-     * @generated from rpc locations.v1.private.PublicUsersService.AddLocation
+     * @generated from rpc locations.v1.private.PrivateLocationsService.AddLocation
      */
     addLocation: {
       name: "AddLocation",
@@ -22,7 +22,7 @@ export const PublicUsersService = {
       kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc locations.v1.private.PublicUsersService.ModifyLocation
+     * @generated from rpc locations.v1.private.PrivateLocationsService.ModifyLocation
      */
     modifyLocation: {
       name: "ModifyLocation",
@@ -31,7 +31,7 @@ export const PublicUsersService = {
       kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc locations.v1.private.PublicUsersService.ListLocations
+     * @generated from rpc locations.v1.private.PrivateLocationsService.ListLocations
      */
     listLocations: {
       name: "ListLocations",
@@ -40,7 +40,7 @@ export const PublicUsersService = {
       kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc locations.v1.private.PublicUsersService.RemoveLocations
+     * @generated from rpc locations.v1.private.PrivateLocationsService.RemoveLocations
      */
     removeLocations: {
       name: "RemoveLocations",

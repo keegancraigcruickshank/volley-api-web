@@ -7,13 +7,13 @@ import { AddLocationRequest, AddLocationResponse, ListLocationsRequest, ListLoca
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
- * @generated from service locations.v1.private.PublicUsersService
+ * @generated from service locations.v1.private.PrivateLocationsService
  */
-export declare const PublicUsersService: {
-  readonly typeName: "locations.v1.private.PublicUsersService",
+export declare const PrivateLocationsService: {
+  readonly typeName: "locations.v1.private.PrivateLocationsService",
   readonly methods: {
     /**
-     * @generated from rpc locations.v1.private.PublicUsersService.AddLocation
+     * @generated from rpc locations.v1.private.PrivateLocationsService.AddLocation
      */
     readonly addLocation: {
       readonly name: "AddLocation",
@@ -22,7 +22,7 @@ export declare const PublicUsersService: {
       readonly kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc locations.v1.private.PublicUsersService.ModifyLocation
+     * @generated from rpc locations.v1.private.PrivateLocationsService.ModifyLocation
      */
     readonly modifyLocation: {
       readonly name: "ModifyLocation",
@@ -31,7 +31,7 @@ export declare const PublicUsersService: {
       readonly kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc locations.v1.private.PublicUsersService.ListLocations
+     * @generated from rpc locations.v1.private.PrivateLocationsService.ListLocations
      */
     readonly listLocations: {
       readonly name: "ListLocations",
@@ -40,7 +40,7 @@ export declare const PublicUsersService: {
       readonly kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc locations.v1.private.PublicUsersService.RemoveLocations
+     * @generated from rpc locations.v1.private.PrivateLocationsService.RemoveLocations
      */
     readonly removeLocations: {
       readonly name: "RemoveLocations",
