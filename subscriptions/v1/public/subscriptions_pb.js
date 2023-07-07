@@ -15,6 +15,7 @@ export const SubscriptionPlan = proto3.makeMessageType(
     { no: 2, name: "subscription_key", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "description", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: "price", kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
   ],
 );
 

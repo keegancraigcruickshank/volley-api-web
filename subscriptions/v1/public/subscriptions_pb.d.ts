@@ -30,6 +30,11 @@ export declare class SubscriptionPlan extends Message<SubscriptionPlan> {
    */
   description: string;
 
+  /**
+   * @generated from field: float price = 5;
+   */
+  price: number;
+
   constructor(data?: PartialMessage<SubscriptionPlan>);
 
   static readonly runtime: typeof proto3;
