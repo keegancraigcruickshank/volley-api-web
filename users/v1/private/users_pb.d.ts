@@ -86,6 +86,40 @@ export declare class User extends Message<User> {
 }
 
 /**
+ * @generated from message users.v1.private.ApiToken
+ */
+export declare class ApiToken extends Message<ApiToken> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: int32 last_modified = 3;
+   */
+  lastModified: number;
+
+  constructor(data?: PartialMessage<ApiToken>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.ApiToken";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ApiToken;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ApiToken;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ApiToken;
+
+  static equals(a: ApiToken | PlainMessage<ApiToken> | undefined, b: ApiToken | PlainMessage<ApiToken> | undefined): boolean;
+}
+
+/**
  * @generated from message users.v1.private.SetDefaultOrgRequest
  */
 export declare class SetDefaultOrgRequest extends Message<SetDefaultOrgRequest> {
@@ -288,5 +322,154 @@ export declare class ResendVerificationResponse extends Message<ResendVerificati
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ResendVerificationResponse;
 
   static equals(a: ResendVerificationResponse | PlainMessage<ResendVerificationResponse> | undefined, b: ResendVerificationResponse | PlainMessage<ResendVerificationResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.CreateApiTokenRequest
+ */
+export declare class CreateApiTokenRequest extends Message<CreateApiTokenRequest> {
+  /**
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  constructor(data?: PartialMessage<CreateApiTokenRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.CreateApiTokenRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateApiTokenRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateApiTokenRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateApiTokenRequest;
+
+  static equals(a: CreateApiTokenRequest | PlainMessage<CreateApiTokenRequest> | undefined, b: CreateApiTokenRequest | PlainMessage<CreateApiTokenRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.CreateApiTokenResponse
+ */
+export declare class CreateApiTokenResponse extends Message<CreateApiTokenResponse> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string token = 3;
+   */
+  token: string;
+
+  constructor(data?: PartialMessage<CreateApiTokenResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.CreateApiTokenResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateApiTokenResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateApiTokenResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateApiTokenResponse;
+
+  static equals(a: CreateApiTokenResponse | PlainMessage<CreateApiTokenResponse> | undefined, b: CreateApiTokenResponse | PlainMessage<CreateApiTokenResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.ListApiTokensRequest
+ */
+export declare class ListApiTokensRequest extends Message<ListApiTokensRequest> {
+  constructor(data?: PartialMessage<ListApiTokensRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.ListApiTokensRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListApiTokensRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListApiTokensRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListApiTokensRequest;
+
+  static equals(a: ListApiTokensRequest | PlainMessage<ListApiTokensRequest> | undefined, b: ListApiTokensRequest | PlainMessage<ListApiTokensRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.ListApiTokensResponse
+ */
+export declare class ListApiTokensResponse extends Message<ListApiTokensResponse> {
+  /**
+   * @generated from field: repeated users.v1.private.ApiToken tokens = 1;
+   */
+  tokens: ApiToken[];
+
+  /**
+   * @generated from field: int32 count = 2;
+   */
+  count: number;
+
+  constructor(data?: PartialMessage<ListApiTokensResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.ListApiTokensResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListApiTokensResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListApiTokensResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListApiTokensResponse;
+
+  static equals(a: ListApiTokensResponse | PlainMessage<ListApiTokensResponse> | undefined, b: ListApiTokensResponse | PlainMessage<ListApiTokensResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.RemoveApiTokenRequest
+ */
+export declare class RemoveApiTokenRequest extends Message<RemoveApiTokenRequest> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  constructor(data?: PartialMessage<RemoveApiTokenRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.RemoveApiTokenRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RemoveApiTokenRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RemoveApiTokenRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RemoveApiTokenRequest;
+
+  static equals(a: RemoveApiTokenRequest | PlainMessage<RemoveApiTokenRequest> | undefined, b: RemoveApiTokenRequest | PlainMessage<RemoveApiTokenRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.RemoveApiTokenResponse
+ */
+export declare class RemoveApiTokenResponse extends Message<RemoveApiTokenResponse> {
+  constructor(data?: PartialMessage<RemoveApiTokenResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.RemoveApiTokenResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RemoveApiTokenResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RemoveApiTokenResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RemoveApiTokenResponse;
+
+  static equals(a: RemoveApiTokenResponse | PlainMessage<RemoveApiTokenResponse> | undefined, b: RemoveApiTokenResponse | PlainMessage<RemoveApiTokenResponse> | undefined): boolean;
 }
 

@@ -27,6 +27,18 @@ export const User = proto3.makeMessageType(
 );
 
 /**
+ * @generated from message users.v1.private.ApiToken
+ */
+export const ApiToken = proto3.makeMessageType(
+  "users.v1.private.ApiToken",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "last_modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+);
+
+/**
  * @generated from message users.v1.private.SetDefaultOrgRequest
  */
 export const SetDefaultOrgRequest = proto3.makeMessageType(
@@ -109,6 +121,65 @@ export const ResendVerificationRequest = proto3.makeMessageType(
  */
 export const ResendVerificationResponse = proto3.makeMessageType(
   "users.v1.private.ResendVerificationResponse",
+  [],
+);
+
+/**
+ * @generated from message users.v1.private.CreateApiTokenRequest
+ */
+export const CreateApiTokenRequest = proto3.makeMessageType(
+  "users.v1.private.CreateApiTokenRequest",
+  () => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.CreateApiTokenResponse
+ */
+export const CreateApiTokenResponse = proto3.makeMessageType(
+  "users.v1.private.CreateApiTokenResponse",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.ListApiTokensRequest
+ */
+export const ListApiTokensRequest = proto3.makeMessageType(
+  "users.v1.private.ListApiTokensRequest",
+  [],
+);
+
+/**
+ * @generated from message users.v1.private.ListApiTokensResponse
+ */
+export const ListApiTokensResponse = proto3.makeMessageType(
+  "users.v1.private.ListApiTokensResponse",
+  () => [
+    { no: 1, name: "tokens", kind: "message", T: ApiToken, repeated: true },
+    { no: 2, name: "count", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.RemoveApiTokenRequest
+ */
+export const RemoveApiTokenRequest = proto3.makeMessageType(
+  "users.v1.private.RemoveApiTokenRequest",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.RemoveApiTokenResponse
+ */
+export const RemoveApiTokenResponse = proto3.makeMessageType(
+  "users.v1.private.RemoveApiTokenResponse",
   [],
 );
 

@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { GetMeRequest, GetMeResponse, LogoutRequest, LogoutResponse, ResendVerificationRequest, ResendVerificationResponse, SetActiveOrgRequest, SetActiveOrgResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
+import { CreateApiTokenRequest, CreateApiTokenResponse, GetMeRequest, GetMeResponse, ListApiTokensRequest, ListApiTokensResponse, LogoutRequest, LogoutResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetActiveOrgRequest, SetActiveOrgResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -55,6 +55,33 @@ export const PrivateUsersService = {
       name: "SetDefaultOrg",
       I: SetDefaultOrgRequest,
       O: SetDefaultOrgResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.private.PrivateUsersService.CreateApiToken
+     */
+    createApiToken: {
+      name: "CreateApiToken",
+      I: CreateApiTokenRequest,
+      O: CreateApiTokenResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.private.PrivateUsersService.ListApiTokens
+     */
+    listApiTokens: {
+      name: "ListApiTokens",
+      I: ListApiTokensRequest,
+      O: ListApiTokensResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.private.PrivateUsersService.RemoveApiToken
+     */
+    removeApiToken: {
+      name: "RemoveApiToken",
+      I: RemoveApiTokenRequest,
+      O: RemoveApiTokenResponse,
       kind: MethodKind.Unary,
     },
   }
