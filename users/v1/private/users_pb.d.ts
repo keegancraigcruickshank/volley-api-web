@@ -353,17 +353,7 @@ export declare class CreateApiTokenRequest extends Message<CreateApiTokenRequest
  */
 export declare class CreateApiTokenResponse extends Message<CreateApiTokenResponse> {
   /**
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
-  /**
-   * @generated from field: string name = 2;
-   */
-  name: string;
-
-  /**
-   * @generated from field: string token = 3;
+   * @generated from field: string token = 1;
    */
   token: string;
 

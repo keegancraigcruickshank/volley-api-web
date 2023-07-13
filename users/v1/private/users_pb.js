@@ -140,9 +140,7 @@ export const CreateApiTokenRequest = proto3.makeMessageType(
 export const CreateApiTokenResponse = proto3.makeMessageType(
   "users.v1.private.CreateApiTokenResponse",
   () => [
-    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
