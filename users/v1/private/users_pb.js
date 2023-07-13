@@ -159,7 +159,6 @@ export const ListApiTokensResponse = proto3.makeMessageType(
   "users.v1.private.ListApiTokensResponse",
   () => [
     { no: 1, name: "tokens", kind: "message", T: ApiToken, repeated: true },
-    { no: 2, name: "count", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 

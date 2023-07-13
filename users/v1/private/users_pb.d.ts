@@ -400,11 +400,6 @@ export declare class ListApiTokensResponse extends Message<ListApiTokensResponse
    */
   tokens: ApiToken[];
 
-  /**
-   * @generated from field: int32 count = 2;
-   */
-  count: number;
-
   constructor(data?: PartialMessage<ListApiTokensResponse>);
 
   static readonly runtime: typeof proto3;
