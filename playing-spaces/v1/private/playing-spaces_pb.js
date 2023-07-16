@@ -75,8 +75,8 @@ export const ModifyPlayingSpaceRequest = proto3.makeMessageType(
   "playing_spaces.v1.private.ModifyPlayingSpaceRequest",
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "location_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 3, name: "location_id", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ],
 );
 

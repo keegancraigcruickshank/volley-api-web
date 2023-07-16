@@ -166,14 +166,14 @@ export declare class ModifyPlayingSpaceRequest extends Message<ModifyPlayingSpac
   id: string;
 
   /**
-   * @generated from field: string name = 2;
+   * @generated from field: optional string name = 2;
    */
-  name: string;
+  name?: string;
 
   /**
-   * @generated from field: string location_id = 3;
+   * @generated from field: optional string location_id = 3;
    */
-  locationId: string;
+  locationId?: string;
 
   constructor(data?: PartialMessage<ModifyPlayingSpaceRequest>);
 
