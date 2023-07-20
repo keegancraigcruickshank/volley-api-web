@@ -80,32 +80,37 @@ export declare class Address extends Message<Address> {
  */
 export declare class Contact extends Message<Contact> {
   /**
-   * @generated from field: string first_name = 1;
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string first_name = 2;
    */
   firstName: string;
 
   /**
-   * @generated from field: optional string last_name = 2;
+   * @generated from field: optional string last_name = 3;
    */
   lastName?: string;
 
   /**
-   * @generated from field: optional string email = 3;
+   * @generated from field: optional string email = 4;
    */
   email?: string;
 
   /**
-   * @generated from field: optional string mobile = 4;
+   * @generated from field: optional string mobile = 5;
    */
   mobile?: string;
 
   /**
-   * @generated from field: optional string dob = 5;
+   * @generated from field: optional string dob = 6;
    */
   dob?: string;
 
   /**
-   * @generated from field: optional players.v1.private.Address address = 6;
+   * @generated from field: optional players.v1.private.Address address = 7;
    */
   address?: Address;
 
@@ -129,9 +134,9 @@ export declare class Contact extends Message<Contact> {
  */
 export declare class Player extends Message<Player> {
   /**
-   * @generated from field: string id = 1;
+   * @generated from field: repeated string teams = 1;
    */
-  id: string;
+  teams: string[];
 
   /**
    * @generated from field: players.v1.private.Contact player_details = 2;
@@ -142,6 +147,11 @@ export declare class Player extends Message<Player> {
    * @generated from field: optional players.v1.private.Contact emergency_contact = 3;
    */
   emergencyContact?: Contact;
+
+  /**
+   * @generated from field: int32 modified = 4;
+   */
+  modified: number;
 
   constructor(data?: PartialMessage<Player>);
 
