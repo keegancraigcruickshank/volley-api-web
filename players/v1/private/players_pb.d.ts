@@ -85,9 +85,9 @@ export declare class Contact extends Message<Contact> {
   id: string;
 
   /**
-   * @generated from field: string first_name = 2;
+   * @generated from field: optional string first_name = 2;
    */
-  firstName: string;
+  firstName?: string;
 
   /**
    * @generated from field: optional string last_name = 3;

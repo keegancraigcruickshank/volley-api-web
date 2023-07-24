@@ -39,7 +39,7 @@ export const Contact = proto3.makeMessageType(
   "players.v1.private.Contact",
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 3, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 4, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 5, name: "mobile", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
