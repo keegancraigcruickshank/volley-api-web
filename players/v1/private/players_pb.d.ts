@@ -130,6 +130,55 @@ export declare class Contact extends Message<Contact> {
 }
 
 /**
+ * @generated from message players.v1.private.CreatedContact
+ */
+export declare class CreatedContact extends Message<CreatedContact> {
+  /**
+   * @generated from field: optional string first_name = 1;
+   */
+  firstName?: string;
+
+  /**
+   * @generated from field: optional string last_name = 2;
+   */
+  lastName?: string;
+
+  /**
+   * @generated from field: optional string email = 3;
+   */
+  email?: string;
+
+  /**
+   * @generated from field: optional string mobile = 4;
+   */
+  mobile?: string;
+
+  /**
+   * @generated from field: optional string dob = 5;
+   */
+  dob?: string;
+
+  /**
+   * @generated from field: optional players.v1.private.Address address = 6;
+   */
+  address?: Address;
+
+  constructor(data?: PartialMessage<CreatedContact>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "players.v1.private.CreatedContact";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreatedContact;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreatedContact;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreatedContact;
+
+  static equals(a: CreatedContact | PlainMessage<CreatedContact> | undefined, b: CreatedContact | PlainMessage<CreatedContact> | undefined): boolean;
+}
+
+/**
  * @generated from message players.v1.private.Player
  */
 export declare class Player extends Message<Player> {
@@ -169,13 +218,42 @@ export declare class Player extends Message<Player> {
 }
 
 /**
+ * @generated from message players.v1.private.CreatedPlayer
+ */
+export declare class CreatedPlayer extends Message<CreatedPlayer> {
+  /**
+   * @generated from field: players.v1.private.Contact player_details = 1;
+   */
+  playerDetails?: Contact;
+
+  /**
+   * @generated from field: optional players.v1.private.Contact emergency_contact = 2;
+   */
+  emergencyContact?: Contact;
+
+  constructor(data?: PartialMessage<CreatedPlayer>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "players.v1.private.CreatedPlayer";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreatedPlayer;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreatedPlayer;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreatedPlayer;
+
+  static equals(a: CreatedPlayer | PlainMessage<CreatedPlayer> | undefined, b: CreatedPlayer | PlainMessage<CreatedPlayer> | undefined): boolean;
+}
+
+/**
  * @generated from message players.v1.private.CreatePlayerRequest
  */
 export declare class CreatePlayerRequest extends Message<CreatePlayerRequest> {
   /**
-   * @generated from field: players.v1.private.Player player = 1;
+   * @generated from field: players.v1.private.CreatedPlayer player = 1;
    */
-  player?: Player;
+  player?: CreatedPlayer;
 
   constructor(data?: PartialMessage<CreatePlayerRequest>);
 
@@ -259,9 +337,9 @@ export declare class RemovePlayersResponse extends Message<RemovePlayersResponse
  */
 export declare class ModifyPlayerRequest extends Message<ModifyPlayerRequest> {
   /**
-   * @generated from field: players.v1.private.Player player = 1;
+   * @generated from field: players.v1.private.CreatedPlayer player = 1;
    */
-  player?: Player;
+  player?: CreatedPlayer;
 
   constructor(data?: PartialMessage<ModifyPlayerRequest>);
 

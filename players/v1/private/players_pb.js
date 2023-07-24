@@ -49,6 +49,21 @@ export const Contact = proto3.makeMessageType(
 );
 
 /**
+ * @generated from message players.v1.private.CreatedContact
+ */
+export const CreatedContact = proto3.makeMessageType(
+  "players.v1.private.CreatedContact",
+  () => [
+    { no: 1, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 2, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 3, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 4, name: "mobile", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 5, name: "dob", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 6, name: "address", kind: "message", T: Address, opt: true },
+  ],
+);
+
+/**
  * @generated from message players.v1.private.Player
  */
 export const Player = proto3.makeMessageType(
@@ -62,12 +77,23 @@ export const Player = proto3.makeMessageType(
 );
 
 /**
+ * @generated from message players.v1.private.CreatedPlayer
+ */
+export const CreatedPlayer = proto3.makeMessageType(
+  "players.v1.private.CreatedPlayer",
+  () => [
+    { no: 1, name: "player_details", kind: "message", T: Contact },
+    { no: 2, name: "emergency_contact", kind: "message", T: Contact, opt: true },
+  ],
+);
+
+/**
  * @generated from message players.v1.private.CreatePlayerRequest
  */
 export const CreatePlayerRequest = proto3.makeMessageType(
   "players.v1.private.CreatePlayerRequest",
   () => [
-    { no: 1, name: "player", kind: "message", T: Player },
+    { no: 1, name: "player", kind: "message", T: CreatedPlayer },
   ],
 );
 
@@ -103,7 +129,7 @@ export const RemovePlayersResponse = proto3.makeMessageType(
 export const ModifyPlayerRequest = proto3.makeMessageType(
   "players.v1.private.ModifyPlayerRequest",
   () => [
-    { no: 1, name: "player", kind: "message", T: Player },
+    { no: 1, name: "player", kind: "message", T: CreatedPlayer },
   ],
 );
 
