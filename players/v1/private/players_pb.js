@@ -82,8 +82,8 @@ export const Player = proto3.makeMessageType(
 export const CreatedPlayer = proto3.makeMessageType(
   "players.v1.private.CreatedPlayer",
   () => [
-    { no: 1, name: "player_details", kind: "message", T: Contact },
-    { no: 2, name: "emergency_contact", kind: "message", T: Contact, opt: true },
+    { no: 1, name: "player_details", kind: "message", T: CreatedContact },
+    { no: 2, name: "emergency_contact", kind: "message", T: CreatedContact, opt: true },
   ],
 );
 

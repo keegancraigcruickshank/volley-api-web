@@ -222,14 +222,14 @@ export declare class Player extends Message<Player> {
  */
 export declare class CreatedPlayer extends Message<CreatedPlayer> {
   /**
-   * @generated from field: players.v1.private.Contact player_details = 1;
+   * @generated from field: players.v1.private.CreatedContact player_details = 1;
    */
-  playerDetails?: Contact;
+  playerDetails?: CreatedContact;
 
   /**
-   * @generated from field: optional players.v1.private.Contact emergency_contact = 2;
+   * @generated from field: optional players.v1.private.CreatedContact emergency_contact = 2;
    */
-  emergencyContact?: Contact;
+  emergencyContact?: CreatedContact;
 
   constructor(data?: PartialMessage<CreatedPlayer>);
 
