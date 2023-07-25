@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreatePlayerRequest, CreatePlayerResponse, ListPlayersRequest, ListPlayersResponse, ModifyPlayerRequest, ModifyPlayerResponse, RemovePlayersRequest, RemovePlayersResponse } from "./players_pb.js";
+import { CreatePlayerRequest, CreatePlayerResponse, GetPlayerRequest, GetPlayerResponse, ListPlayersRequest, ListPlayersResponse, ModifyPlayerRequest, ModifyPlayerResponse, RemovePlayersRequest, RemovePlayersResponse } from "./players_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -46,6 +46,15 @@ export declare const PrivatePlayersService: {
       readonly name: "ListPlayers",
       readonly I: typeof ListPlayersRequest,
       readonly O: typeof ListPlayersResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc players.v1.private.PrivatePlayersService.GetPlayer
+     */
+    readonly getPlayer: {
+      readonly name: "GetPlayer",
+      readonly I: typeof GetPlayerRequest,
+      readonly O: typeof GetPlayerResponse,
       readonly kind: MethodKind.Unary,
     },
   }

@@ -370,3 +370,51 @@ export declare class ListPlayersResponse extends Message<ListPlayersResponse> {
   static equals(a: ListPlayersResponse | PlainMessage<ListPlayersResponse> | undefined, b: ListPlayersResponse | PlainMessage<ListPlayersResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message players.v1.private.GetPlayerRequest
+ */
+export declare class GetPlayerRequest extends Message<GetPlayerRequest> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  constructor(data?: PartialMessage<GetPlayerRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "players.v1.private.GetPlayerRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetPlayerRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetPlayerRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetPlayerRequest;
+
+  static equals(a: GetPlayerRequest | PlainMessage<GetPlayerRequest> | undefined, b: GetPlayerRequest | PlainMessage<GetPlayerRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message players.v1.private.GetPlayerResponse
+ */
+export declare class GetPlayerResponse extends Message<GetPlayerResponse> {
+  /**
+   * @generated from field: players.v1.private.PlayerDetails details = 1;
+   */
+  details?: PlayerDetails;
+
+  constructor(data?: PartialMessage<GetPlayerResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "players.v1.private.GetPlayerResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetPlayerResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetPlayerResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetPlayerResponse;
+
+  static equals(a: GetPlayerResponse | PlainMessage<GetPlayerResponse> | undefined, b: GetPlayerResponse | PlainMessage<GetPlayerResponse> | undefined): boolean;
+}
+

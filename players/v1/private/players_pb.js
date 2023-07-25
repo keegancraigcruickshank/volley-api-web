@@ -140,3 +140,23 @@ export const ListPlayersResponse = proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message players.v1.private.GetPlayerRequest
+ */
+export const GetPlayerRequest = proto3.makeMessageType(
+  "players.v1.private.GetPlayerRequest",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message players.v1.private.GetPlayerResponse
+ */
+export const GetPlayerResponse = proto3.makeMessageType(
+  "players.v1.private.GetPlayerResponse",
+  () => [
+    { no: 1, name: "details", kind: "message", T: PlayerDetails },
+  ],
+);
+
