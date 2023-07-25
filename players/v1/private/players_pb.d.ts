@@ -130,52 +130,57 @@ export declare class Contact extends Message<Contact> {
 }
 
 /**
- * @generated from message players.v1.private.CreatedContact
+ * @generated from message players.v1.private.PlayerDetails
  */
-export declare class CreatedContact extends Message<CreatedContact> {
+export declare class PlayerDetails extends Message<PlayerDetails> {
   /**
-   * @generated from field: optional string first_name = 1;
+   * @generated from field: repeated string teams = 1;
+   */
+  teams: string[];
+
+  /**
+   * @generated from field: optional string first_name = 2;
    */
   firstName?: string;
 
   /**
-   * @generated from field: optional string last_name = 2;
+   * @generated from field: optional string last_name = 3;
    */
   lastName?: string;
 
   /**
-   * @generated from field: optional string email = 3;
+   * @generated from field: optional string email = 4;
    */
   email?: string;
 
   /**
-   * @generated from field: optional string mobile = 4;
+   * @generated from field: optional string mobile = 5;
    */
   mobile?: string;
 
   /**
-   * @generated from field: optional string dob = 5;
+   * @generated from field: optional string dob = 6;
    */
   dob?: string;
 
   /**
-   * @generated from field: optional players.v1.private.Address address = 6;
+   * @generated from field: optional players.v1.private.Address address = 7;
    */
   address?: Address;
 
-  constructor(data?: PartialMessage<CreatedContact>);
+  constructor(data?: PartialMessage<PlayerDetails>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "players.v1.private.CreatedContact";
+  static readonly typeName = "players.v1.private.PlayerDetails";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreatedContact;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PlayerDetails;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreatedContact;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): PlayerDetails;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreatedContact;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): PlayerDetails;
 
-  static equals(a: CreatedContact | PlainMessage<CreatedContact> | undefined, b: CreatedContact | PlainMessage<CreatedContact> | undefined): boolean;
+  static equals(a: PlayerDetails | PlainMessage<PlayerDetails> | undefined, b: PlayerDetails | PlainMessage<PlayerDetails> | undefined): boolean;
 }
 
 /**
@@ -183,19 +188,19 @@ export declare class CreatedContact extends Message<CreatedContact> {
  */
 export declare class Player extends Message<Player> {
   /**
-   * @generated from field: repeated string teams = 1;
+   * @generated from field: string id = 1;
    */
-  teams: string[];
+  id: string;
 
   /**
-   * @generated from field: players.v1.private.Contact player_details = 2;
+   * @generated from field: string orgId = 2;
    */
-  playerDetails?: Contact;
+  orgId: string;
 
   /**
-   * @generated from field: optional players.v1.private.Contact emergency_contact = 3;
+   * @generated from field: players.v1.private.PlayerDetails details = 3;
    */
-  emergencyContact?: Contact;
+  details?: PlayerDetails;
 
   /**
    * @generated from field: int32 modified = 4;
@@ -218,42 +223,13 @@ export declare class Player extends Message<Player> {
 }
 
 /**
- * @generated from message players.v1.private.CreatedPlayer
- */
-export declare class CreatedPlayer extends Message<CreatedPlayer> {
-  /**
-   * @generated from field: players.v1.private.CreatedContact player_details = 1;
-   */
-  playerDetails?: CreatedContact;
-
-  /**
-   * @generated from field: optional players.v1.private.CreatedContact emergency_contact = 2;
-   */
-  emergencyContact?: CreatedContact;
-
-  constructor(data?: PartialMessage<CreatedPlayer>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "players.v1.private.CreatedPlayer";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreatedPlayer;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreatedPlayer;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreatedPlayer;
-
-  static equals(a: CreatedPlayer | PlainMessage<CreatedPlayer> | undefined, b: CreatedPlayer | PlainMessage<CreatedPlayer> | undefined): boolean;
-}
-
-/**
  * @generated from message players.v1.private.CreatePlayerRequest
  */
 export declare class CreatePlayerRequest extends Message<CreatePlayerRequest> {
   /**
-   * @generated from field: players.v1.private.CreatedPlayer player = 1;
+   * @generated from field: players.v1.private.Player player = 1;
    */
-  player?: CreatedPlayer;
+  player?: Player;
 
   constructor(data?: PartialMessage<CreatePlayerRequest>);
 
@@ -337,9 +313,14 @@ export declare class RemovePlayersResponse extends Message<RemovePlayersResponse
  */
 export declare class ModifyPlayerRequest extends Message<ModifyPlayerRequest> {
   /**
-   * @generated from field: players.v1.private.CreatedPlayer player = 1;
+   * @generated from field: string id = 1;
    */
-  player?: CreatedPlayer;
+  id: string;
+
+  /**
+   * @generated from field: players.v1.private.PlayerDetails details = 2;
+   */
+  details?: PlayerDetails;
 
   constructor(data?: PartialMessage<ModifyPlayerRequest>);
 
