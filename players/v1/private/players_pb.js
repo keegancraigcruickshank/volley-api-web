@@ -33,22 +33,6 @@ export const Address = proto3.makeMessageType(
 );
 
 /**
- * @generated from message players.v1.private.Contact
- */
-export const Contact = proto3.makeMessageType(
-  "players.v1.private.Contact",
-  () => [
-    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "first_name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 3, name: "last_name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 4, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 5, name: "mobile", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 6, name: "dob", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 7, name: "address", kind: "message", T: Address, opt: true },
-  ],
-);
-
-/**
  * @generated from message players.v1.private.PlayerDetails
  */
 export const PlayerDetails = proto3.makeMessageType(
@@ -83,7 +67,7 @@ export const Player = proto3.makeMessageType(
 export const CreatePlayerRequest = proto3.makeMessageType(
   "players.v1.private.CreatePlayerRequest",
   () => [
-    { no: 1, name: "player", kind: "message", T: Player },
+    { no: 1, name: "details", kind: "message", T: PlayerDetails },
   ],
 );
 

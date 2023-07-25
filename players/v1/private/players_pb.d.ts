@@ -76,60 +76,6 @@ export declare class Address extends Message<Address> {
 }
 
 /**
- * @generated from message players.v1.private.Contact
- */
-export declare class Contact extends Message<Contact> {
-  /**
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
-  /**
-   * @generated from field: optional string first_name = 2;
-   */
-  firstName?: string;
-
-  /**
-   * @generated from field: optional string last_name = 3;
-   */
-  lastName?: string;
-
-  /**
-   * @generated from field: optional string email = 4;
-   */
-  email?: string;
-
-  /**
-   * @generated from field: optional string mobile = 5;
-   */
-  mobile?: string;
-
-  /**
-   * @generated from field: optional string dob = 6;
-   */
-  dob?: string;
-
-  /**
-   * @generated from field: optional players.v1.private.Address address = 7;
-   */
-  address?: Address;
-
-  constructor(data?: PartialMessage<Contact>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "players.v1.private.Contact";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Contact;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Contact;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Contact;
-
-  static equals(a: Contact | PlainMessage<Contact> | undefined, b: Contact | PlainMessage<Contact> | undefined): boolean;
-}
-
-/**
  * @generated from message players.v1.private.PlayerDetails
  */
 export declare class PlayerDetails extends Message<PlayerDetails> {
@@ -227,9 +173,9 @@ export declare class Player extends Message<Player> {
  */
 export declare class CreatePlayerRequest extends Message<CreatePlayerRequest> {
   /**
-   * @generated from field: players.v1.private.Player player = 1;
+   * @generated from field: players.v1.private.PlayerDetails details = 1;
    */
-  player?: Player;
+  details?: PlayerDetails;
 
   constructor(data?: PartialMessage<CreatePlayerRequest>);
 
