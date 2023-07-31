@@ -24,7 +24,7 @@ export const Division = proto3.makeMessageType(
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "day", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "days", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
     { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
@@ -36,7 +36,7 @@ export const AddDivisionRequest = proto3.makeMessageType(
   "divisions.v1.private.AddDivisionRequest",
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "day", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "days", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ],
 );
 

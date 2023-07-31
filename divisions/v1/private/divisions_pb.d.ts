@@ -36,9 +36,9 @@ export declare class Division extends Message<Division> {
   name: string;
 
   /**
-   * @generated from field: string day = 3;
+   * @generated from field: repeated string days = 3;
    */
-  day: string;
+  days: string[];
 
   /**
    * @generated from field: int32 modified = 4;
@@ -70,9 +70,9 @@ export declare class AddDivisionRequest extends Message<AddDivisionRequest> {
   name: string;
 
   /**
-   * @generated from field: string day = 2;
+   * @generated from field: repeated string days = 2;
    */
-  day: string;
+  days: string[];
 
   constructor(data?: PartialMessage<AddDivisionRequest>);
 
