@@ -17,6 +17,19 @@ export const SortDirection = proto3.makeEnum(
 );
 
 /**
+ * @generated from message divisions.v1.private.Bound
+ */
+export const Bound = proto3.makeMessageType(
+  "divisions.v1.private.Bound",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "day", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "lower_bound", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 4, name: "upper_bound", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+);
+
+/**
  * @generated from message divisions.v1.private.Division
  */
 export const Division = proto3.makeMessageType(
@@ -24,7 +37,7 @@ export const Division = proto3.makeMessageType(
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "days", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 3, name: "bounds", kind: "message", T: Bound, repeated: true },
     { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
@@ -36,7 +49,7 @@ export const AddDivisionRequest = proto3.makeMessageType(
   "divisions.v1.private.AddDivisionRequest",
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "days", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 2, name: "bounds", kind: "message", T: Bound, repeated: true },
   ],
 );
 

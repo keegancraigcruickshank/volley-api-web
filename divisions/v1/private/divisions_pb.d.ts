@@ -22,6 +22,45 @@ export declare enum SortDirection {
 }
 
 /**
+ * @generated from message divisions.v1.private.Bound
+ */
+export declare class Bound extends Message<Bound> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string day = 2;
+   */
+  day: string;
+
+  /**
+   * @generated from field: int32 lower_bound = 3;
+   */
+  lowerBound: number;
+
+  /**
+   * @generated from field: int32 upper_bound = 4;
+   */
+  upperBound: number;
+
+  constructor(data?: PartialMessage<Bound>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "divisions.v1.private.Bound";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Bound;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Bound;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Bound;
+
+  static equals(a: Bound | PlainMessage<Bound> | undefined, b: Bound | PlainMessage<Bound> | undefined): boolean;
+}
+
+/**
  * @generated from message divisions.v1.private.Division
  */
 export declare class Division extends Message<Division> {
@@ -36,9 +75,9 @@ export declare class Division extends Message<Division> {
   name: string;
 
   /**
-   * @generated from field: repeated string days = 3;
+   * @generated from field: repeated divisions.v1.private.Bound bounds = 3;
    */
-  days: string[];
+  bounds: Bound[];
 
   /**
    * @generated from field: int32 modified = 4;
@@ -70,9 +109,9 @@ export declare class AddDivisionRequest extends Message<AddDivisionRequest> {
   name: string;
 
   /**
-   * @generated from field: repeated string days = 2;
+   * @generated from field: repeated divisions.v1.private.Bound bounds = 2;
    */
-  days: string[];
+  bounds: Bound[];
 
   constructor(data?: PartialMessage<AddDivisionRequest>);
 
