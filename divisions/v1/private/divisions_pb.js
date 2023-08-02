@@ -49,8 +49,21 @@ export const AddDivisionRequest = proto3.makeMessageType(
   "divisions.v1.private.AddDivisionRequest",
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "bounds", kind: "message", T: Bound, repeated: true },
+    { no: 2, name: "bounds", kind: "message", T: AddDivisionRequest_ReqBounds, repeated: true },
   ],
+);
+
+/**
+ * @generated from message divisions.v1.private.AddDivisionRequest.ReqBounds
+ */
+export const AddDivisionRequest_ReqBounds = proto3.makeMessageType(
+  "divisions.v1.private.AddDivisionRequest.ReqBounds",
+  () => [
+    { no: 2, name: "day", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "lower_bound", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 4, name: "upper_bound", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+  {localName: "AddDivisionRequest_ReqBounds"},
 );
 
 /**

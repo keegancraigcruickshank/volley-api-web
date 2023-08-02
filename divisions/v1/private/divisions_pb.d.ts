@@ -109,9 +109,9 @@ export declare class AddDivisionRequest extends Message<AddDivisionRequest> {
   name: string;
 
   /**
-   * @generated from field: repeated divisions.v1.private.Bound bounds = 2;
+   * @generated from field: repeated divisions.v1.private.AddDivisionRequest.ReqBounds bounds = 2;
    */
-  bounds: Bound[];
+  bounds: AddDivisionRequest_ReqBounds[];
 
   constructor(data?: PartialMessage<AddDivisionRequest>);
 
@@ -126,6 +126,40 @@ export declare class AddDivisionRequest extends Message<AddDivisionRequest> {
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AddDivisionRequest;
 
   static equals(a: AddDivisionRequest | PlainMessage<AddDivisionRequest> | undefined, b: AddDivisionRequest | PlainMessage<AddDivisionRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message divisions.v1.private.AddDivisionRequest.ReqBounds
+ */
+export declare class AddDivisionRequest_ReqBounds extends Message<AddDivisionRequest_ReqBounds> {
+  /**
+   * @generated from field: string day = 2;
+   */
+  day: string;
+
+  /**
+   * @generated from field: int32 lower_bound = 3;
+   */
+  lowerBound: number;
+
+  /**
+   * @generated from field: int32 upper_bound = 4;
+   */
+  upperBound: number;
+
+  constructor(data?: PartialMessage<AddDivisionRequest_ReqBounds>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "divisions.v1.private.AddDivisionRequest.ReqBounds";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AddDivisionRequest_ReqBounds;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AddDivisionRequest_ReqBounds;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AddDivisionRequest_ReqBounds;
+
+  static equals(a: AddDivisionRequest_ReqBounds | PlainMessage<AddDivisionRequest_ReqBounds> | undefined, b: AddDivisionRequest_ReqBounds | PlainMessage<AddDivisionRequest_ReqBounds> | undefined): boolean;
 }
 
 /**
