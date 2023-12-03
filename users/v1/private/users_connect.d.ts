@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrgRequest, CreateNewOrgResponse, GetMeRequest, GetMeResponse, ListApiTokensRequest, ListApiTokensResponse, LogoutRequest, LogoutResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetActiveOrgRequest, SetActiveOrgResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
+import { CreateApiTokenRequest, CreateApiTokenResponse, GetMeRequest, GetMeResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, LogoutRequest, LogoutResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetActiveOrgRequest, SetActiveOrgResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -85,12 +85,12 @@ export declare const PrivateUsersService: {
       readonly kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc users.v1.private.PrivateUsersService.CreateNewOrg
+     * @generated from rpc users.v1.private.PrivateUsersService.ListOrganisations
      */
-    readonly createNewOrg: {
-      readonly name: "CreateNewOrg",
-      readonly I: typeof CreateNewOrgRequest,
-      readonly O: typeof CreateNewOrgResponse,
+    readonly listOrganisations: {
+      readonly name: "ListOrganisations",
+      readonly I: typeof ListOrganisationsRequest,
+      readonly O: typeof ListOrganisationsResponse,
       readonly kind: MethodKind.Unary,
     },
   }

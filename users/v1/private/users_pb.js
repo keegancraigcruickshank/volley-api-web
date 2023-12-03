@@ -198,3 +198,19 @@ export const CreateNewOrgResponse = proto3.makeMessageType(
   [],
 );
 
+/**
+ * @generated from message users.v1.private.ListOrganisationsRequest
+ */
+export const ListOrganisationsRequest = proto3.makeMessageType(
+  "users.v1.private.ListOrganisationsRequest",
+  [],
+);
+
+/**
+ * @generated from message users.v1.private.ListOrganisationsResponse
+ */
+export const ListOrganisationsResponse = proto3.makeMessageType(
+  "users.v1.private.ListOrganisationsResponse",
+  [],
+);
+

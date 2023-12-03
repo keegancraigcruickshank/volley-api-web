@@ -501,3 +501,41 @@ export declare class CreateNewOrgResponse extends Message<CreateNewOrgResponse> 
   static equals(a: CreateNewOrgResponse | PlainMessage<CreateNewOrgResponse> | undefined, b: CreateNewOrgResponse | PlainMessage<CreateNewOrgResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.private.ListOrganisationsRequest
+ */
+export declare class ListOrganisationsRequest extends Message<ListOrganisationsRequest> {
+  constructor(data?: PartialMessage<ListOrganisationsRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.ListOrganisationsRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListOrganisationsRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListOrganisationsRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListOrganisationsRequest;
+
+  static equals(a: ListOrganisationsRequest | PlainMessage<ListOrganisationsRequest> | undefined, b: ListOrganisationsRequest | PlainMessage<ListOrganisationsRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.ListOrganisationsResponse
+ */
+export declare class ListOrganisationsResponse extends Message<ListOrganisationsResponse> {
+  constructor(data?: PartialMessage<ListOrganisationsResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.ListOrganisationsResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListOrganisationsResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListOrganisationsResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListOrganisationsResponse;
+
+  static equals(a: ListOrganisationsResponse | PlainMessage<ListOrganisationsResponse> | undefined, b: ListOrganisationsResponse | PlainMessage<ListOrganisationsResponse> | undefined): boolean;
+}
+
