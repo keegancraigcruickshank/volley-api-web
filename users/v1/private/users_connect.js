@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateApiTokenRequest, CreateApiTokenResponse, GetMeRequest, GetMeResponse, ListApiTokensRequest, ListApiTokensResponse, LogoutRequest, LogoutResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetActiveOrgRequest, SetActiveOrgResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
+import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrgRequest, CreateNewOrgResponse, GetMeRequest, GetMeResponse, ListApiTokensRequest, ListApiTokensResponse, LogoutRequest, LogoutResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetActiveOrgRequest, SetActiveOrgResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -82,6 +82,15 @@ export const PrivateUsersService = {
       name: "RemoveApiToken",
       I: RemoveApiTokenRequest,
       O: RemoveApiTokenResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.private.PrivateUsersService.CreateNewOrg
+     */
+    createNewOrg: {
+      name: "CreateNewOrg",
+      I: CreateNewOrgRequest,
+      O: CreateNewOrgResponse,
       kind: MethodKind.Unary,
     },
   }
