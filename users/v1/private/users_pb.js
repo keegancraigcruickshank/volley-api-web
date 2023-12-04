@@ -192,24 +192,6 @@ export const RemoveApiTokenResponse = proto3.makeMessageType(
 );
 
 /**
- * @generated from message users.v1.private.CreateNewOrgRequest
- */
-export const CreateNewOrgRequest = proto3.makeMessageType(
-  "users.v1.private.CreateNewOrgRequest",
-  () => [
-    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
-);
-
-/**
- * @generated from message users.v1.private.CreateNewOrgResponse
- */
-export const CreateNewOrgResponse = proto3.makeMessageType(
-  "users.v1.private.CreateNewOrgResponse",
-  [],
-);
-
-/**
  * @generated from message users.v1.private.ListOrganisationsRequest
  */
 export const ListOrganisationsRequest = proto3.makeMessageType(
@@ -224,6 +206,27 @@ export const ListOrganisationsResponse = proto3.makeMessageType(
   "users.v1.private.ListOrganisationsResponse",
   () => [
     { no: 1, name: "organisations", kind: "message", T: Organisation, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.CreateNewOrganisationRequest
+ */
+export const CreateNewOrganisationRequest = proto3.makeMessageType(
+  "users.v1.private.CreateNewOrganisationRequest",
+  () => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.CreateNewOrganisationResponse
+ */
+export const CreateNewOrganisationResponse = proto3.makeMessageType(
+  "users.v1.private.CreateNewOrganisationResponse",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 

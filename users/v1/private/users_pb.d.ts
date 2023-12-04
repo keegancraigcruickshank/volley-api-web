@@ -488,49 +488,6 @@ export declare class RemoveApiTokenResponse extends Message<RemoveApiTokenRespon
 }
 
 /**
- * @generated from message users.v1.private.CreateNewOrgRequest
- */
-export declare class CreateNewOrgRequest extends Message<CreateNewOrgRequest> {
-  /**
-   * @generated from field: string name = 1;
-   */
-  name: string;
-
-  constructor(data?: PartialMessage<CreateNewOrgRequest>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "users.v1.private.CreateNewOrgRequest";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateNewOrgRequest;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateNewOrgRequest;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateNewOrgRequest;
-
-  static equals(a: CreateNewOrgRequest | PlainMessage<CreateNewOrgRequest> | undefined, b: CreateNewOrgRequest | PlainMessage<CreateNewOrgRequest> | undefined): boolean;
-}
-
-/**
- * @generated from message users.v1.private.CreateNewOrgResponse
- */
-export declare class CreateNewOrgResponse extends Message<CreateNewOrgResponse> {
-  constructor(data?: PartialMessage<CreateNewOrgResponse>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "users.v1.private.CreateNewOrgResponse";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateNewOrgResponse;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateNewOrgResponse;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateNewOrgResponse;
-
-  static equals(a: CreateNewOrgResponse | PlainMessage<CreateNewOrgResponse> | undefined, b: CreateNewOrgResponse | PlainMessage<CreateNewOrgResponse> | undefined): boolean;
-}
-
-/**
  * @generated from message users.v1.private.ListOrganisationsRequest
  */
 export declare class ListOrganisationsRequest extends Message<ListOrganisationsRequest> {
@@ -571,5 +528,58 @@ export declare class ListOrganisationsResponse extends Message<ListOrganisations
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListOrganisationsResponse;
 
   static equals(a: ListOrganisationsResponse | PlainMessage<ListOrganisationsResponse> | undefined, b: ListOrganisationsResponse | PlainMessage<ListOrganisationsResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.CreateNewOrganisationRequest
+ */
+export declare class CreateNewOrganisationRequest extends Message<CreateNewOrganisationRequest> {
+  /**
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  constructor(data?: PartialMessage<CreateNewOrganisationRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.CreateNewOrganisationRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateNewOrganisationRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateNewOrganisationRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateNewOrganisationRequest;
+
+  static equals(a: CreateNewOrganisationRequest | PlainMessage<CreateNewOrganisationRequest> | undefined, b: CreateNewOrganisationRequest | PlainMessage<CreateNewOrganisationRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.CreateNewOrganisationResponse
+ */
+export declare class CreateNewOrganisationResponse extends Message<CreateNewOrganisationResponse> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  constructor(data?: PartialMessage<CreateNewOrganisationResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.CreateNewOrganisationResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateNewOrganisationResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateNewOrganisationResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateNewOrganisationResponse;
+
+  static equals(a: CreateNewOrganisationResponse | PlainMessage<CreateNewOrganisationResponse> | undefined, b: CreateNewOrganisationResponse | PlainMessage<CreateNewOrganisationResponse> | undefined): boolean;
 }
 
