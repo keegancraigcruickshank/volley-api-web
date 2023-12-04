@@ -86,6 +86,35 @@ export declare class User extends Message<User> {
 }
 
 /**
+ * @generated from message users.v1.private.Organisation
+ */
+export declare class Organisation extends Message<Organisation> {
+  /**
+   * @generated from field: string org_id = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  constructor(data?: PartialMessage<Organisation>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.Organisation";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Organisation;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Organisation;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Organisation;
+
+  static equals(a: Organisation | PlainMessage<Organisation> | undefined, b: Organisation | PlainMessage<Organisation> | undefined): boolean;
+}
+
+/**
  * @generated from message users.v1.private.ApiToken
  */
 export declare class ApiToken extends Message<ApiToken> {
@@ -524,6 +553,11 @@ export declare class ListOrganisationsRequest extends Message<ListOrganisationsR
  * @generated from message users.v1.private.ListOrganisationsResponse
  */
 export declare class ListOrganisationsResponse extends Message<ListOrganisationsResponse> {
+  /**
+   * @generated from field: repeated users.v1.private.Organisation organisations = 1;
+   */
+  organisations: Organisation[];
+
   constructor(data?: PartialMessage<ListOrganisationsResponse>);
 
   static readonly runtime: typeof proto3;

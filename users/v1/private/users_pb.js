@@ -27,6 +27,17 @@ export const User = proto3.makeMessageType(
 );
 
 /**
+ * @generated from message users.v1.private.Organisation
+ */
+export const Organisation = proto3.makeMessageType(
+  "users.v1.private.Organisation",
+  () => [
+    { no: 1, name: "org_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
  * @generated from message users.v1.private.ApiToken
  */
 export const ApiToken = proto3.makeMessageType(
@@ -211,6 +222,8 @@ export const ListOrganisationsRequest = proto3.makeMessageType(
  */
 export const ListOrganisationsResponse = proto3.makeMessageType(
   "users.v1.private.ListOrganisationsResponse",
-  [],
+  () => [
+    { no: 1, name: "organisations", kind: "message", T: Organisation, repeated: true },
+  ],
 );
 
