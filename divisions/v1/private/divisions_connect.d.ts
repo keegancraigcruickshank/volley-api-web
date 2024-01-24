@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AddDivisionRequest, AddDivisionResponse, ListDivisionsRequest, ListDivisionsResponse, RemoveDivisionsRequest, RemoveDivisionsResponse } from "./divisions_pb.js";
+import { AddDivisionRequest, AddDivisionResponse, GetDivisionRequest, GetDivisionResponse, ListDivisionsRequest, ListDivisionsResponse, RemoveDivisionsRequest, RemoveDivisionsResponse, UpdateDivisionRequest, UpdateDivisionResponse } from "./divisions_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -37,6 +37,24 @@ export declare const PrivateDivisionsService: {
       readonly name: "ListDivisions",
       readonly I: typeof ListDivisionsRequest,
       readonly O: typeof ListDivisionsResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc divisions.v1.private.PrivateDivisionsService.UpdateDivision
+     */
+    readonly updateDivision: {
+      readonly name: "UpdateDivision",
+      readonly I: typeof UpdateDivisionRequest,
+      readonly O: typeof UpdateDivisionResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc divisions.v1.private.PrivateDivisionsService.GetDivision
+     */
+    readonly getDivision: {
+      readonly name: "GetDivision",
+      readonly I: typeof GetDivisionRequest,
+      readonly O: typeof GetDivisionResponse,
       readonly kind: MethodKind.Unary,
     },
   }
