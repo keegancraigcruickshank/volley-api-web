@@ -114,9 +114,9 @@ export declare class ListedDivision extends Message<ListedDivision> {
   name: string;
 
   /**
-   * @generated from field: int32 modified = 4;
+   * @generated from field: int64 modified = 4;
    */
-  modified: number;
+  modified: bigint;
 
   constructor(data?: PartialMessage<ListedDivision>);
 

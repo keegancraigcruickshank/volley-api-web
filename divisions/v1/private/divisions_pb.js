@@ -50,7 +50,7 @@ export const ListedDivision = proto3.makeMessageType(
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 4, name: "modified", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
   ],
 );
 
