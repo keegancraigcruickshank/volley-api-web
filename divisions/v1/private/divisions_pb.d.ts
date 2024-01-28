@@ -80,9 +80,9 @@ export declare class Division extends Message<Division> {
   bounds: Bound[];
 
   /**
-   * @generated from field: int32 modified = 4;
+   * @generated from field: int64 modified = 4;
    */
-  modified: number;
+  modified: bigint;
 
   constructor(data?: PartialMessage<Division>);
 
