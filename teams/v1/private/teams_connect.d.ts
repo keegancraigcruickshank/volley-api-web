@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AddTeamRequest, AddTeamResponse, ListTeamsResponse, RemoveTeamsRequest, RemoveTeamsResponse, UpdateTeamRequest, UpdateTeamResponse } from "./teams_pb.js";
+import { AddTeamRequest, AddTeamResponse, ListTeamsRequest, ListTeamsResponse, RemoveTeamsRequest, RemoveTeamsResponse, UpdateTeamRequest, UpdateTeamResponse } from "./teams_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -26,7 +26,7 @@ export declare const PrivateTeamsService: {
      */
     readonly listTeams: {
       readonly name: "ListTeams",
-      readonly I: typeof AddTeamRequest,
+      readonly I: typeof ListTeamsRequest,
       readonly O: typeof ListTeamsResponse,
       readonly kind: MethodKind.Unary,
     },
