@@ -48,7 +48,7 @@ export const AddTeamResponse = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "players", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "players", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ],
 );
 

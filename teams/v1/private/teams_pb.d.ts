@@ -104,9 +104,9 @@ export declare class AddTeamResponse extends Message<AddTeamResponse> {
   name: string;
 
   /**
-   * @generated from field: string players = 3;
+   * @generated from field: repeated string players = 3;
    */
-  players: string;
+  players: string[];
 
   constructor(data?: PartialMessage<AddTeamResponse>);
 
