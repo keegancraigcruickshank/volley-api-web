@@ -41,9 +41,9 @@ export declare class ListedTeam extends Message<ListedTeam> {
   players: string[];
 
   /**
-   * @generated from field: int64 modified = 4;
+   * @generated from field: int32 modified = 4;
    */
-  modified: bigint;
+  modified: number;
 
   constructor(data?: PartialMessage<ListedTeam>);
 

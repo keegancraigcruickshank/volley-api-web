@@ -80,9 +80,9 @@ export declare class Division extends Message<Division> {
   bounds: Bound[];
 
   /**
-   * @generated from field: int64 modified = 4;
+   * @generated from field: int32 modified = 4;
    */
-  modified: bigint;
+  modified: number;
 
   constructor(data?: PartialMessage<Division>);
 
@@ -114,9 +114,9 @@ export declare class ListedDivision extends Message<ListedDivision> {
   name: string;
 
   /**
-   * @generated from field: int64 modified = 4;
+   * @generated from field: int32 modified = 4;
    */
-  modified: bigint;
+  modified: number;
 
   constructor(data?: PartialMessage<ListedDivision>);
 
