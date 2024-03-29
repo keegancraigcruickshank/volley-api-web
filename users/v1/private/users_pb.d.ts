@@ -583,3 +583,46 @@ export declare class CreateNewOrganisationResponse extends Message<CreateNewOrga
   static equals(a: CreateNewOrganisationResponse | PlainMessage<CreateNewOrganisationResponse> | undefined, b: CreateNewOrganisationResponse | PlainMessage<CreateNewOrganisationResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.private.DeleteOrganisationRequest
+ */
+export declare class DeleteOrganisationRequest extends Message<DeleteOrganisationRequest> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  constructor(data?: PartialMessage<DeleteOrganisationRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.DeleteOrganisationRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DeleteOrganisationRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DeleteOrganisationRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DeleteOrganisationRequest;
+
+  static equals(a: DeleteOrganisationRequest | PlainMessage<DeleteOrganisationRequest> | undefined, b: DeleteOrganisationRequest | PlainMessage<DeleteOrganisationRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.DeleteOrganisationResponse
+ */
+export declare class DeleteOrganisationResponse extends Message<DeleteOrganisationResponse> {
+  constructor(data?: PartialMessage<DeleteOrganisationResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.DeleteOrganisationResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DeleteOrganisationResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DeleteOrganisationResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DeleteOrganisationResponse;
+
+  static equals(a: DeleteOrganisationResponse | PlainMessage<DeleteOrganisationResponse> | undefined, b: DeleteOrganisationResponse | PlainMessage<DeleteOrganisationResponse> | undefined): boolean;
+}
+

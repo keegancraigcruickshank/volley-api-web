@@ -230,3 +230,21 @@ export const CreateNewOrganisationResponse = /*@__PURE__*/ proto3.makeMessageTyp
   ],
 );
 
+/**
+ * @generated from message users.v1.private.DeleteOrganisationRequest
+ */
+export const DeleteOrganisationRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "users.v1.private.DeleteOrganisationRequest",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.DeleteOrganisationResponse
+ */
+export const DeleteOrganisationResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "users.v1.private.DeleteOrganisationResponse",
+  [],
+);
+
