@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateDrawRequest, CreateDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetDrawRoundRequest, GetDrawRoundResponse, UpdateDrawRequest, UpdateDrawResponse } from "./draw_pb.js";
+import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./draw_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -13,30 +13,12 @@ export declare const PrivateDrawService: {
   readonly typeName: "draw.v1.private.PrivateDrawService",
   readonly methods: {
     /**
-     * @generated from rpc draw.v1.private.PrivateDrawService.CreateDraw
-     */
-    readonly createDraw: {
-      readonly name: "CreateDraw",
-      readonly I: typeof CreateDrawRequest,
-      readonly O: typeof CreateDrawResponse,
-      readonly kind: MethodKind.Unary,
-    },
-    /**
      * @generated from rpc draw.v1.private.PrivateDrawService.GetDraw
      */
     readonly getDraw: {
       readonly name: "GetDraw",
       readonly I: typeof GetDrawRequest,
       readonly O: typeof GetDrawResponse,
-      readonly kind: MethodKind.Unary,
-    },
-    /**
-     * @generated from rpc draw.v1.private.PrivateDrawService.UpdateDraw
-     */
-    readonly updateDraw: {
-      readonly name: "UpdateDraw",
-      readonly I: typeof UpdateDrawRequest,
-      readonly O: typeof UpdateDrawResponse,
       readonly kind: MethodKind.Unary,
     },
     /**
@@ -49,12 +31,30 @@ export declare const PrivateDrawService: {
       readonly kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc draw.v1.private.PrivateDrawService.GetDrawRound
+     * @generated from rpc draw.v1.private.PrivateDrawService.CreateFlexibleRoundRobinDraw
      */
-    readonly getDrawRound: {
-      readonly name: "GetDrawRound",
-      readonly I: typeof GetDrawRoundRequest,
-      readonly O: typeof GetDrawRoundResponse,
+    readonly createFlexibleRoundRobinDraw: {
+      readonly name: "CreateFlexibleRoundRobinDraw",
+      readonly I: typeof CreateFlexibleRoundRobinDrawRequest,
+      readonly O: typeof CreateFlexibleRoundRobinDrawResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc draw.v1.private.PrivateDrawService.UpdateFlexibleRoundRobinDraw
+     */
+    readonly updateFlexibleRoundRobinDraw: {
+      readonly name: "UpdateFlexibleRoundRobinDraw",
+      readonly I: typeof UpdateFlexibleRoundRobinDrawRequest,
+      readonly O: typeof UpdateFlexibleRoundRobinDrawResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc draw.v1.private.PrivateDrawService.GetFlexibleRoundRobinDrawRound
+     */
+    readonly getFlexibleRoundRobinDrawRound: {
+      readonly name: "GetFlexibleRoundRobinDrawRound",
+      readonly I: typeof GetFlexibleRoundRobinDrawRoundRequest,
+      readonly O: typeof GetFlexibleRoundRobinDrawRoundResponse,
       readonly kind: MethodKind.Unary,
     },
   }

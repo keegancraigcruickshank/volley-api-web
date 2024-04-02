@@ -22,9 +22,44 @@ export declare enum DrawType {
 }
 
 /**
- * @generated from message draw.v1.private.Draw
+ * @generated from enum draw.v1.private.Frequency
  */
-export declare class Draw extends Message<Draw> {
+export declare enum Frequency {
+  /**
+   * @generated from enum value: FREQUENCY_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: FREQUENCY_ASAP = 1;
+   */
+  ASAP = 1,
+
+  /**
+   * @generated from enum value: FREQUENCY_DAILY = 2;
+   */
+  DAILY = 2,
+
+  /**
+   * @generated from enum value: FREQUENCY_WEEKLY = 3;
+   */
+  WEEKLY = 3,
+
+  /**
+   * @generated from enum value: FREQUENCY_MONTHLY = 4;
+   */
+  MONTHLY = 4,
+
+  /**
+   * @generated from enum value: FREQUENCY_YEARLY = 5;
+   */
+  YEARLY = 5,
+}
+
+/**
+ * @generated from message draw.v1.private.FlexibleRoundRobinDraw
+ */
+export declare class FlexibleRoundRobinDraw extends Message<FlexibleRoundRobinDraw> {
   /**
    * @generated from field: string id = 1;
    */
@@ -41,34 +76,29 @@ export declare class Draw extends Message<Draw> {
   modified: number;
 
   /**
-   * @generated from field: draw.v1.private.DrawType draw_type = 5;
+   * @generated from field: repeated string teams = 5;
    */
-  drawType: DrawType;
+  teams: string[];
 
-  /**
-   * @generated from field: int32 team_count = 6;
-   */
-  teamCount: number;
-
-  constructor(data?: PartialMessage<Draw>);
+  constructor(data?: PartialMessage<FlexibleRoundRobinDraw>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "draw.v1.private.Draw";
+  static readonly typeName = "draw.v1.private.FlexibleRoundRobinDraw";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Draw;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): FlexibleRoundRobinDraw;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Draw;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): FlexibleRoundRobinDraw;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Draw;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): FlexibleRoundRobinDraw;
 
-  static equals(a: Draw | PlainMessage<Draw> | undefined, b: Draw | PlainMessage<Draw> | undefined): boolean;
+  static equals(a: FlexibleRoundRobinDraw | PlainMessage<FlexibleRoundRobinDraw> | undefined, b: FlexibleRoundRobinDraw | PlainMessage<FlexibleRoundRobinDraw> | undefined): boolean;
 }
 
 /**
- * @generated from message draw.v1.private.Match
+ * @generated from message draw.v1.private.FlexibleRoundRobinMatch
  */
-export declare class Match extends Message<Match> {
+export declare class FlexibleRoundRobinMatch extends Message<FlexibleRoundRobinMatch> {
   /**
    * @generated from field: string id = 1;
    */
@@ -109,77 +139,19 @@ export declare class Match extends Message<Match> {
    */
   modified: number;
 
-  constructor(data?: PartialMessage<Match>);
+  constructor(data?: PartialMessage<FlexibleRoundRobinMatch>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "draw.v1.private.Match";
+  static readonly typeName = "draw.v1.private.FlexibleRoundRobinMatch";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Match;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): FlexibleRoundRobinMatch;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Match;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): FlexibleRoundRobinMatch;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Match;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): FlexibleRoundRobinMatch;
 
-  static equals(a: Match | PlainMessage<Match> | undefined, b: Match | PlainMessage<Match> | undefined): boolean;
-}
-
-/**
- * @generated from message draw.v1.private.CreateDrawRequest
- */
-export declare class CreateDrawRequest extends Message<CreateDrawRequest> {
-  /**
-   * @generated from field: string name = 1;
-   */
-  name: string;
-
-  /**
-   * @generated from field: draw.v1.private.DrawType draw_type = 2;
-   */
-  drawType: DrawType;
-
-  /**
-   * @generated from field: repeated string teams = 3;
-   */
-  teams: string[];
-
-  constructor(data?: PartialMessage<CreateDrawRequest>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "draw.v1.private.CreateDrawRequest";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateDrawRequest;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateDrawRequest;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateDrawRequest;
-
-  static equals(a: CreateDrawRequest | PlainMessage<CreateDrawRequest> | undefined, b: CreateDrawRequest | PlainMessage<CreateDrawRequest> | undefined): boolean;
-}
-
-/**
- * @generated from message draw.v1.private.CreateDrawResponse
- */
-export declare class CreateDrawResponse extends Message<CreateDrawResponse> {
-  /**
-   * @generated from field: draw.v1.private.Draw draw = 1;
-   */
-  draw?: Draw;
-
-  constructor(data?: PartialMessage<CreateDrawResponse>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "draw.v1.private.CreateDrawResponse";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateDrawResponse;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateDrawResponse;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateDrawResponse;
-
-  static equals(a: CreateDrawResponse | PlainMessage<CreateDrawResponse> | undefined, b: CreateDrawResponse | PlainMessage<CreateDrawResponse> | undefined): boolean;
+  static equals(a: FlexibleRoundRobinMatch | PlainMessage<FlexibleRoundRobinMatch> | undefined, b: FlexibleRoundRobinMatch | PlainMessage<FlexibleRoundRobinMatch> | undefined): boolean;
 }
 
 /**
@@ -211,14 +183,15 @@ export declare class GetDrawRequest extends Message<GetDrawRequest> {
  */
 export declare class GetDrawResponse extends Message<GetDrawResponse> {
   /**
-   * @generated from field: draw.v1.private.Draw draw = 1;
+   * @generated from oneof draw.v1.private.GetDrawResponse.draw
    */
-  draw?: Draw;
-
-  /**
-   * @generated from field: repeated string teams = 2;
-   */
-  teams: string[];
+  draw: {
+    /**
+     * @generated from field: draw.v1.private.FlexibleRoundRobinDraw flexible_round_robin_draw = 1;
+     */
+    value: FlexibleRoundRobinDraw;
+    case: "flexibleRoundRobinDraw";
+  } | { case: undefined; value?: undefined };
 
   constructor(data?: PartialMessage<GetDrawResponse>);
 
@@ -233,64 +206,6 @@ export declare class GetDrawResponse extends Message<GetDrawResponse> {
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetDrawResponse;
 
   static equals(a: GetDrawResponse | PlainMessage<GetDrawResponse> | undefined, b: GetDrawResponse | PlainMessage<GetDrawResponse> | undefined): boolean;
-}
-
-/**
- * @generated from message draw.v1.private.UpdateDrawRequest
- */
-export declare class UpdateDrawRequest extends Message<UpdateDrawRequest> {
-  /**
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
-  /**
-   * @generated from field: string name = 2;
-   */
-  name: string;
-
-  /**
-   * @generated from field: repeated string teams = 3;
-   */
-  teams: string[];
-
-  constructor(data?: PartialMessage<UpdateDrawRequest>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "draw.v1.private.UpdateDrawRequest";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateDrawRequest;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateDrawRequest;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateDrawRequest;
-
-  static equals(a: UpdateDrawRequest | PlainMessage<UpdateDrawRequest> | undefined, b: UpdateDrawRequest | PlainMessage<UpdateDrawRequest> | undefined): boolean;
-}
-
-/**
- * @generated from message draw.v1.private.UpdateDrawResponse
- */
-export declare class UpdateDrawResponse extends Message<UpdateDrawResponse> {
-  /**
-   * @generated from field: draw.v1.private.Draw draw = 1;
-   */
-  draw?: Draw;
-
-  constructor(data?: PartialMessage<UpdateDrawResponse>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "draw.v1.private.UpdateDrawResponse";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateDrawResponse;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateDrawResponse;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateDrawResponse;
-
-  static equals(a: UpdateDrawResponse | PlainMessage<UpdateDrawResponse> | undefined, b: UpdateDrawResponse | PlainMessage<UpdateDrawResponse> | undefined): boolean;
 }
 
 /**
@@ -342,38 +257,164 @@ export declare class DeleteDrawResponse extends Message<DeleteDrawResponse> {
 }
 
 /**
- * @generated from message draw.v1.private.GetDrawRoundRequest
+ * @generated from message draw.v1.private.CreateFlexibleRoundRobinDrawRequest
  */
-export declare class GetDrawRoundRequest extends Message<GetDrawRoundRequest> {
+export declare class CreateFlexibleRoundRobinDrawRequest extends Message<CreateFlexibleRoundRobinDrawRequest> {
   /**
-   * @generated from field: string draw_id = 1;
+   * @generated from field: string name = 1;
    */
-  drawId: string;
+  name: string;
 
   /**
-   * @generated from field: int32 round = 2;
+   * @generated from field: draw.v1.private.DrawType draw_type = 2;
    */
-  round: number;
+  drawType: DrawType;
 
-  constructor(data?: PartialMessage<GetDrawRoundRequest>);
+  /**
+   * @generated from field: repeated string teams = 3;
+   */
+  teams: string[];
+
+  /**
+   * @generated from field: optional int32 start_date = 4;
+   */
+  startDate?: number;
+
+  /**
+   * @generated from field: draw.v1.private.Frequency frequency = 5;
+   */
+  frequency: Frequency;
+
+  constructor(data?: PartialMessage<CreateFlexibleRoundRobinDrawRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "draw.v1.private.GetDrawRoundRequest";
+  static readonly typeName = "draw.v1.private.CreateFlexibleRoundRobinDrawRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetDrawRoundRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateFlexibleRoundRobinDrawRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetDrawRoundRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateFlexibleRoundRobinDrawRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetDrawRoundRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateFlexibleRoundRobinDrawRequest;
 
-  static equals(a: GetDrawRoundRequest | PlainMessage<GetDrawRoundRequest> | undefined, b: GetDrawRoundRequest | PlainMessage<GetDrawRoundRequest> | undefined): boolean;
+  static equals(a: CreateFlexibleRoundRobinDrawRequest | PlainMessage<CreateFlexibleRoundRobinDrawRequest> | undefined, b: CreateFlexibleRoundRobinDrawRequest | PlainMessage<CreateFlexibleRoundRobinDrawRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message draw.v1.private.GetDrawRoundResponse
+ * @generated from message draw.v1.private.CreateFlexibleRoundRobinDrawResponse
  */
-export declare class GetDrawRoundResponse extends Message<GetDrawRoundResponse> {
+export declare class CreateFlexibleRoundRobinDrawResponse extends Message<CreateFlexibleRoundRobinDrawResponse> {
+  /**
+   * @generated from field: draw.v1.private.FlexibleRoundRobinDraw draw = 1;
+   */
+  draw?: FlexibleRoundRobinDraw;
+
+  constructor(data?: PartialMessage<CreateFlexibleRoundRobinDrawResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.CreateFlexibleRoundRobinDrawResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateFlexibleRoundRobinDrawResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateFlexibleRoundRobinDrawResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateFlexibleRoundRobinDrawResponse;
+
+  static equals(a: CreateFlexibleRoundRobinDrawResponse | PlainMessage<CreateFlexibleRoundRobinDrawResponse> | undefined, b: CreateFlexibleRoundRobinDrawResponse | PlainMessage<CreateFlexibleRoundRobinDrawResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message draw.v1.private.UpdateFlexibleRoundRobinDrawRequest
+ */
+export declare class UpdateFlexibleRoundRobinDrawRequest extends Message<UpdateFlexibleRoundRobinDrawRequest> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: repeated string teams = 3;
+   */
+  teams: string[];
+
+  constructor(data?: PartialMessage<UpdateFlexibleRoundRobinDrawRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.UpdateFlexibleRoundRobinDrawRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateFlexibleRoundRobinDrawRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateFlexibleRoundRobinDrawRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateFlexibleRoundRobinDrawRequest;
+
+  static equals(a: UpdateFlexibleRoundRobinDrawRequest | PlainMessage<UpdateFlexibleRoundRobinDrawRequest> | undefined, b: UpdateFlexibleRoundRobinDrawRequest | PlainMessage<UpdateFlexibleRoundRobinDrawRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message draw.v1.private.UpdateFlexibleRoundRobinDrawResponse
+ */
+export declare class UpdateFlexibleRoundRobinDrawResponse extends Message<UpdateFlexibleRoundRobinDrawResponse> {
+  /**
+   * @generated from field: draw.v1.private.FlexibleRoundRobinDraw draw = 1;
+   */
+  draw?: FlexibleRoundRobinDraw;
+
+  constructor(data?: PartialMessage<UpdateFlexibleRoundRobinDrawResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.UpdateFlexibleRoundRobinDrawResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateFlexibleRoundRobinDrawResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateFlexibleRoundRobinDrawResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateFlexibleRoundRobinDrawResponse;
+
+  static equals(a: UpdateFlexibleRoundRobinDrawResponse | PlainMessage<UpdateFlexibleRoundRobinDrawResponse> | undefined, b: UpdateFlexibleRoundRobinDrawResponse | PlainMessage<UpdateFlexibleRoundRobinDrawResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message draw.v1.private.GetFlexibleRoundRobinDrawRoundRequest
+ */
+export declare class GetFlexibleRoundRobinDrawRoundRequest extends Message<GetFlexibleRoundRobinDrawRoundRequest> {
+  /**
+   * @generated from field: string draw_id = 1;
+   */
+  drawId: string;
+
+  /**
+   * @generated from field: int32 round = 2;
+   */
+  round: number;
+
+  constructor(data?: PartialMessage<GetFlexibleRoundRobinDrawRoundRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.GetFlexibleRoundRobinDrawRoundRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetFlexibleRoundRobinDrawRoundRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetFlexibleRoundRobinDrawRoundRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetFlexibleRoundRobinDrawRoundRequest;
+
+  static equals(a: GetFlexibleRoundRobinDrawRoundRequest | PlainMessage<GetFlexibleRoundRobinDrawRoundRequest> | undefined, b: GetFlexibleRoundRobinDrawRoundRequest | PlainMessage<GetFlexibleRoundRobinDrawRoundRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message draw.v1.private.GetFlexibleRoundRobinDrawRoundResponse
+ */
+export declare class GetFlexibleRoundRobinDrawRoundResponse extends Message<GetFlexibleRoundRobinDrawRoundResponse> {
   /**
    * @generated from field: string draw_id = 1;
    */
@@ -385,22 +426,22 @@ export declare class GetDrawRoundResponse extends Message<GetDrawRoundResponse> 
   round: number;
 
   /**
-   * @generated from field: repeated draw.v1.private.Match matches = 3;
+   * @generated from field: repeated draw.v1.private.FlexibleRoundRobinMatch matches = 3;
    */
-  matches: Match[];
+  matches: FlexibleRoundRobinMatch[];
 
-  constructor(data?: PartialMessage<GetDrawRoundResponse>);
+  constructor(data?: PartialMessage<GetFlexibleRoundRobinDrawRoundResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "draw.v1.private.GetDrawRoundResponse";
+  static readonly typeName = "draw.v1.private.GetFlexibleRoundRobinDrawRoundResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetDrawRoundResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetFlexibleRoundRobinDrawRoundResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetDrawRoundResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetFlexibleRoundRobinDrawRoundResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetDrawRoundResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetFlexibleRoundRobinDrawRoundResponse;
 
-  static equals(a: GetDrawRoundResponse | PlainMessage<GetDrawRoundResponse> | undefined, b: GetDrawRoundResponse | PlainMessage<GetDrawRoundResponse> | undefined): boolean;
+  static equals(a: GetFlexibleRoundRobinDrawRoundResponse | PlainMessage<GetFlexibleRoundRobinDrawRoundResponse> | undefined, b: GetFlexibleRoundRobinDrawRoundResponse | PlainMessage<GetFlexibleRoundRobinDrawRoundResponse> | undefined): boolean;
 }
 

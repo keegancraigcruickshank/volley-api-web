@@ -17,24 +17,38 @@ export const DrawType = /*@__PURE__*/ proto3.makeEnum(
 );
 
 /**
- * @generated from message draw.v1.private.Draw
+ * @generated from enum draw.v1.private.Frequency
  */
-export const Draw = /*@__PURE__*/ proto3.makeMessageType(
-  "draw.v1.private.Draw",
-  () => [
-    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 5, name: "draw_type", kind: "enum", T: proto3.getEnumType(DrawType) },
-    { no: 6, name: "team_count", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+export const Frequency = /*@__PURE__*/ proto3.makeEnum(
+  "draw.v1.private.Frequency",
+  [
+    {no: 0, name: "FREQUENCY_UNSPECIFIED", localName: "UNSPECIFIED"},
+    {no: 1, name: "FREQUENCY_ASAP", localName: "ASAP"},
+    {no: 2, name: "FREQUENCY_DAILY", localName: "DAILY"},
+    {no: 3, name: "FREQUENCY_WEEKLY", localName: "WEEKLY"},
+    {no: 4, name: "FREQUENCY_MONTHLY", localName: "MONTHLY"},
+    {no: 5, name: "FREQUENCY_YEARLY", localName: "YEARLY"},
   ],
 );
 
 /**
- * @generated from message draw.v1.private.Match
+ * @generated from message draw.v1.private.FlexibleRoundRobinDraw
  */
-export const Match = /*@__PURE__*/ proto3.makeMessageType(
-  "draw.v1.private.Match",
+export const FlexibleRoundRobinDraw = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.FlexibleRoundRobinDraw",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 5, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message draw.v1.private.FlexibleRoundRobinMatch
+ */
+export const FlexibleRoundRobinMatch = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.FlexibleRoundRobinMatch",
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "draw_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
@@ -44,28 +58,6 @@ export const Match = /*@__PURE__*/ proto3.makeMessageType(
     { no: 6, name: "team_one_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 7, name: "team_two_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 8, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-  ],
-);
-
-/**
- * @generated from message draw.v1.private.CreateDrawRequest
- */
-export const CreateDrawRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "draw.v1.private.CreateDrawRequest",
-  () => [
-    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "draw_type", kind: "enum", T: proto3.getEnumType(DrawType) },
-    { no: 3, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-  ],
-);
-
-/**
- * @generated from message draw.v1.private.CreateDrawResponse
- */
-export const CreateDrawResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "draw.v1.private.CreateDrawResponse",
-  () => [
-    { no: 1, name: "draw", kind: "message", T: Draw },
   ],
 );
 
@@ -85,30 +77,7 @@ export const GetDrawRequest = /*@__PURE__*/ proto3.makeMessageType(
 export const GetDrawResponse = /*@__PURE__*/ proto3.makeMessageType(
   "draw.v1.private.GetDrawResponse",
   () => [
-    { no: 1, name: "draw", kind: "message", T: Draw },
-    { no: 2, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-  ],
-);
-
-/**
- * @generated from message draw.v1.private.UpdateDrawRequest
- */
-export const UpdateDrawRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "draw.v1.private.UpdateDrawRequest",
-  () => [
-    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-  ],
-);
-
-/**
- * @generated from message draw.v1.private.UpdateDrawResponse
- */
-export const UpdateDrawResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "draw.v1.private.UpdateDrawResponse",
-  () => [
-    { no: 1, name: "draw", kind: "message", T: Draw },
+    { no: 1, name: "flexible_round_robin_draw", kind: "message", T: FlexibleRoundRobinDraw, oneof: "draw" },
   ],
 );
 
@@ -133,10 +102,56 @@ export const DeleteDrawResponse = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
- * @generated from message draw.v1.private.GetDrawRoundRequest
+ * @generated from message draw.v1.private.CreateFlexibleRoundRobinDrawRequest
  */
-export const GetDrawRoundRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "draw.v1.private.GetDrawRoundRequest",
+export const CreateFlexibleRoundRobinDrawRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.CreateFlexibleRoundRobinDrawRequest",
+  () => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "draw_type", kind: "enum", T: proto3.getEnumType(DrawType) },
+    { no: 3, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 4, name: "start_date", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
+    { no: 5, name: "frequency", kind: "enum", T: proto3.getEnumType(Frequency) },
+  ],
+);
+
+/**
+ * @generated from message draw.v1.private.CreateFlexibleRoundRobinDrawResponse
+ */
+export const CreateFlexibleRoundRobinDrawResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.CreateFlexibleRoundRobinDrawResponse",
+  () => [
+    { no: 1, name: "draw", kind: "message", T: FlexibleRoundRobinDraw },
+  ],
+);
+
+/**
+ * @generated from message draw.v1.private.UpdateFlexibleRoundRobinDrawRequest
+ */
+export const UpdateFlexibleRoundRobinDrawRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.UpdateFlexibleRoundRobinDrawRequest",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message draw.v1.private.UpdateFlexibleRoundRobinDrawResponse
+ */
+export const UpdateFlexibleRoundRobinDrawResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.UpdateFlexibleRoundRobinDrawResponse",
+  () => [
+    { no: 1, name: "draw", kind: "message", T: FlexibleRoundRobinDraw },
+  ],
+);
+
+/**
+ * @generated from message draw.v1.private.GetFlexibleRoundRobinDrawRoundRequest
+ */
+export const GetFlexibleRoundRobinDrawRoundRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.GetFlexibleRoundRobinDrawRoundRequest",
   () => [
     { no: 1, name: "draw_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "round", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
@@ -144,14 +159,14 @@ export const GetDrawRoundRequest = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
- * @generated from message draw.v1.private.GetDrawRoundResponse
+ * @generated from message draw.v1.private.GetFlexibleRoundRobinDrawRoundResponse
  */
-export const GetDrawRoundResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "draw.v1.private.GetDrawRoundResponse",
+export const GetFlexibleRoundRobinDrawRoundResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.GetFlexibleRoundRobinDrawRoundResponse",
   () => [
     { no: 1, name: "draw_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "round", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 3, name: "matches", kind: "message", T: Match, repeated: true },
+    { no: 3, name: "matches", kind: "message", T: FlexibleRoundRobinMatch, repeated: true },
   ],
 );
 

@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateDrawRequest, CreateDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetDrawRoundRequest, GetDrawRoundResponse, UpdateDrawRequest, UpdateDrawResponse } from "./draw_pb.js";
+import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./draw_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -13,30 +13,12 @@ export const PrivateDrawService = {
   typeName: "draw.v1.private.PrivateDrawService",
   methods: {
     /**
-     * @generated from rpc draw.v1.private.PrivateDrawService.CreateDraw
-     */
-    createDraw: {
-      name: "CreateDraw",
-      I: CreateDrawRequest,
-      O: CreateDrawResponse,
-      kind: MethodKind.Unary,
-    },
-    /**
      * @generated from rpc draw.v1.private.PrivateDrawService.GetDraw
      */
     getDraw: {
       name: "GetDraw",
       I: GetDrawRequest,
       O: GetDrawResponse,
-      kind: MethodKind.Unary,
-    },
-    /**
-     * @generated from rpc draw.v1.private.PrivateDrawService.UpdateDraw
-     */
-    updateDraw: {
-      name: "UpdateDraw",
-      I: UpdateDrawRequest,
-      O: UpdateDrawResponse,
       kind: MethodKind.Unary,
     },
     /**
@@ -49,12 +31,30 @@ export const PrivateDrawService = {
       kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc draw.v1.private.PrivateDrawService.GetDrawRound
+     * @generated from rpc draw.v1.private.PrivateDrawService.CreateFlexibleRoundRobinDraw
      */
-    getDrawRound: {
-      name: "GetDrawRound",
-      I: GetDrawRoundRequest,
-      O: GetDrawRoundResponse,
+    createFlexibleRoundRobinDraw: {
+      name: "CreateFlexibleRoundRobinDraw",
+      I: CreateFlexibleRoundRobinDrawRequest,
+      O: CreateFlexibleRoundRobinDrawResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc draw.v1.private.PrivateDrawService.UpdateFlexibleRoundRobinDraw
+     */
+    updateFlexibleRoundRobinDraw: {
+      name: "UpdateFlexibleRoundRobinDraw",
+      I: UpdateFlexibleRoundRobinDrawRequest,
+      O: UpdateFlexibleRoundRobinDrawResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc draw.v1.private.PrivateDrawService.GetFlexibleRoundRobinDrawRound
+     */
+    getFlexibleRoundRobinDrawRound: {
+      name: "GetFlexibleRoundRobinDrawRound",
+      I: GetFlexibleRoundRobinDrawRoundRequest,
+      O: GetFlexibleRoundRobinDrawRoundResponse,
       kind: MethodKind.Unary,
     },
   }
