@@ -7,13 +7,13 @@ import { CreateDrawRequest, CreateDrawResponse, DeleteDrawRequest, DeleteDrawRes
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
- * @generated from service draw.v1.private.DrawService
+ * @generated from service draw.v1.private.PrivateDrawService
  */
-export const DrawService = {
-  typeName: "draw.v1.private.DrawService",
+export const PrivateDrawService = {
+  typeName: "draw.v1.private.PrivateDrawService",
   methods: {
     /**
-     * @generated from rpc draw.v1.private.DrawService.CreateDraw
+     * @generated from rpc draw.v1.private.PrivateDrawService.CreateDraw
      */
     createDraw: {
       name: "CreateDraw",
@@ -22,7 +22,7 @@ export const DrawService = {
       kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc draw.v1.private.DrawService.GetDraw
+     * @generated from rpc draw.v1.private.PrivateDrawService.GetDraw
      */
     getDraw: {
       name: "GetDraw",
@@ -31,7 +31,7 @@ export const DrawService = {
       kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc draw.v1.private.DrawService.UpdateDraw
+     * @generated from rpc draw.v1.private.PrivateDrawService.UpdateDraw
      */
     updateDraw: {
       name: "UpdateDraw",
@@ -40,7 +40,7 @@ export const DrawService = {
       kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc draw.v1.private.DrawService.DeleteDraw
+     * @generated from rpc draw.v1.private.PrivateDrawService.DeleteDraw
      */
     deleteDraw: {
       name: "DeleteDraw",
@@ -49,7 +49,7 @@ export const DrawService = {
       kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc draw.v1.private.DrawService.GetDrawRound
+     * @generated from rpc draw.v1.private.PrivateDrawService.GetDrawRound
      */
     getDrawRound: {
       name: "GetDrawRound",

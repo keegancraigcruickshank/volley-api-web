@@ -7,13 +7,13 @@ import { CreateDrawRequest, CreateDrawResponse, DeleteDrawRequest, DeleteDrawRes
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
- * @generated from service draw.v1.private.DrawService
+ * @generated from service draw.v1.private.PrivateDrawService
  */
-export declare const DrawService: {
-  readonly typeName: "draw.v1.private.DrawService",
+export declare const PrivateDrawService: {
+  readonly typeName: "draw.v1.private.PrivateDrawService",
   readonly methods: {
     /**
-     * @generated from rpc draw.v1.private.DrawService.CreateDraw
+     * @generated from rpc draw.v1.private.PrivateDrawService.CreateDraw
      */
     readonly createDraw: {
       readonly name: "CreateDraw",
@@ -22,7 +22,7 @@ export declare const DrawService: {
       readonly kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc draw.v1.private.DrawService.GetDraw
+     * @generated from rpc draw.v1.private.PrivateDrawService.GetDraw
      */
     readonly getDraw: {
       readonly name: "GetDraw",
@@ -31,7 +31,7 @@ export declare const DrawService: {
       readonly kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc draw.v1.private.DrawService.UpdateDraw
+     * @generated from rpc draw.v1.private.PrivateDrawService.UpdateDraw
      */
     readonly updateDraw: {
       readonly name: "UpdateDraw",
@@ -40,7 +40,7 @@ export declare const DrawService: {
       readonly kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc draw.v1.private.DrawService.DeleteDraw
+     * @generated from rpc draw.v1.private.PrivateDrawService.DeleteDraw
      */
     readonly deleteDraw: {
       readonly name: "DeleteDraw",
@@ -49,7 +49,7 @@ export declare const DrawService: {
       readonly kind: MethodKind.Unary,
     },
     /**
-     * @generated from rpc draw.v1.private.DrawService.GetDrawRound
+     * @generated from rpc draw.v1.private.PrivateDrawService.GetDrawRound
      */
     readonly getDrawRound: {
       readonly name: "GetDrawRound",
