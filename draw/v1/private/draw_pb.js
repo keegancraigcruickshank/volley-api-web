@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { proto3 } from "@bufbuild/protobuf";
+import { proto3, Timestamp } from "@bufbuild/protobuf";
 
 /**
  * @generated from enum draw.v1.private.DrawType
@@ -51,7 +51,7 @@ export const FlexibleRoundRobinDraw = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 4, name: "modified", kind: "message", T: Timestamp },
     { no: 5, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ],
 );
@@ -69,7 +69,7 @@ export const FlexibleRoundRobinMatch = /*@__PURE__*/ proto3.makeMessageType(
     { no: 5, name: "team_two", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 6, name: "team_one_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 7, name: "team_two_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 8, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 8, name: "modified", kind: "message", T: Timestamp },
   ],
 );
 
@@ -122,7 +122,7 @@ export const CreateFlexibleRoundRobinDrawRequest = /*@__PURE__*/ proto3.makeMess
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "draw_type", kind: "enum", T: proto3.getEnumType(DrawType) },
     { no: 3, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-    { no: 4, name: "start_date", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
+    { no: 4, name: "start_date", kind: "message", T: Timestamp, opt: true },
     { no: 5, name: "frequency", kind: "enum", T: proto3.getEnumType(Frequency) },
     { no: 6, name: "points", kind: "message", T: Points },
     { no: 7, name: "rounds", kind: "scalar", T: 5 /* ScalarType.INT32 */ },

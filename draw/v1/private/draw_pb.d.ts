@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
+import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage, Timestamp } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
 
 /**
@@ -105,9 +105,9 @@ export declare class FlexibleRoundRobinDraw extends Message<FlexibleRoundRobinDr
   name: string;
 
   /**
-   * @generated from field: int32 modified = 4;
+   * @generated from field: google.protobuf.Timestamp modified = 4;
    */
-  modified: number;
+  modified?: Timestamp;
 
   /**
    * @generated from field: repeated string teams = 5;
@@ -169,9 +169,9 @@ export declare class FlexibleRoundRobinMatch extends Message<FlexibleRoundRobinM
   teamTwoScore: number;
 
   /**
-   * @generated from field: int32 modified = 8;
+   * @generated from field: google.protobuf.Timestamp modified = 8;
    */
-  modified: number;
+  modified?: Timestamp;
 
   constructor(data?: PartialMessage<FlexibleRoundRobinMatch>);
 
@@ -310,9 +310,9 @@ export declare class CreateFlexibleRoundRobinDrawRequest extends Message<CreateF
   teams: string[];
 
   /**
-   * @generated from field: optional int32 start_date = 4;
+   * @generated from field: optional google.protobuf.Timestamp start_date = 4;
    */
-  startDate?: number;
+  startDate?: Timestamp;
 
   /**
    * @generated from field: draw.v1.private.Frequency frequency = 5;
