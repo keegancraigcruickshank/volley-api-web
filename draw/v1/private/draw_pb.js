@@ -32,6 +32,18 @@ export const Frequency = /*@__PURE__*/ proto3.makeEnum(
 );
 
 /**
+ * @generated from message draw.v1.private.Points
+ */
+export const Points = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.Points",
+  () => [
+    { no: 1, name: "win", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 2, name: "draw", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 3, name: "loss", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+);
+
+/**
  * @generated from message draw.v1.private.FlexibleRoundRobinDraw
  */
 export const FlexibleRoundRobinDraw = /*@__PURE__*/ proto3.makeMessageType(
@@ -112,6 +124,8 @@ export const CreateFlexibleRoundRobinDrawRequest = /*@__PURE__*/ proto3.makeMess
     { no: 3, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
     { no: 4, name: "start_date", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
     { no: 5, name: "frequency", kind: "enum", T: proto3.getEnumType(Frequency) },
+    { no: 6, name: "points", kind: "message", T: Points },
+    { no: 7, name: "rounds", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 

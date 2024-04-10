@@ -57,6 +57,40 @@ export declare enum Frequency {
 }
 
 /**
+ * @generated from message draw.v1.private.Points
+ */
+export declare class Points extends Message<Points> {
+  /**
+   * @generated from field: int32 win = 1;
+   */
+  win: number;
+
+  /**
+   * @generated from field: int32 draw = 2;
+   */
+  draw: number;
+
+  /**
+   * @generated from field: int32 loss = 3;
+   */
+  loss: number;
+
+  constructor(data?: PartialMessage<Points>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.Points";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Points;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Points;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Points;
+
+  static equals(a: Points | PlainMessage<Points> | undefined, b: Points | PlainMessage<Points> | undefined): boolean;
+}
+
+/**
  * @generated from message draw.v1.private.FlexibleRoundRobinDraw
  */
 export declare class FlexibleRoundRobinDraw extends Message<FlexibleRoundRobinDraw> {
@@ -284,6 +318,16 @@ export declare class CreateFlexibleRoundRobinDrawRequest extends Message<CreateF
    * @generated from field: draw.v1.private.Frequency frequency = 5;
    */
   frequency: Frequency;
+
+  /**
+   * @generated from field: draw.v1.private.Points points = 6;
+   */
+  points?: Points;
+
+  /**
+   * @generated from field: int32 rounds = 7;
+   */
+  rounds: number;
 
   constructor(data?: PartialMessage<CreateFlexibleRoundRobinDrawRequest>);
 
