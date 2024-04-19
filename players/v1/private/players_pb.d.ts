@@ -370,6 +370,11 @@ export declare class ListPlayersRequest extends Message<ListPlayersRequest> {
    */
   sortDirection?: SortDirection;
 
+  /**
+   * @generated from field: repeated string Users = 5;
+   */
+  Users: string[];
+
   constructor(data?: PartialMessage<ListPlayersRequest>);
 
   static readonly runtime: typeof proto3;
