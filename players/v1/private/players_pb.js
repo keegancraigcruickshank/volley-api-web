@@ -141,7 +141,7 @@ export const ListPlayersRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "page", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
     { no: 3, name: "pageSize", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
     { no: 4, name: "sortDirection", kind: "enum", T: proto3.getEnumType(SortDirection), opt: true },
-    { no: 5, name: "Users", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 5, name: "playerIds", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ],
 );
 

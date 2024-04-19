@@ -371,9 +371,9 @@ export declare class ListPlayersRequest extends Message<ListPlayersRequest> {
   sortDirection?: SortDirection;
 
   /**
-   * @generated from field: repeated string Users = 5;
+   * @generated from field: repeated string playerIds = 5;
    */
-  Users: string[];
+  playerIds: string[];
 
   constructor(data?: PartialMessage<ListPlayersRequest>);
 
