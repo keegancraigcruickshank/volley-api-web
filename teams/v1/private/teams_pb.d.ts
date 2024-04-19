@@ -147,6 +147,11 @@ export declare class ListTeamsRequest extends Message<ListTeamsRequest> {
    */
   sortDirection?: SortDirection;
 
+  /**
+   * @generated from field: repeated string TeamIds = 5;
+   */
+  TeamIds: string[];
+
   constructor(data?: PartialMessage<ListTeamsRequest>);
 
   static readonly runtime: typeof proto3;
