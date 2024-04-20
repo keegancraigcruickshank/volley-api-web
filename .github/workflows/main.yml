@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - run: git config --global user.email "keegan@cloudpixel.com.au"
@@ -24,7 +24,7 @@ jobs:
         with:
           version: ${{ steps.previoustag.outputs.tag }}
       - name: Update npm package
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
