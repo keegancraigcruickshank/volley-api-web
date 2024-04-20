@@ -119,3 +119,22 @@ export const UpdateTeamResponse = /*@__PURE__*/ proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message teams.v1.private.AssociatePlayersToTeamsRequest
+ */
+export const AssociatePlayersToTeamsRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "teams.v1.private.AssociatePlayersToTeamsRequest",
+  () => [
+    { no: 1, name: "players", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 2, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message teams.v1.private.AssociatePlayersToTeamsResponse
+ */
+export const AssociatePlayersToTeamsResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "teams.v1.private.AssociatePlayersToTeamsResponse",
+  [],
+);
+

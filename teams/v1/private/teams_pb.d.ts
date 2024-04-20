@@ -307,3 +307,51 @@ export declare class UpdateTeamResponse extends Message<UpdateTeamResponse> {
   static equals(a: UpdateTeamResponse | PlainMessage<UpdateTeamResponse> | undefined, b: UpdateTeamResponse | PlainMessage<UpdateTeamResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message teams.v1.private.AssociatePlayersToTeamsRequest
+ */
+export declare class AssociatePlayersToTeamsRequest extends Message<AssociatePlayersToTeamsRequest> {
+  /**
+   * @generated from field: repeated string players = 1;
+   */
+  players: string[];
+
+  /**
+   * @generated from field: repeated string teams = 2;
+   */
+  teams: string[];
+
+  constructor(data?: PartialMessage<AssociatePlayersToTeamsRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "teams.v1.private.AssociatePlayersToTeamsRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AssociatePlayersToTeamsRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AssociatePlayersToTeamsRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AssociatePlayersToTeamsRequest;
+
+  static equals(a: AssociatePlayersToTeamsRequest | PlainMessage<AssociatePlayersToTeamsRequest> | undefined, b: AssociatePlayersToTeamsRequest | PlainMessage<AssociatePlayersToTeamsRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message teams.v1.private.AssociatePlayersToTeamsResponse
+ */
+export declare class AssociatePlayersToTeamsResponse extends Message<AssociatePlayersToTeamsResponse> {
+  constructor(data?: PartialMessage<AssociatePlayersToTeamsResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "teams.v1.private.AssociatePlayersToTeamsResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AssociatePlayersToTeamsResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AssociatePlayersToTeamsResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AssociatePlayersToTeamsResponse;
+
+  static equals(a: AssociatePlayersToTeamsResponse | PlainMessage<AssociatePlayersToTeamsResponse> | undefined, b: AssociatePlayersToTeamsResponse | PlainMessage<AssociatePlayersToTeamsResponse> | undefined): boolean;
+}
+
