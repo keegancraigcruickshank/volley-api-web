@@ -148,9 +148,9 @@ export declare class ListTeamsRequest extends Message<ListTeamsRequest> {
   sortDirection?: SortDirection;
 
   /**
-   * @generated from field: repeated string TeamIds = 5;
+   * @generated from field: repeated string teamIds = 5;
    */
-  TeamIds: string[];
+  teamIds: string[];
 
   constructor(data?: PartialMessage<ListTeamsRequest>);
 
