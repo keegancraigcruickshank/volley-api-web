@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetMeRequest, GetMeResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, LogoutRequest, LogoutResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetActiveOrgRequest, SetActiveOrgResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
+import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetMeRequest, GetMeResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -19,33 +19,6 @@ export declare const PrivateUsersService: {
       readonly name: "GetMe",
       readonly I: typeof GetMeRequest,
       readonly O: typeof GetMeResponse,
-      readonly kind: MethodKind.Unary,
-    },
-    /**
-     * @generated from rpc users.v1.private.PrivateUsersService.ResendVerification
-     */
-    readonly resendVerification: {
-      readonly name: "ResendVerification",
-      readonly I: typeof ResendVerificationRequest,
-      readonly O: typeof ResendVerificationResponse,
-      readonly kind: MethodKind.Unary,
-    },
-    /**
-     * @generated from rpc users.v1.private.PrivateUsersService.SetActiveOrg
-     */
-    readonly setActiveOrg: {
-      readonly name: "SetActiveOrg",
-      readonly I: typeof SetActiveOrgRequest,
-      readonly O: typeof SetActiveOrgResponse,
-      readonly kind: MethodKind.Unary,
-    },
-    /**
-     * @generated from rpc users.v1.private.PrivateUsersService.Logout
-     */
-    readonly logout: {
-      readonly name: "Logout",
-      readonly I: typeof LogoutRequest,
-      readonly O: typeof LogoutResponse,
       readonly kind: MethodKind.Unary,
     },
     /**
