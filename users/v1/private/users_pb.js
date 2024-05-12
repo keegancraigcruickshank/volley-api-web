@@ -268,3 +268,23 @@ export const FreshUserSetupResponse = /*@__PURE__*/ proto3.makeMessageType(
   [],
 );
 
+/**
+ * @generated from message users.v1.private.GetOrganisationRequest
+ */
+export const GetOrganisationRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "users.v1.private.GetOrganisationRequest",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.GetOrganisationResponse
+ */
+export const GetOrganisationResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "users.v1.private.GetOrganisationResponse",
+  () => [
+    { no: 1, name: "organisation", kind: "message", T: Organisation },
+  ],
+);
+

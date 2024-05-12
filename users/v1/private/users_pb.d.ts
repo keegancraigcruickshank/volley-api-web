@@ -679,3 +679,51 @@ export declare class FreshUserSetupResponse extends Message<FreshUserSetupRespon
   static equals(a: FreshUserSetupResponse | PlainMessage<FreshUserSetupResponse> | undefined, b: FreshUserSetupResponse | PlainMessage<FreshUserSetupResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.private.GetOrganisationRequest
+ */
+export declare class GetOrganisationRequest extends Message<GetOrganisationRequest> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  constructor(data?: PartialMessage<GetOrganisationRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.GetOrganisationRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetOrganisationRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetOrganisationRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetOrganisationRequest;
+
+  static equals(a: GetOrganisationRequest | PlainMessage<GetOrganisationRequest> | undefined, b: GetOrganisationRequest | PlainMessage<GetOrganisationRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.GetOrganisationResponse
+ */
+export declare class GetOrganisationResponse extends Message<GetOrganisationResponse> {
+  /**
+   * @generated from field: users.v1.private.Organisation organisation = 1;
+   */
+  organisation?: Organisation;
+
+  constructor(data?: PartialMessage<GetOrganisationResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.GetOrganisationResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetOrganisationResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetOrganisationResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetOrganisationResponse;
+
+  static equals(a: GetOrganisationResponse | PlainMessage<GetOrganisationResponse> | undefined, b: GetOrganisationResponse | PlainMessage<GetOrganisationResponse> | undefined): boolean;
+}
+
