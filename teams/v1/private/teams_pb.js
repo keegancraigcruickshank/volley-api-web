@@ -78,6 +78,29 @@ export const ListTeamsResponse = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
+ * @generated from message teams.v1.private.GetTeamRequest
+ */
+export const GetTeamRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "teams.v1.private.GetTeamRequest",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message teams.v1.private.GetTeamResponse
+ */
+export const GetTeamResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "teams.v1.private.GetTeamResponse",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "players", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+);
+
+/**
  * @generated from message teams.v1.private.RemoveTeamsRequest
  */
 export const RemoveTeamsRequest = /*@__PURE__*/ proto3.makeMessageType(

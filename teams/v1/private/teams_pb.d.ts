@@ -197,6 +197,69 @@ export declare class ListTeamsResponse extends Message<ListTeamsResponse> {
 }
 
 /**
+ * @generated from message teams.v1.private.GetTeamRequest
+ */
+export declare class GetTeamRequest extends Message<GetTeamRequest> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  constructor(data?: PartialMessage<GetTeamRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "teams.v1.private.GetTeamRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetTeamRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetTeamRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetTeamRequest;
+
+  static equals(a: GetTeamRequest | PlainMessage<GetTeamRequest> | undefined, b: GetTeamRequest | PlainMessage<GetTeamRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message teams.v1.private.GetTeamResponse
+ */
+export declare class GetTeamResponse extends Message<GetTeamResponse> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: repeated string players = 3;
+   */
+  players: string[];
+
+  /**
+   * @generated from field: int32 modified = 4;
+   */
+  modified: number;
+
+  constructor(data?: PartialMessage<GetTeamResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "teams.v1.private.GetTeamResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetTeamResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetTeamResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetTeamResponse;
+
+  static equals(a: GetTeamResponse | PlainMessage<GetTeamResponse> | undefined, b: GetTeamResponse | PlainMessage<GetTeamResponse> | undefined): boolean;
+}
+
+/**
  * @generated from message teams.v1.private.RemoveTeamsRequest
  */
 export declare class RemoveTeamsRequest extends Message<RemoveTeamsRequest> {

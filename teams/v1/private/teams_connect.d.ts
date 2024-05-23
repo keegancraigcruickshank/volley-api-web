@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AddTeamRequest, AddTeamResponse, AssociatePlayersToTeamsRequest, AssociatePlayersToTeamsResponse, ListTeamsRequest, ListTeamsResponse, RemoveTeamsRequest, RemoveTeamsResponse, UpdateTeamRequest, UpdateTeamResponse } from "./teams_pb.js";
+import { AddTeamRequest, AddTeamResponse, AssociatePlayersToTeamsRequest, AssociatePlayersToTeamsResponse, GetTeamRequest, GetTeamResponse, ListTeamsRequest, ListTeamsResponse, RemoveTeamsRequest, RemoveTeamsResponse, UpdateTeamRequest, UpdateTeamResponse } from "./teams_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -28,6 +28,15 @@ export declare const PrivateTeamsService: {
       readonly name: "ListTeams",
       readonly I: typeof ListTeamsRequest,
       readonly O: typeof ListTeamsResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc teams.v1.private.PrivateTeamsService.GetTeam
+     */
+    readonly getTeam: {
+      readonly name: "GetTeam",
+      readonly I: typeof GetTeamRequest,
+      readonly O: typeof GetTeamResponse,
       readonly kind: MethodKind.Unary,
     },
     /**
