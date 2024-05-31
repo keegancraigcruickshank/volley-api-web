@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import { MethodKind } from "@bufbuild/protobuf";
-import { AddTeamRequest, AddTeamResponse, AssociatePlayersToTeamsRequest, AssociatePlayersToTeamsResponse, GetTeamRequest, GetTeamResponse, ListTeamsRequest, ListTeamsResponse, RemoveTeamsRequest, RemoveTeamsResponse, UpdateTeamRequest, UpdateTeamResponse } from "./teams_pb.js";
+import { AddTeamRequest, AddTeamResponse, AssociatePlayersToTeamsRequest, AssociatePlayersToTeamsResponse, DissociatePlayersFromTeamsRequest, DissociatePlayersFromTeamsResponse, GetTeamRequest, GetTeamResponse, ListTeamsRequest, ListTeamsResponse, RemoveTeamsRequest, RemoveTeamsResponse, UpdateTeamRequest, UpdateTeamResponse } from "./teams_pb.js";
 
 /**
  * @generated from rpc teams.v1.private.PrivateTeamsService.AddTeam
@@ -85,6 +85,20 @@ export const associatePlayersToTeams = {
   kind: MethodKind.Unary,
   I: AssociatePlayersToTeamsRequest,
   O: AssociatePlayersToTeamsResponse,
+  service: {
+    typeName: "teams.v1.private.PrivateTeamsService"
+  }
+};
+
+/**
+ * @generated from rpc teams.v1.private.PrivateTeamsService.DissociatePlayersFromTeams
+ */
+export const dissociatePlayersFromTeams = {
+  localName: "dissociatePlayersFromTeams",
+  name: "DissociatePlayersFromTeams",
+  kind: MethodKind.Unary,
+  I: DissociatePlayersFromTeamsRequest,
+  O: DissociatePlayersFromTeamsResponse,
   service: {
     typeName: "teams.v1.private.PrivateTeamsService"
   }

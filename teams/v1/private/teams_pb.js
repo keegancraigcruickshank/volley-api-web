@@ -162,10 +162,10 @@ export const AssociatePlayersToTeamsResponse = /*@__PURE__*/ proto3.makeMessageT
 );
 
 /**
- * @generated from message teams.v1.private.DissociatePlayersToTeamsRequest
+ * @generated from message teams.v1.private.DissociatePlayersFromTeamsRequest
  */
-export const DissociatePlayersToTeamsRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "teams.v1.private.DissociatePlayersToTeamsRequest",
+export const DissociatePlayersFromTeamsRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "teams.v1.private.DissociatePlayersFromTeamsRequest",
   () => [
     { no: 1, name: "players", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
     { no: 2, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
@@ -173,10 +173,10 @@ export const DissociatePlayersToTeamsRequest = /*@__PURE__*/ proto3.makeMessageT
 );
 
 /**
- * @generated from message teams.v1.private.DissociatePlayersToTeamsResponse
+ * @generated from message teams.v1.private.DissociatePlayersFromTeamsResponse
  */
-export const DissociatePlayersToTeamsResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "teams.v1.private.DissociatePlayersToTeamsResponse",
+export const DissociatePlayersFromTeamsResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "teams.v1.private.DissociatePlayersFromTeamsResponse",
   [],
 );
 

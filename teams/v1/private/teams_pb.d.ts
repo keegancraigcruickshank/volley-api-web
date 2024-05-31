@@ -419,9 +419,9 @@ export declare class AssociatePlayersToTeamsResponse extends Message<AssociatePl
 }
 
 /**
- * @generated from message teams.v1.private.DissociatePlayersToTeamsRequest
+ * @generated from message teams.v1.private.DissociatePlayersFromTeamsRequest
  */
-export declare class DissociatePlayersToTeamsRequest extends Message<DissociatePlayersToTeamsRequest> {
+export declare class DissociatePlayersFromTeamsRequest extends Message<DissociatePlayersFromTeamsRequest> {
   /**
    * @generated from field: repeated string players = 1;
    */
@@ -432,37 +432,37 @@ export declare class DissociatePlayersToTeamsRequest extends Message<DissociateP
    */
   teams: string[];
 
-  constructor(data?: PartialMessage<DissociatePlayersToTeamsRequest>);
+  constructor(data?: PartialMessage<DissociatePlayersFromTeamsRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "teams.v1.private.DissociatePlayersToTeamsRequest";
+  static readonly typeName = "teams.v1.private.DissociatePlayersFromTeamsRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DissociatePlayersToTeamsRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DissociatePlayersFromTeamsRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DissociatePlayersToTeamsRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DissociatePlayersFromTeamsRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DissociatePlayersToTeamsRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DissociatePlayersFromTeamsRequest;
 
-  static equals(a: DissociatePlayersToTeamsRequest | PlainMessage<DissociatePlayersToTeamsRequest> | undefined, b: DissociatePlayersToTeamsRequest | PlainMessage<DissociatePlayersToTeamsRequest> | undefined): boolean;
+  static equals(a: DissociatePlayersFromTeamsRequest | PlainMessage<DissociatePlayersFromTeamsRequest> | undefined, b: DissociatePlayersFromTeamsRequest | PlainMessage<DissociatePlayersFromTeamsRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message teams.v1.private.DissociatePlayersToTeamsResponse
+ * @generated from message teams.v1.private.DissociatePlayersFromTeamsResponse
  */
-export declare class DissociatePlayersToTeamsResponse extends Message<DissociatePlayersToTeamsResponse> {
-  constructor(data?: PartialMessage<DissociatePlayersToTeamsResponse>);
+export declare class DissociatePlayersFromTeamsResponse extends Message<DissociatePlayersFromTeamsResponse> {
+  constructor(data?: PartialMessage<DissociatePlayersFromTeamsResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "teams.v1.private.DissociatePlayersToTeamsResponse";
+  static readonly typeName = "teams.v1.private.DissociatePlayersFromTeamsResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DissociatePlayersToTeamsResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DissociatePlayersFromTeamsResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DissociatePlayersToTeamsResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DissociatePlayersFromTeamsResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DissociatePlayersToTeamsResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DissociatePlayersFromTeamsResponse;
 
-  static equals(a: DissociatePlayersToTeamsResponse | PlainMessage<DissociatePlayersToTeamsResponse> | undefined, b: DissociatePlayersToTeamsResponse | PlainMessage<DissociatePlayersToTeamsResponse> | undefined): boolean;
+  static equals(a: DissociatePlayersFromTeamsResponse | PlainMessage<DissociatePlayersFromTeamsResponse> | undefined, b: DissociatePlayersFromTeamsResponse | PlainMessage<DissociatePlayersFromTeamsResponse> | undefined): boolean;
 }
 
