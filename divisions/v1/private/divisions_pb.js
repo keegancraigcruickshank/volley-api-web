@@ -30,6 +30,17 @@ export const Bound = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
+ * @generated from message divisions.v1.private.PlayingSpaceWithBounds
+ */
+export const PlayingSpaceWithBounds = /*@__PURE__*/ proto3.makeMessageType(
+  "divisions.v1.private.PlayingSpaceWithBounds",
+  () => [
+    { no: 1, name: "playing_space_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "bounds", kind: "message", T: Bound, repeated: true },
+  ],
+);
+
+/**
  * @generated from message divisions.v1.private.Division
  */
 export const Division = /*@__PURE__*/ proto3.makeMessageType(
@@ -37,19 +48,7 @@ export const Division = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "bounds", kind: "message", T: Bound, repeated: true },
-    { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-  ],
-);
-
-/**
- * @generated from message divisions.v1.private.ListedDivision
- */
-export const ListedDivision = /*@__PURE__*/ proto3.makeMessageType(
-  "divisions.v1.private.ListedDivision",
-  () => [
-    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "playing_spaces", kind: "message", T: PlayingSpaceWithBounds, repeated: true },
     { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
@@ -61,7 +60,7 @@ export const AddDivisionRequest = /*@__PURE__*/ proto3.makeMessageType(
   "divisions.v1.private.AddDivisionRequest",
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "bounds", kind: "message", T: Bound, repeated: true },
+    { no: 2, name: "playing_spaces", kind: "message", T: PlayingSpaceWithBounds, repeated: true },
   ],
 );
 
@@ -81,7 +80,7 @@ export const UpdateDivisionRequest = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "bounds", kind: "message", T: Bound, repeated: true },
+    { no: 3, name: "playing_spaces", kind: "message", T: PlayingSpaceWithBounds, repeated: true },
   ],
 );
 
@@ -115,6 +114,16 @@ export const GetDivisionResponse = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
+ * @generated from message divisions.v1.private.ListDivisionsFilter
+ */
+export const ListDivisionsFilter = /*@__PURE__*/ proto3.makeMessageType(
+  "divisions.v1.private.ListDivisionsFilter",
+  () => [
+    { no: 1, name: "playing_space_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+  ],
+);
+
+/**
  * @generated from message divisions.v1.private.ListDivisionsRequest
  */
 export const ListDivisionsRequest = /*@__PURE__*/ proto3.makeMessageType(
@@ -124,6 +133,7 @@ export const ListDivisionsRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "page", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
     { no: 3, name: "pageSize", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
     { no: 4, name: "sortDirection", kind: "enum", T: proto3.getEnumType(SortDirection), opt: true },
+    { no: 5, name: "filter", kind: "message", T: ListDivisionsFilter, opt: true },
   ],
 );
 
@@ -133,7 +143,7 @@ export const ListDivisionsRequest = /*@__PURE__*/ proto3.makeMessageType(
 export const ListDivisionsResponse = /*@__PURE__*/ proto3.makeMessageType(
   "divisions.v1.private.ListDivisionsResponse",
   () => [
-    { no: 1, name: "divisions", kind: "message", T: ListedDivision, repeated: true },
+    { no: 1, name: "divisions", kind: "message", T: Division, repeated: true },
     { no: 2, name: "totalCount", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );

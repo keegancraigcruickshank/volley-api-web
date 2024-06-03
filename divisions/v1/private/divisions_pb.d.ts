@@ -61,6 +61,35 @@ export declare class Bound extends Message<Bound> {
 }
 
 /**
+ * @generated from message divisions.v1.private.PlayingSpaceWithBounds
+ */
+export declare class PlayingSpaceWithBounds extends Message<PlayingSpaceWithBounds> {
+  /**
+   * @generated from field: string playing_space_id = 1;
+   */
+  playingSpaceId: string;
+
+  /**
+   * @generated from field: repeated divisions.v1.private.Bound bounds = 2;
+   */
+  bounds: Bound[];
+
+  constructor(data?: PartialMessage<PlayingSpaceWithBounds>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "divisions.v1.private.PlayingSpaceWithBounds";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PlayingSpaceWithBounds;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): PlayingSpaceWithBounds;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): PlayingSpaceWithBounds;
+
+  static equals(a: PlayingSpaceWithBounds | PlainMessage<PlayingSpaceWithBounds> | undefined, b: PlayingSpaceWithBounds | PlainMessage<PlayingSpaceWithBounds> | undefined): boolean;
+}
+
+/**
  * @generated from message divisions.v1.private.Division
  */
 export declare class Division extends Message<Division> {
@@ -75,9 +104,9 @@ export declare class Division extends Message<Division> {
   name: string;
 
   /**
-   * @generated from field: repeated divisions.v1.private.Bound bounds = 3;
+   * @generated from field: repeated divisions.v1.private.PlayingSpaceWithBounds playing_spaces = 3;
    */
-  bounds: Bound[];
+  playingSpaces: PlayingSpaceWithBounds[];
 
   /**
    * @generated from field: int32 modified = 4;
@@ -100,40 +129,6 @@ export declare class Division extends Message<Division> {
 }
 
 /**
- * @generated from message divisions.v1.private.ListedDivision
- */
-export declare class ListedDivision extends Message<ListedDivision> {
-  /**
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
-  /**
-   * @generated from field: string name = 2;
-   */
-  name: string;
-
-  /**
-   * @generated from field: int32 modified = 4;
-   */
-  modified: number;
-
-  constructor(data?: PartialMessage<ListedDivision>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "divisions.v1.private.ListedDivision";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListedDivision;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListedDivision;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListedDivision;
-
-  static equals(a: ListedDivision | PlainMessage<ListedDivision> | undefined, b: ListedDivision | PlainMessage<ListedDivision> | undefined): boolean;
-}
-
-/**
  * @generated from message divisions.v1.private.AddDivisionRequest
  */
 export declare class AddDivisionRequest extends Message<AddDivisionRequest> {
@@ -143,9 +138,9 @@ export declare class AddDivisionRequest extends Message<AddDivisionRequest> {
   name: string;
 
   /**
-   * @generated from field: repeated divisions.v1.private.Bound bounds = 2;
+   * @generated from field: repeated divisions.v1.private.PlayingSpaceWithBounds playing_spaces = 2;
    */
-  bounds: Bound[];
+  playingSpaces: PlayingSpaceWithBounds[];
 
   constructor(data?: PartialMessage<AddDivisionRequest>);
 
@@ -196,9 +191,9 @@ export declare class UpdateDivisionRequest extends Message<UpdateDivisionRequest
   name: string;
 
   /**
-   * @generated from field: repeated divisions.v1.private.Bound bounds = 3;
+   * @generated from field: repeated divisions.v1.private.PlayingSpaceWithBounds playing_spaces = 3;
    */
-  bounds: Bound[];
+  playingSpaces: PlayingSpaceWithBounds[];
 
   constructor(data?: PartialMessage<UpdateDivisionRequest>);
 
@@ -288,6 +283,30 @@ export declare class GetDivisionResponse extends Message<GetDivisionResponse> {
 }
 
 /**
+ * @generated from message divisions.v1.private.ListDivisionsFilter
+ */
+export declare class ListDivisionsFilter extends Message<ListDivisionsFilter> {
+  /**
+   * @generated from field: repeated string playing_space_ids = 1;
+   */
+  playingSpaceIds: string[];
+
+  constructor(data?: PartialMessage<ListDivisionsFilter>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "divisions.v1.private.ListDivisionsFilter";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListDivisionsFilter;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListDivisionsFilter;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListDivisionsFilter;
+
+  static equals(a: ListDivisionsFilter | PlainMessage<ListDivisionsFilter> | undefined, b: ListDivisionsFilter | PlainMessage<ListDivisionsFilter> | undefined): boolean;
+}
+
+/**
  * @generated from message divisions.v1.private.ListDivisionsRequest
  */
 export declare class ListDivisionsRequest extends Message<ListDivisionsRequest> {
@@ -311,6 +330,11 @@ export declare class ListDivisionsRequest extends Message<ListDivisionsRequest> 
    */
   sortDirection?: SortDirection;
 
+  /**
+   * @generated from field: optional divisions.v1.private.ListDivisionsFilter filter = 5;
+   */
+  filter?: ListDivisionsFilter;
+
   constructor(data?: PartialMessage<ListDivisionsRequest>);
 
   static readonly runtime: typeof proto3;
@@ -331,9 +355,9 @@ export declare class ListDivisionsRequest extends Message<ListDivisionsRequest> 
  */
 export declare class ListDivisionsResponse extends Message<ListDivisionsResponse> {
   /**
-   * @generated from field: repeated divisions.v1.private.ListedDivision divisions = 1;
+   * @generated from field: repeated divisions.v1.private.Division divisions = 1;
    */
-  divisions: ListedDivision[];
+  divisions: Division[];
 
   /**
    * @generated from field: int32 totalCount = 2;
