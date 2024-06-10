@@ -45,6 +45,11 @@ export declare class ListedTeam extends Message<ListedTeam> {
    */
   modified: number;
 
+  /**
+   * @generated from field: string division = 5;
+   */
+  division: string;
+
   constructor(data?: PartialMessage<ListedTeam>);
 
   static readonly runtime: typeof proto3;
@@ -73,6 +78,11 @@ export declare class AddTeamRequest extends Message<AddTeamRequest> {
    * @generated from field: repeated string players = 2;
    */
   players: string[];
+
+  /**
+   * @generated from field: optional string division = 3;
+   */
+  division?: string;
 
   constructor(data?: PartialMessage<AddTeamRequest>);
 
@@ -107,6 +117,11 @@ export declare class AddTeamResponse extends Message<AddTeamResponse> {
    * @generated from field: repeated string players = 3;
    */
   players: string[];
+
+  /**
+   * @generated from field: string division = 4;
+   */
+  division: string;
 
   constructor(data?: PartialMessage<AddTeamResponse>);
 
@@ -244,6 +259,11 @@ export declare class GetTeamResponse extends Message<GetTeamResponse> {
    */
   modified: number;
 
+  /**
+   * @generated from field: string division = 5;
+   */
+  division: string;
+
   constructor(data?: PartialMessage<GetTeamResponse>);
 
   static readonly runtime: typeof proto3;
@@ -320,6 +340,11 @@ export declare class UpdateTeamRequest extends Message<UpdateTeamRequest> {
    * @generated from field: repeated string players = 3;
    */
   players: string[];
+
+  /**
+   * @generated from field: optional string division = 4;
+   */
+  division?: string;
 
   constructor(data?: PartialMessage<UpdateTeamRequest>);
 
@@ -464,5 +489,53 @@ export declare class DissociatePlayersFromTeamsResponse extends Message<Dissocia
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DissociatePlayersFromTeamsResponse;
 
   static equals(a: DissociatePlayersFromTeamsResponse | PlainMessage<DissociatePlayersFromTeamsResponse> | undefined, b: DissociatePlayersFromTeamsResponse | PlainMessage<DissociatePlayersFromTeamsResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message teams.v1.private.UpdateTeamDivisionRequest
+ */
+export declare class UpdateTeamDivisionRequest extends Message<UpdateTeamDivisionRequest> {
+  /**
+   * @generated from field: string team_id = 1;
+   */
+  teamId: string;
+
+  /**
+   * @generated from field: string division_id = 2;
+   */
+  divisionId: string;
+
+  constructor(data?: PartialMessage<UpdateTeamDivisionRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "teams.v1.private.UpdateTeamDivisionRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateTeamDivisionRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateTeamDivisionRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateTeamDivisionRequest;
+
+  static equals(a: UpdateTeamDivisionRequest | PlainMessage<UpdateTeamDivisionRequest> | undefined, b: UpdateTeamDivisionRequest | PlainMessage<UpdateTeamDivisionRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message teams.v1.private.UpdateTeamDivisionResponse
+ */
+export declare class UpdateTeamDivisionResponse extends Message<UpdateTeamDivisionResponse> {
+  constructor(data?: PartialMessage<UpdateTeamDivisionResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "teams.v1.private.UpdateTeamDivisionResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateTeamDivisionResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateTeamDivisionResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateTeamDivisionResponse;
+
+  static equals(a: UpdateTeamDivisionResponse | PlainMessage<UpdateTeamDivisionResponse> | undefined, b: UpdateTeamDivisionResponse | PlainMessage<UpdateTeamDivisionResponse> | undefined): boolean;
 }
 

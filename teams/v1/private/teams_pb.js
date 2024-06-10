@@ -26,6 +26,7 @@ export const ListedTeam = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "players", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
     { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 5, name: "division", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
@@ -37,6 +38,7 @@ export const AddTeamRequest = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "players", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 3, name: "division", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ],
 );
 
@@ -49,6 +51,7 @@ export const AddTeamResponse = /*@__PURE__*/ proto3.makeMessageType(
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "players", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 4, name: "division", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
@@ -97,6 +100,7 @@ export const GetTeamResponse = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "players", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
     { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 5, name: "division", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
@@ -127,6 +131,7 @@ export const UpdateTeamRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 3, name: "players", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 4, name: "division", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ],
 );
 
@@ -177,6 +182,25 @@ export const DissociatePlayersFromTeamsRequest = /*@__PURE__*/ proto3.makeMessag
  */
 export const DissociatePlayersFromTeamsResponse = /*@__PURE__*/ proto3.makeMessageType(
   "teams.v1.private.DissociatePlayersFromTeamsResponse",
+  [],
+);
+
+/**
+ * @generated from message teams.v1.private.UpdateTeamDivisionRequest
+ */
+export const UpdateTeamDivisionRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "teams.v1.private.UpdateTeamDivisionRequest",
+  () => [
+    { no: 1, name: "team_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "division_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message teams.v1.private.UpdateTeamDivisionResponse
+ */
+export const UpdateTeamDivisionResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "teams.v1.private.UpdateTeamDivisionResponse",
   [],
 );
 

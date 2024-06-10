@@ -105,14 +105,14 @@ export declare class FlexibleRoundRobinDraw extends Message<FlexibleRoundRobinDr
   name: string;
 
   /**
-   * @generated from field: google.protobuf.Timestamp modified = 4;
+   * @generated from field: google.protobuf.Timestamp modified = 3;
    */
   modified?: Timestamp;
 
   /**
-   * @generated from field: repeated string teams = 5;
+   * @generated from field: string division_id = 4;
    */
-  teams: string[];
+  divisionId: string;
 
   constructor(data?: PartialMessage<FlexibleRoundRobinDraw>);
 
@@ -300,32 +300,27 @@ export declare class CreateFlexibleRoundRobinDrawRequest extends Message<CreateF
   name: string;
 
   /**
-   * @generated from field: draw.v1.private.DrawType draw_type = 2;
+   * @generated from field: string division_id = 2;
    */
-  drawType: DrawType;
+  divisionId: string;
 
   /**
-   * @generated from field: repeated string teams = 3;
-   */
-  teams: string[];
-
-  /**
-   * @generated from field: optional google.protobuf.Timestamp start_date = 4;
+   * @generated from field: optional google.protobuf.Timestamp start_date = 3;
    */
   startDate?: Timestamp;
 
   /**
-   * @generated from field: draw.v1.private.Frequency frequency = 5;
+   * @generated from field: draw.v1.private.Frequency frequency = 4;
    */
   frequency: Frequency;
 
   /**
-   * @generated from field: draw.v1.private.Points points = 6;
+   * @generated from field: draw.v1.private.Points points = 5;
    */
   points?: Points;
 
   /**
-   * @generated from field: int32 rounds = 7;
+   * @generated from field: int32 rounds = 6;
    */
   rounds: number;
 

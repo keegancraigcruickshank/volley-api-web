@@ -51,8 +51,8 @@ export const FlexibleRoundRobinDraw = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "modified", kind: "message", T: Timestamp },
-    { no: 5, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 3, name: "modified", kind: "message", T: Timestamp },
+    { no: 4, name: "division_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
@@ -120,12 +120,11 @@ export const CreateFlexibleRoundRobinDrawRequest = /*@__PURE__*/ proto3.makeMess
   "draw.v1.private.CreateFlexibleRoundRobinDrawRequest",
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "draw_type", kind: "enum", T: proto3.getEnumType(DrawType) },
-    { no: 3, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-    { no: 4, name: "start_date", kind: "message", T: Timestamp, opt: true },
-    { no: 5, name: "frequency", kind: "enum", T: proto3.getEnumType(Frequency) },
-    { no: 6, name: "points", kind: "message", T: Points },
-    { no: 7, name: "rounds", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 2, name: "division_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "start_date", kind: "message", T: Timestamp, opt: true },
+    { no: 4, name: "frequency", kind: "enum", T: proto3.getEnumType(Frequency) },
+    { no: 5, name: "points", kind: "message", T: Points },
+    { no: 6, name: "rounds", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 
