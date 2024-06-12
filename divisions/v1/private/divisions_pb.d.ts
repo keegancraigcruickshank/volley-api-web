@@ -161,6 +161,11 @@ export declare class AddDivisionRequest extends Message<AddDivisionRequest> {
  * @generated from message divisions.v1.private.AddDivisionResponse
  */
 export declare class AddDivisionResponse extends Message<AddDivisionResponse> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
   constructor(data?: PartialMessage<AddDivisionResponse>);
 
   static readonly runtime: typeof proto3;

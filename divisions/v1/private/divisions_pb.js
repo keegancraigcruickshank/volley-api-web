@@ -69,7 +69,9 @@ export const AddDivisionRequest = /*@__PURE__*/ proto3.makeMessageType(
  */
 export const AddDivisionResponse = /*@__PURE__*/ proto3.makeMessageType(
   "divisions.v1.private.AddDivisionResponse",
-  [],
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
 );
 
 /**
