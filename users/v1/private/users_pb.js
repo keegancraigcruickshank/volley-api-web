@@ -86,6 +86,28 @@ export const GetMeResponse = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
+ * @generated from message users.v1.private.UpdateMeRequest
+ */
+export const UpdateMeRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "users.v1.private.UpdateMeRequest",
+  () => [
+    { no: 1, name: "given_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "family_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message users.v1.private.UpdateMeResponse
+ */
+export const UpdateMeResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "users.v1.private.UpdateMeResponse",
+  () => [
+    { no: 1, name: "user", kind: "message", T: User },
+  ],
+);
+
+/**
  * @generated from message users.v1.private.LogoutRequest
  */
 export const LogoutRequest = /*@__PURE__*/ proto3.makeMessageType(

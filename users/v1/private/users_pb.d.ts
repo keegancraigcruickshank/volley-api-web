@@ -235,6 +235,64 @@ export declare class GetMeResponse extends Message<GetMeResponse> {
 }
 
 /**
+ * @generated from message users.v1.private.UpdateMeRequest
+ */
+export declare class UpdateMeRequest extends Message<UpdateMeRequest> {
+  /**
+   * @generated from field: string given_name = 1;
+   */
+  givenName: string;
+
+  /**
+   * @generated from field: string family_name = 2;
+   */
+  familyName: string;
+
+  /**
+   * @generated from field: string email = 3;
+   */
+  email: string;
+
+  constructor(data?: PartialMessage<UpdateMeRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.UpdateMeRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateMeRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateMeRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateMeRequest;
+
+  static equals(a: UpdateMeRequest | PlainMessage<UpdateMeRequest> | undefined, b: UpdateMeRequest | PlainMessage<UpdateMeRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.UpdateMeResponse
+ */
+export declare class UpdateMeResponse extends Message<UpdateMeResponse> {
+  /**
+   * @generated from field: users.v1.private.User user = 1;
+   */
+  user?: User;
+
+  constructor(data?: PartialMessage<UpdateMeResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.UpdateMeResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateMeResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateMeResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateMeResponse;
+
+  static equals(a: UpdateMeResponse | PlainMessage<UpdateMeResponse> | undefined, b: UpdateMeResponse | PlainMessage<UpdateMeResponse> | undefined): boolean;
+}
+
+/**
  * @generated from message users.v1.private.LogoutRequest
  */
 export declare class LogoutRequest extends Message<LogoutRequest> {

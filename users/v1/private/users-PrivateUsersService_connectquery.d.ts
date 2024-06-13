@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetMeRequest, GetMeResponse, GetOrganisationRequest, GetOrganisationResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetDefaultOrgRequest, SetDefaultOrgResponse } from "./users_pb.js";
+import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetMeRequest, GetMeResponse, GetOrganisationRequest, GetOrganisationResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetDefaultOrgRequest, SetDefaultOrgResponse, UpdateMeRequest, UpdateMeResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -13,6 +13,18 @@ export const getMe: {
       readonly name: "GetMe",
       readonly I: typeof GetMeRequest,
       readonly O: typeof GetMeResponse,
+      readonly kind: MethodKind.Unary,
+  readonly service: {
+    readonly typeName: "users.v1.private.PrivateUsersService"
+  }
+};
+/**
+ * @generated from rpc users.v1.private.PrivateUsersService.UpdateMe
+ */
+export const updateMe: {
+      readonly name: "UpdateMe",
+      readonly I: typeof UpdateMeRequest,
+      readonly O: typeof UpdateMeResponse,
       readonly kind: MethodKind.Unary,
   readonly service: {
     readonly typeName: "users.v1.private.PrivateUsersService"
