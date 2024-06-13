@@ -239,19 +239,19 @@ export declare class GetMeResponse extends Message<GetMeResponse> {
  */
 export declare class UpdateMeRequest extends Message<UpdateMeRequest> {
   /**
-   * @generated from field: string given_name = 1;
+   * @generated from field: optional string given_name = 1;
    */
-  givenName: string;
+  givenName?: string;
 
   /**
-   * @generated from field: string family_name = 2;
+   * @generated from field: optional string family_name = 2;
    */
-  familyName: string;
+  familyName?: string;
 
   /**
-   * @generated from field: string email = 3;
+   * @generated from field: optional string email = 3;
    */
-  email: string;
+  email?: string;
 
   constructor(data?: PartialMessage<UpdateMeRequest>);
 

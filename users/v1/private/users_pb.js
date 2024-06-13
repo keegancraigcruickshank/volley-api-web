@@ -91,9 +91,9 @@ export const GetMeResponse = /*@__PURE__*/ proto3.makeMessageType(
 export const UpdateMeRequest = /*@__PURE__*/ proto3.makeMessageType(
   "users.v1.private.UpdateMeRequest",
   () => [
-    { no: 1, name: "given_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "family_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "given_name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 2, name: "family_name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 3, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ],
 );
 
