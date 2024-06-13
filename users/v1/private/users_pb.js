@@ -102,9 +102,7 @@ export const UpdateMeRequest = /*@__PURE__*/ proto3.makeMessageType(
  */
 export const UpdateMeResponse = /*@__PURE__*/ proto3.makeMessageType(
   "users.v1.private.UpdateMeResponse",
-  () => [
-    { no: 1, name: "user", kind: "message", T: User },
-  ],
+  [],
 );
 
 /**

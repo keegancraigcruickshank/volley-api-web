@@ -272,11 +272,6 @@ export declare class UpdateMeRequest extends Message<UpdateMeRequest> {
  * @generated from message users.v1.private.UpdateMeResponse
  */
 export declare class UpdateMeResponse extends Message<UpdateMeResponse> {
-  /**
-   * @generated from field: users.v1.private.User user = 1;
-   */
-  user?: User;
-
   constructor(data?: PartialMessage<UpdateMeResponse>);
 
   static readonly runtime: typeof proto3;
