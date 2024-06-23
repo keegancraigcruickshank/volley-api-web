@@ -80,7 +80,10 @@ export const FlexibleRoundRobinMatch = /*@__PURE__*/ proto3.makeMessageType(
 export const Draw = /*@__PURE__*/ proto3.makeMessageType(
   "draw.v1.private.Draw",
   () => [
-    { no: 1, name: "flexible_round_robin_draw", kind: "message", T: FlexibleRoundRobinDraw, oneof: "draw" },
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "modified", kind: "message", T: Timestamp },
+    { no: 4, name: "division_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 

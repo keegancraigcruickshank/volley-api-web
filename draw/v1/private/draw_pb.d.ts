@@ -198,15 +198,24 @@ export declare class FlexibleRoundRobinMatch extends Message<FlexibleRoundRobinM
  */
 export declare class Draw extends Message<Draw> {
   /**
-   * @generated from oneof draw.v1.private.Draw.draw
+   * @generated from field: string id = 1;
    */
-  draw: {
-    /**
-     * @generated from field: draw.v1.private.FlexibleRoundRobinDraw flexible_round_robin_draw = 1;
-     */
-    value: FlexibleRoundRobinDraw;
-    case: "flexibleRoundRobinDraw";
-  } | { case: undefined; value?: undefined };
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp modified = 3;
+   */
+  modified?: Timestamp;
+
+  /**
+   * @generated from field: string division_id = 4;
+   */
+  divisionId: string;
 
   constructor(data?: PartialMessage<Draw>);
 
