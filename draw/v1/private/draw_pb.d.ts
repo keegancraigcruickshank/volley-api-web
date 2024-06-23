@@ -66,9 +66,9 @@ export declare class Points extends Message<Points> {
   win: number;
 
   /**
-   * @generated from field: int32 tiw = 2;
+   * @generated from field: int32 tie = 2;
    */
-  tiw: number;
+  tie: number;
 
   /**
    * @generated from field: int32 loss = 3;
