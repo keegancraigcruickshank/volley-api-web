@@ -83,7 +83,7 @@ export const Draw = /*@__PURE__*/ proto3.makeMessageType(
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "modified", kind: "message", T: Timestamp },
-    { no: 4, name: "division_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "type", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 

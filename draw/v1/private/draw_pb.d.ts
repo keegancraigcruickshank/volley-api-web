@@ -213,9 +213,9 @@ export declare class Draw extends Message<Draw> {
   modified?: Timestamp;
 
   /**
-   * @generated from field: string division_id = 4;
+   * @generated from field: int32 type = 4;
    */
-  divisionId: string;
+  type: number;
 
   constructor(data?: PartialMessage<Draw>);
 
