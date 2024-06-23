@@ -562,6 +562,11 @@ export declare class ListDrawsResponse extends Message<ListDrawsResponse> {
    */
   draw: Draw[];
 
+  /**
+   * @generated from field: int32 totalCount = 2;
+   */
+  totalCount: number;
+
   constructor(data?: PartialMessage<ListDrawsResponse>);
 
   static readonly runtime: typeof proto3;

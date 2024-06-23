@@ -213,6 +213,7 @@ export const ListDrawsResponse = /*@__PURE__*/ proto3.makeMessageType(
   "draw.v1.private.ListDrawsResponse",
   () => [
     { no: 1, name: "draw", kind: "message", T: Draw, repeated: true },
+    { no: 2, name: "totalCount", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 
