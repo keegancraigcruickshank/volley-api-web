@@ -22,60 +22,6 @@ export declare enum SortDirection {
 }
 
 /**
- * @generated from message players.v1.private.Address
- */
-export declare class Address extends Message<Address> {
-  /**
-   * @generated from field: optional string unit = 1;
-   */
-  unit?: string;
-
-  /**
-   * @generated from field: optional string house_number = 2;
-   */
-  houseNumber?: string;
-
-  /**
-   * @generated from field: optional string street = 3;
-   */
-  street?: string;
-
-  /**
-   * @generated from field: optional string suburb = 4;
-   */
-  suburb?: string;
-
-  /**
-   * @generated from field: optional string state = 5;
-   */
-  state?: string;
-
-  /**
-   * @generated from field: optional string country = 6;
-   */
-  country?: string;
-
-  /**
-   * @generated from field: optional string zip_postcode = 7;
-   */
-  zipPostcode?: string;
-
-  constructor(data?: PartialMessage<Address>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "players.v1.private.Address";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Address;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Address;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Address;
-
-  static equals(a: Address | PlainMessage<Address> | undefined, b: Address | PlainMessage<Address> | undefined): boolean;
-}
-
-/**
  * @generated from message players.v1.private.PlayerDetails
  */
 export declare class PlayerDetails extends Message<PlayerDetails> {
@@ -110,12 +56,7 @@ export declare class PlayerDetails extends Message<PlayerDetails> {
   dob?: string;
 
   /**
-   * @generated from field: optional players.v1.private.Address address = 7;
-   */
-  address?: Address;
-
-  /**
-   * @generated from field: repeated players.v1.private.Exclusion exclusions = 8;
+   * @generated from field: repeated players.v1.private.Exclusion exclusions = 7;
    */
   exclusions: Exclusion[];
 

@@ -17,22 +17,6 @@ export const SortDirection = /*@__PURE__*/ proto3.makeEnum(
 );
 
 /**
- * @generated from message players.v1.private.Address
- */
-export const Address = /*@__PURE__*/ proto3.makeMessageType(
-  "players.v1.private.Address",
-  () => [
-    { no: 1, name: "unit", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 2, name: "house_number", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 3, name: "street", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 4, name: "suburb", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 5, name: "state", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 6, name: "country", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 7, name: "zip_postcode", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-  ],
-);
-
-/**
  * @generated from message players.v1.private.PlayerDetails
  */
 export const PlayerDetails = /*@__PURE__*/ proto3.makeMessageType(
@@ -44,8 +28,7 @@ export const PlayerDetails = /*@__PURE__*/ proto3.makeMessageType(
     { no: 4, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 5, name: "mobile", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 6, name: "dob", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 7, name: "address", kind: "message", T: Address, opt: true },
-    { no: 8, name: "exclusions", kind: "message", T: Exclusion, repeated: true },
+    { no: 7, name: "exclusions", kind: "message", T: Exclusion, repeated: true },
   ],
 );
 
