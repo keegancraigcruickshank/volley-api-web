@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./draw_pb.js";
+import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, ListDrawsRequest, ListDrawsResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./draw_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -61,6 +61,18 @@ export const getFlexibleRoundRobinDrawRound: {
       readonly name: "GetFlexibleRoundRobinDrawRound",
       readonly I: typeof GetFlexibleRoundRobinDrawRoundRequest,
       readonly O: typeof GetFlexibleRoundRobinDrawRoundResponse,
+      readonly kind: MethodKind.Unary,
+  readonly service: {
+    readonly typeName: "draw.v1.private.PrivateDrawService"
+  }
+};
+/**
+ * @generated from rpc draw.v1.private.PrivateDrawService.ListDraws
+ */
+export const listDraws: {
+      readonly name: "ListDraws",
+      readonly I: typeof ListDrawsRequest,
+      readonly O: typeof ListDrawsResponse,
       readonly kind: MethodKind.Unary,
   readonly service: {
     readonly typeName: "draw.v1.private.PrivateDrawService"

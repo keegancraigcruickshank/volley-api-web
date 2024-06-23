@@ -75,6 +75,16 @@ export const FlexibleRoundRobinMatch = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
+ * @generated from message draw.v1.private.Draw
+ */
+export const Draw = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.Draw",
+  () => [
+    { no: 1, name: "flexible_round_robin_draw", kind: "message", T: FlexibleRoundRobinDraw, oneof: "draw" },
+  ],
+);
+
+/**
  * @generated from message draw.v1.private.GetDrawRequest
  */
 export const GetDrawRequest = /*@__PURE__*/ proto3.makeMessageType(
@@ -181,6 +191,28 @@ export const GetFlexibleRoundRobinDrawRoundResponse = /*@__PURE__*/ proto3.makeM
     { no: 1, name: "draw_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "round", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 3, name: "matches", kind: "message", T: FlexibleRoundRobinMatch, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message draw.v1.private.ListDrawsRequest
+ */
+export const ListDrawsRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.ListDrawsRequest",
+  () => [
+    { no: 1, name: "query", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 2, name: "page", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
+    { no: 3, name: "pageSize", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
+  ],
+);
+
+/**
+ * @generated from message draw.v1.private.ListDrawsResponse
+ */
+export const ListDrawsResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.ListDrawsResponse",
+  () => [
+    { no: 1, name: "draw", kind: "message", T: Draw, repeated: true },
   ],
 );
 

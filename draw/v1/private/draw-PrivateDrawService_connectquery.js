@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import { MethodKind } from "@bufbuild/protobuf";
-import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./draw_pb.js";
+import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, ListDrawsRequest, ListDrawsResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./draw_pb.js";
 
 /**
  * @generated from rpc draw.v1.private.PrivateDrawService.GetDraw
@@ -71,6 +71,20 @@ export const getFlexibleRoundRobinDrawRound = {
   kind: MethodKind.Unary,
   I: GetFlexibleRoundRobinDrawRoundRequest,
   O: GetFlexibleRoundRobinDrawRoundResponse,
+  service: {
+    typeName: "draw.v1.private.PrivateDrawService"
+  }
+};
+
+/**
+ * @generated from rpc draw.v1.private.PrivateDrawService.ListDraws
+ */
+export const listDraws = {
+  localName: "listDraws",
+  name: "ListDraws",
+  kind: MethodKind.Unary,
+  I: ListDrawsRequest,
+  O: ListDrawsResponse,
   service: {
     typeName: "draw.v1.private.PrivateDrawService"
   }

@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./draw_pb.js";
+import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, ListDrawsRequest, ListDrawsResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./draw_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -55,6 +55,15 @@ export declare const PrivateDrawService: {
       readonly name: "GetFlexibleRoundRobinDrawRound",
       readonly I: typeof GetFlexibleRoundRobinDrawRoundRequest,
       readonly O: typeof GetFlexibleRoundRobinDrawRoundResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc draw.v1.private.PrivateDrawService.ListDraws
+     */
+    readonly listDraws: {
+      readonly name: "ListDraws",
+      readonly I: typeof ListDrawsRequest,
+      readonly O: typeof ListDrawsResponse,
       readonly kind: MethodKind.Unary,
     },
   }
