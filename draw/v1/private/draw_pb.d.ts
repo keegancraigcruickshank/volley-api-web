@@ -75,6 +75,11 @@ export declare class Points extends Message<Points> {
    */
   loss: number;
 
+  /**
+   * @generated from field: int32 tie = 4;
+   */
+  tie: number;
+
   constructor(data?: PartialMessage<Points>);
 
   static readonly runtime: typeof proto3;

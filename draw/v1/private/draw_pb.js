@@ -40,6 +40,7 @@ export const Points = /*@__PURE__*/ proto3.makeMessageType(
     { no: 1, name: "win", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 2, name: "draw", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 3, name: "loss", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 4, name: "tie", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 
