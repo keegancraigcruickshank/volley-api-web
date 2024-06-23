@@ -66,9 +66,9 @@ export declare class Points extends Message<Points> {
   win: number;
 
   /**
-   * @generated from field: int32 draw = 2;
+   * @generated from field: int32 tiw = 2;
    */
-  draw: number;
+  tiw: number;
 
   /**
    * @generated from field: int32 loss = 3;
@@ -76,9 +76,9 @@ export declare class Points extends Message<Points> {
   loss: number;
 
   /**
-   * @generated from field: int32 tie = 4;
+   * @generated from field: int32 forfeit = 4;
    */
-  tie: number;
+  forfeit: number;
 
   constructor(data?: PartialMessage<Points>);
 
