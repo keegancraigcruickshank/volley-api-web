@@ -308,3 +308,21 @@ export const GetOrganisationResponse = /*@__PURE__*/ proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message users.v1.private.GetBillingLinkRequest
+ */
+export const GetBillingLinkRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "users.v1.private.GetBillingLinkRequest",
+  [],
+);
+
+/**
+ * @generated from message users.v1.private.GetBillingLinkResponse
+ */
+export const GetBillingLinkResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "users.v1.private.GetBillingLinkResponse",
+  () => [
+    { no: 1, name: "URL", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+

@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import { MethodKind } from "@bufbuild/protobuf";
-import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetMeRequest, GetMeResponse, GetOrganisationRequest, GetOrganisationResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetDefaultOrgRequest, SetDefaultOrgResponse, UpdateMeRequest, UpdateMeResponse } from "./users_pb.js";
+import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetBillingLinkRequest, GetBillingLinkResponse, GetMeRequest, GetMeResponse, GetOrganisationRequest, GetOrganisationResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetDefaultOrgRequest, SetDefaultOrgResponse, UpdateMeRequest, UpdateMeResponse } from "./users_pb.js";
 
 /**
  * @generated from rpc users.v1.private.PrivateUsersService.GetMe
@@ -15,6 +15,20 @@ export const getMe = {
   kind: MethodKind.Unary,
   I: GetMeRequest,
   O: GetMeResponse,
+  service: {
+    typeName: "users.v1.private.PrivateUsersService"
+  }
+};
+
+/**
+ * @generated from rpc users.v1.private.PrivateUsersService.GetBillingLink
+ */
+export const getBillingLink = {
+  localName: "getBillingLink",
+  name: "GetBillingLink",
+  kind: MethodKind.Unary,
+  I: GetBillingLinkRequest,
+  O: GetBillingLinkResponse,
   service: {
     typeName: "users.v1.private.PrivateUsersService"
   }

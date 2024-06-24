@@ -780,3 +780,46 @@ export declare class GetOrganisationResponse extends Message<GetOrganisationResp
   static equals(a: GetOrganisationResponse | PlainMessage<GetOrganisationResponse> | undefined, b: GetOrganisationResponse | PlainMessage<GetOrganisationResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.private.GetBillingLinkRequest
+ */
+export declare class GetBillingLinkRequest extends Message<GetBillingLinkRequest> {
+  constructor(data?: PartialMessage<GetBillingLinkRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.GetBillingLinkRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetBillingLinkRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetBillingLinkRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetBillingLinkRequest;
+
+  static equals(a: GetBillingLinkRequest | PlainMessage<GetBillingLinkRequest> | undefined, b: GetBillingLinkRequest | PlainMessage<GetBillingLinkRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.GetBillingLinkResponse
+ */
+export declare class GetBillingLinkResponse extends Message<GetBillingLinkResponse> {
+  /**
+   * @generated from field: string URL = 1;
+   */
+  URL: string;
+
+  constructor(data?: PartialMessage<GetBillingLinkResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.GetBillingLinkResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetBillingLinkResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetBillingLinkResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetBillingLinkResponse;
+
+  static equals(a: GetBillingLinkResponse | PlainMessage<GetBillingLinkResponse> | undefined, b: GetBillingLinkResponse | PlainMessage<GetBillingLinkResponse> | undefined): boolean;
+}
+
