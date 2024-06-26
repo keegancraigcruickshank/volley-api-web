@@ -3,8 +3,9 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, ListDrawsRequest, ListDrawsResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./draw_pb.js";
+import { DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, ListDrawsRequest, ListDrawsResponse } from "./draw_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
+import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./flexible-round-robin/flexible-round-robin_pb.js";
 
 /**
  * @generated from service draw.v1.private.PrivateDrawService
@@ -13,6 +14,8 @@ export const PrivateDrawService = {
   typeName: "draw.v1.private.PrivateDrawService",
   methods: {
     /**
+     * Common endpoints
+     *
      * @generated from rpc draw.v1.private.PrivateDrawService.GetDraw
      */
     getDraw: {
@@ -31,6 +34,17 @@ export const PrivateDrawService = {
       kind: MethodKind.Unary,
     },
     /**
+     * @generated from rpc draw.v1.private.PrivateDrawService.ListDraws
+     */
+    listDraws: {
+      name: "ListDraws",
+      I: ListDrawsRequest,
+      O: ListDrawsResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Flexible round robin
+     *
      * @generated from rpc draw.v1.private.PrivateDrawService.CreateFlexibleRoundRobinDraw
      */
     createFlexibleRoundRobinDraw: {
@@ -55,15 +69,6 @@ export const PrivateDrawService = {
       name: "GetFlexibleRoundRobinDrawRound",
       I: GetFlexibleRoundRobinDrawRoundRequest,
       O: GetFlexibleRoundRobinDrawRoundResponse,
-      kind: MethodKind.Unary,
-    },
-    /**
-     * @generated from rpc draw.v1.private.PrivateDrawService.ListDraws
-     */
-    listDraws: {
-      name: "ListDraws",
-      I: ListDrawsRequest,
-      O: ListDrawsResponse,
       kind: MethodKind.Unary,
     },
   }

@@ -3,10 +3,13 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, ListDrawsRequest, ListDrawsResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./draw_pb.js";
+import { DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, ListDrawsRequest, ListDrawsResponse } from "./draw_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
+import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./flexible-round-robin/flexible-round-robin_pb.js";
 
 /**
+ * Common endpoints
+ *
  * @generated from rpc draw.v1.private.PrivateDrawService.GetDraw
  */
 export const getDraw: {
@@ -31,6 +34,20 @@ export const deleteDraw: {
   }
 };
 /**
+ * @generated from rpc draw.v1.private.PrivateDrawService.ListDraws
+ */
+export const listDraws: {
+      readonly name: "ListDraws",
+      readonly I: typeof ListDrawsRequest,
+      readonly O: typeof ListDrawsResponse,
+      readonly kind: MethodKind.Unary,
+  readonly service: {
+    readonly typeName: "draw.v1.private.PrivateDrawService"
+  }
+};
+/**
+ * Flexible round robin
+ *
  * @generated from rpc draw.v1.private.PrivateDrawService.CreateFlexibleRoundRobinDraw
  */
 export const createFlexibleRoundRobinDraw: {
@@ -61,18 +78,6 @@ export const getFlexibleRoundRobinDrawRound: {
       readonly name: "GetFlexibleRoundRobinDrawRound",
       readonly I: typeof GetFlexibleRoundRobinDrawRoundRequest,
       readonly O: typeof GetFlexibleRoundRobinDrawRoundResponse,
-      readonly kind: MethodKind.Unary,
-  readonly service: {
-    readonly typeName: "draw.v1.private.PrivateDrawService"
-  }
-};
-/**
- * @generated from rpc draw.v1.private.PrivateDrawService.ListDraws
- */
-export const listDraws: {
-      readonly name: "ListDraws",
-      readonly I: typeof ListDrawsRequest,
-      readonly O: typeof ListDrawsResponse,
       readonly kind: MethodKind.Unary,
   readonly service: {
     readonly typeName: "draw.v1.private.PrivateDrawService"
