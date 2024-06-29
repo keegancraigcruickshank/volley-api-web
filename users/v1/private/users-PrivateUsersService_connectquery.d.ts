@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetBillingLinkRequest, GetBillingLinkResponse, GetMeRequest, GetMeResponse, GetOrganisationRequest, GetOrganisationResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetDefaultOrgRequest, SetDefaultOrgResponse, UpdateMeRequest, UpdateMeResponse } from "./users_pb.js";
+import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetBillingLinkRequest, GetBillingLinkResponse, GetMeRequest, GetMeResponse, GetOrganisationRequest, GetOrganisationResponse, GetSubscriptionRequest, GetSubscriptionResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetDefaultOrgRequest, SetDefaultOrgResponse, UpdateMeRequest, UpdateMeResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -25,6 +25,18 @@ export const getBillingLink: {
       readonly name: "GetBillingLink",
       readonly I: typeof GetBillingLinkRequest,
       readonly O: typeof GetBillingLinkResponse,
+      readonly kind: MethodKind.Unary,
+  readonly service: {
+    readonly typeName: "users.v1.private.PrivateUsersService"
+  }
+};
+/**
+ * @generated from rpc users.v1.private.PrivateUsersService.GetSubscription
+ */
+export const getSubscription: {
+      readonly name: "GetSubscription",
+      readonly I: typeof GetSubscriptionRequest,
+      readonly O: typeof GetSubscriptionResponse,
       readonly kind: MethodKind.Unary,
   readonly service: {
     readonly typeName: "users.v1.private.PrivateUsersService"

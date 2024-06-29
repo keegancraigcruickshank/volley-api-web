@@ -326,3 +326,21 @@ export const GetBillingLinkResponse = /*@__PURE__*/ proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message users.v1.private.GetSubscriptionRequest
+ */
+export const GetSubscriptionRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "users.v1.private.GetSubscriptionRequest",
+  [],
+);
+
+/**
+ * @generated from message users.v1.private.GetSubscriptionResponse
+ */
+export const GetSubscriptionResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "users.v1.private.GetSubscriptionResponse",
+  () => [
+    { no: 1, name: "subscription", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+

@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetBillingLinkRequest, GetBillingLinkResponse, GetMeRequest, GetMeResponse, GetOrganisationRequest, GetOrganisationResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetDefaultOrgRequest, SetDefaultOrgResponse, UpdateMeRequest, UpdateMeResponse } from "./users_pb.js";
+import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetBillingLinkRequest, GetBillingLinkResponse, GetMeRequest, GetMeResponse, GetOrganisationRequest, GetOrganisationResponse, GetSubscriptionRequest, GetSubscriptionResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetDefaultOrgRequest, SetDefaultOrgResponse, UpdateMeRequest, UpdateMeResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -28,6 +28,15 @@ export const PrivateUsersService = {
       name: "GetBillingLink",
       I: GetBillingLinkRequest,
       O: GetBillingLinkResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc users.v1.private.PrivateUsersService.GetSubscription
+     */
+    getSubscription: {
+      name: "GetSubscription",
+      I: GetSubscriptionRequest,
+      O: GetSubscriptionResponse,
       kind: MethodKind.Unary,
     },
     /**

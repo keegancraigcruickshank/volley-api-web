@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import { MethodKind } from "@bufbuild/protobuf";
-import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetBillingLinkRequest, GetBillingLinkResponse, GetMeRequest, GetMeResponse, GetOrganisationRequest, GetOrganisationResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetDefaultOrgRequest, SetDefaultOrgResponse, UpdateMeRequest, UpdateMeResponse } from "./users_pb.js";
+import { CreateApiTokenRequest, CreateApiTokenResponse, CreateNewOrganisationRequest, CreateNewOrganisationResponse, DeleteOrganisationRequest, DeleteOrganisationResponse, FreshUserSetupRequest, FreshUserSetupResponse, GetBillingLinkRequest, GetBillingLinkResponse, GetMeRequest, GetMeResponse, GetOrganisationRequest, GetOrganisationResponse, GetSubscriptionRequest, GetSubscriptionResponse, ListApiTokensRequest, ListApiTokensResponse, ListOrganisationsRequest, ListOrganisationsResponse, RemoveApiTokenRequest, RemoveApiTokenResponse, ResendVerificationRequest, ResendVerificationResponse, SetDefaultOrgRequest, SetDefaultOrgResponse, UpdateMeRequest, UpdateMeResponse } from "./users_pb.js";
 
 /**
  * @generated from rpc users.v1.private.PrivateUsersService.GetMe
@@ -29,6 +29,20 @@ export const getBillingLink = {
   kind: MethodKind.Unary,
   I: GetBillingLinkRequest,
   O: GetBillingLinkResponse,
+  service: {
+    typeName: "users.v1.private.PrivateUsersService"
+  }
+};
+
+/**
+ * @generated from rpc users.v1.private.PrivateUsersService.GetSubscription
+ */
+export const getSubscription = {
+  localName: "getSubscription",
+  name: "GetSubscription",
+  kind: MethodKind.Unary,
+  I: GetSubscriptionRequest,
+  O: GetSubscriptionResponse,
   service: {
     typeName: "users.v1.private.PrivateUsersService"
   }

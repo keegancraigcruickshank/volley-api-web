@@ -823,3 +823,46 @@ export declare class GetBillingLinkResponse extends Message<GetBillingLinkRespon
   static equals(a: GetBillingLinkResponse | PlainMessage<GetBillingLinkResponse> | undefined, b: GetBillingLinkResponse | PlainMessage<GetBillingLinkResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.private.GetSubscriptionRequest
+ */
+export declare class GetSubscriptionRequest extends Message<GetSubscriptionRequest> {
+  constructor(data?: PartialMessage<GetSubscriptionRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.GetSubscriptionRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetSubscriptionRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetSubscriptionRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetSubscriptionRequest;
+
+  static equals(a: GetSubscriptionRequest | PlainMessage<GetSubscriptionRequest> | undefined, b: GetSubscriptionRequest | PlainMessage<GetSubscriptionRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.GetSubscriptionResponse
+ */
+export declare class GetSubscriptionResponse extends Message<GetSubscriptionResponse> {
+  /**
+   * @generated from field: string subscription = 1;
+   */
+  subscription: string;
+
+  constructor(data?: PartialMessage<GetSubscriptionResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.GetSubscriptionResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetSubscriptionResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetSubscriptionResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetSubscriptionResponse;
+
+  static equals(a: GetSubscriptionResponse | PlainMessage<GetSubscriptionResponse> | undefined, b: GetSubscriptionResponse | PlainMessage<GetSubscriptionResponse> | undefined): boolean;
+}
+
