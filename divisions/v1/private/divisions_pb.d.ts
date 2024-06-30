@@ -296,6 +296,11 @@ export declare class ListDivisionsFilter extends Message<ListDivisionsFilter> {
    */
   playingSpaceIds: string[];
 
+  /**
+   * @generated from field: repeated string division_ids = 2;
+   */
+  divisionIds: string[];
+
   constructor(data?: PartialMessage<ListDivisionsFilter>);
 
   static readonly runtime: typeof proto3;
