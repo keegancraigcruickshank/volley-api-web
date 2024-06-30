@@ -139,6 +139,35 @@ export declare class AddTeamResponse extends Message<AddTeamResponse> {
 }
 
 /**
+ * @generated from message teams.v1.private.ListTeamsFilter
+ */
+export declare class ListTeamsFilter extends Message<ListTeamsFilter> {
+  /**
+   * @generated from field: repeated string team_ids = 1;
+   */
+  teamIds: string[];
+
+  /**
+   * @generated from field: repeated string division_ids = 2;
+   */
+  divisionIds: string[];
+
+  constructor(data?: PartialMessage<ListTeamsFilter>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "teams.v1.private.ListTeamsFilter";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListTeamsFilter;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListTeamsFilter;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListTeamsFilter;
+
+  static equals(a: ListTeamsFilter | PlainMessage<ListTeamsFilter> | undefined, b: ListTeamsFilter | PlainMessage<ListTeamsFilter> | undefined): boolean;
+}
+
+/**
  * @generated from message teams.v1.private.ListTeamsRequest
  */
 export declare class ListTeamsRequest extends Message<ListTeamsRequest> {
@@ -163,9 +192,9 @@ export declare class ListTeamsRequest extends Message<ListTeamsRequest> {
   sortDirection?: SortDirection;
 
   /**
-   * @generated from field: repeated string includeTeams = 5;
+   * @generated from field: optional teams.v1.private.ListTeamsFilter filter = 5;
    */
-  includeTeams: string[];
+  filter?: ListTeamsFilter;
 
   constructor(data?: PartialMessage<ListTeamsRequest>);
 

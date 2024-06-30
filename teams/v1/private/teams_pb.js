@@ -56,6 +56,17 @@ export const AddTeamResponse = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
+ * @generated from message teams.v1.private.ListTeamsFilter
+ */
+export const ListTeamsFilter = /*@__PURE__*/ proto3.makeMessageType(
+  "teams.v1.private.ListTeamsFilter",
+  () => [
+    { no: 1, name: "team_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 2, name: "division_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+  ],
+);
+
+/**
  * @generated from message teams.v1.private.ListTeamsRequest
  */
 export const ListTeamsRequest = /*@__PURE__*/ proto3.makeMessageType(
@@ -65,7 +76,7 @@ export const ListTeamsRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "page", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
     { no: 3, name: "pageSize", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
     { no: 4, name: "sortDirection", kind: "enum", T: proto3.getEnumType(SortDirection), opt: true },
-    { no: 5, name: "includeTeams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 5, name: "filter", kind: "message", T: ListTeamsFilter, opt: true },
   ],
 );
 
