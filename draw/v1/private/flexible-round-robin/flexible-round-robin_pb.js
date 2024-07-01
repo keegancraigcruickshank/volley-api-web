@@ -140,12 +140,11 @@ export const GetFlexibleRoundRobinDrawResponse = /*@__PURE__*/ proto3.makeMessag
   "draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawResponse",
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "division_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "start_date", kind: "message", T: Timestamp, opt: true },
-    { no: 5, name: "frequency", kind: "enum", T: proto3.getEnumType(Frequency) },
-    { no: 6, name: "points", kind: "message", T: Points },
-    { no: 7, name: "rounds", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 2, name: "division_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "start_date", kind: "message", T: Timestamp, opt: true },
+    { no: 4, name: "frequency", kind: "enum", T: proto3.getEnumType(Frequency) },
+    { no: 5, name: "points", kind: "message", T: Points },
+    { no: 6, name: "rounds", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 

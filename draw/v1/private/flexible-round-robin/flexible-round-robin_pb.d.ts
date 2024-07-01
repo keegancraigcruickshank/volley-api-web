@@ -368,32 +368,27 @@ export declare class GetFlexibleRoundRobinDrawResponse extends Message<GetFlexib
   id: string;
 
   /**
-   * @generated from field: string name = 2;
-   */
-  name: string;
-
-  /**
-   * @generated from field: string division_id = 3;
+   * @generated from field: string division_id = 2;
    */
   divisionId: string;
 
   /**
-   * @generated from field: optional google.protobuf.Timestamp start_date = 4;
+   * @generated from field: optional google.protobuf.Timestamp start_date = 3;
    */
   startDate?: Timestamp;
 
   /**
-   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.Frequency frequency = 5;
+   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.Frequency frequency = 4;
    */
   frequency: Frequency;
 
   /**
-   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.Points points = 6;
+   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.Points points = 5;
    */
   points?: Points;
 
   /**
-   * @generated from field: int32 rounds = 7;
+   * @generated from field: int32 rounds = 6;
    */
   rounds: number;
 
