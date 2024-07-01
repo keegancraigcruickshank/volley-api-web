@@ -72,7 +72,9 @@ export const FlexibleRoundRobinMatch = /*@__PURE__*/ proto3.makeMessageType(
     { no: 5, name: "team_two", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 6, name: "team_one_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 7, name: "team_two_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 8, name: "modified", kind: "message", T: Timestamp },
+    { no: 8, name: "game_start_time", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 9, name: "playing_space_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 10, name: "modified", kind: "message", T: Timestamp },
   ],
 );
 
@@ -169,6 +171,7 @@ export const GetFlexibleRoundRobinDrawRoundResponse = /*@__PURE__*/ proto3.makeM
     { no: 2, name: "round", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 3, name: "status", kind: "enum", T: proto3.getEnumType(RoundStatus) },
     { no: 4, name: "matches", kind: "message", T: FlexibleRoundRobinMatch, repeated: true },
+    { no: 5, name: "round_date", kind: "message", T: Timestamp },
   ],
 );
 

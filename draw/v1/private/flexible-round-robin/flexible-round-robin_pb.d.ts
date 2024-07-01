@@ -184,7 +184,17 @@ export declare class FlexibleRoundRobinMatch extends Message<FlexibleRoundRobinM
   teamTwoScore: number;
 
   /**
-   * @generated from field: google.protobuf.Timestamp modified = 8;
+   * @generated from field: int32 game_start_time = 8;
+   */
+  gameStartTime: number;
+
+  /**
+   * @generated from field: string playing_space_id = 9;
+   */
+  playingSpaceId: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp modified = 10;
    */
   modified?: Timestamp;
 
@@ -459,6 +469,11 @@ export declare class GetFlexibleRoundRobinDrawRoundResponse extends Message<GetF
    * @generated from field: repeated draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinMatch matches = 4;
    */
   matches: FlexibleRoundRobinMatch[];
+
+  /**
+   * @generated from field: google.protobuf.Timestamp round_date = 5;
+   */
+  roundDate?: Timestamp;
 
   constructor(data?: PartialMessage<GetFlexibleRoundRobinDrawRoundResponse>);
 
