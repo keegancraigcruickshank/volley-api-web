@@ -5,7 +5,7 @@
 
 import { MethodKind } from "@bufbuild/protobuf";
 import { DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, ListDrawsRequest, ListDrawsResponse } from "./draw_pb.js";
-import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./flexible-round-robin/flexible-round-robin_pb.js";
+import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, GetFlexibleRoundRobinDrawRequest, GetFlexibleRoundRobinDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./flexible-round-robin/flexible-round-robin_pb.js";
 
 /**
  * Common endpoints
@@ -62,6 +62,20 @@ export const createFlexibleRoundRobinDraw = {
   kind: MethodKind.Unary,
   I: CreateFlexibleRoundRobinDrawRequest,
   O: CreateFlexibleRoundRobinDrawResponse,
+  service: {
+    typeName: "draw.v1.private.PrivateDrawService"
+  }
+};
+
+/**
+ * @generated from rpc draw.v1.private.PrivateDrawService.GetFlexibleRoundRobinDraw
+ */
+export const getFlexibleRoundRobinDraw = {
+  localName: "getFlexibleRoundRobinDraw",
+  name: "GetFlexibleRoundRobinDraw",
+  kind: MethodKind.Unary,
+  I: GetFlexibleRoundRobinDrawRequest,
+  O: GetFlexibleRoundRobinDrawResponse,
   service: {
     typeName: "draw.v1.private.PrivateDrawService"
   }
