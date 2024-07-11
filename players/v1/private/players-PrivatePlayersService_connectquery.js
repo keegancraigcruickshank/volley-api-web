@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import { MethodKind } from "@bufbuild/protobuf";
-import { CreatePlayerRequest, CreatePlayerResponse, GetPlayerRequest, GetPlayerResponse, ListPlayersRequest, ListPlayersResponse, ModifyPlayerRequest, ModifyPlayerResponse, RemovePlayersRequest, RemovePlayersResponse } from "./players_pb.js";
+import { AddPlayerExclusionRequest, AddPlayerExclusionResponse, CreatePlayerRequest, CreatePlayerResponse, GetPlayerRequest, GetPlayerResponse, ListPlayersRequest, ListPlayersResponse, ModifyPlayerRequest, ModifyPlayerResponse, RemovePlayerExclusionRequest, RemovePlayerExclusionResponse, RemovePlayersRequest, RemovePlayersResponse } from "./players_pb.js";
 
 /**
  * @generated from rpc players.v1.private.PrivatePlayersService.CreatePlayer
@@ -71,6 +71,34 @@ export const getPlayer = {
   kind: MethodKind.Unary,
   I: GetPlayerRequest,
   O: GetPlayerResponse,
+  service: {
+    typeName: "players.v1.private.PrivatePlayersService"
+  }
+};
+
+/**
+ * @generated from rpc players.v1.private.PrivatePlayersService.AddPlayerExclusion
+ */
+export const addPlayerExclusion = {
+  localName: "addPlayerExclusion",
+  name: "AddPlayerExclusion",
+  kind: MethodKind.Unary,
+  I: AddPlayerExclusionRequest,
+  O: AddPlayerExclusionResponse,
+  service: {
+    typeName: "players.v1.private.PrivatePlayersService"
+  }
+};
+
+/**
+ * @generated from rpc players.v1.private.PrivatePlayersService.RemovePlayerExclusion
+ */
+export const removePlayerExclusion = {
+  localName: "removePlayerExclusion",
+  name: "RemovePlayerExclusion",
+  kind: MethodKind.Unary,
+  I: RemovePlayerExclusionRequest,
+  O: RemovePlayerExclusionResponse,
   service: {
     typeName: "players.v1.private.PrivatePlayersService"
   }

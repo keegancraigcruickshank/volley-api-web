@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreatePlayerRequest, CreatePlayerResponse, GetPlayerRequest, GetPlayerResponse, ListPlayersRequest, ListPlayersResponse, ModifyPlayerRequest, ModifyPlayerResponse, RemovePlayersRequest, RemovePlayersResponse } from "./players_pb.js";
+import { AddPlayerExclusionRequest, AddPlayerExclusionResponse, CreatePlayerRequest, CreatePlayerResponse, GetPlayerRequest, GetPlayerResponse, ListPlayersRequest, ListPlayersResponse, ModifyPlayerRequest, ModifyPlayerResponse, RemovePlayerExclusionRequest, RemovePlayerExclusionResponse, RemovePlayersRequest, RemovePlayersResponse } from "./players_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -55,6 +55,24 @@ export const PrivatePlayersService = {
       name: "GetPlayer",
       I: GetPlayerRequest,
       O: GetPlayerResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc players.v1.private.PrivatePlayersService.AddPlayerExclusion
+     */
+    addPlayerExclusion: {
+      name: "AddPlayerExclusion",
+      I: AddPlayerExclusionRequest,
+      O: AddPlayerExclusionResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc players.v1.private.PrivatePlayersService.RemovePlayerExclusion
+     */
+    removePlayerExclusion: {
+      name: "RemovePlayerExclusion",
+      I: RemovePlayerExclusionRequest,
+      O: RemovePlayerExclusionResponse,
       kind: MethodKind.Unary,
     },
   }

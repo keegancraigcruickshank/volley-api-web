@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreatePlayerRequest, CreatePlayerResponse, GetPlayerRequest, GetPlayerResponse, ListPlayersRequest, ListPlayersResponse, ModifyPlayerRequest, ModifyPlayerResponse, RemovePlayersRequest, RemovePlayersResponse } from "./players_pb.js";
+import { AddPlayerExclusionRequest, AddPlayerExclusionResponse, CreatePlayerRequest, CreatePlayerResponse, GetPlayerRequest, GetPlayerResponse, ListPlayersRequest, ListPlayersResponse, ModifyPlayerRequest, ModifyPlayerResponse, RemovePlayerExclusionRequest, RemovePlayerExclusionResponse, RemovePlayersRequest, RemovePlayersResponse } from "./players_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -61,6 +61,30 @@ export const getPlayer: {
       readonly name: "GetPlayer",
       readonly I: typeof GetPlayerRequest,
       readonly O: typeof GetPlayerResponse,
+      readonly kind: MethodKind.Unary,
+  readonly service: {
+    readonly typeName: "players.v1.private.PrivatePlayersService"
+  }
+};
+/**
+ * @generated from rpc players.v1.private.PrivatePlayersService.AddPlayerExclusion
+ */
+export const addPlayerExclusion: {
+      readonly name: "AddPlayerExclusion",
+      readonly I: typeof AddPlayerExclusionRequest,
+      readonly O: typeof AddPlayerExclusionResponse,
+      readonly kind: MethodKind.Unary,
+  readonly service: {
+    readonly typeName: "players.v1.private.PrivatePlayersService"
+  }
+};
+/**
+ * @generated from rpc players.v1.private.PrivatePlayersService.RemovePlayerExclusion
+ */
+export const removePlayerExclusion: {
+      readonly name: "RemovePlayerExclusion",
+      readonly I: typeof RemovePlayerExclusionRequest,
+      readonly O: typeof RemovePlayerExclusionResponse,
       readonly kind: MethodKind.Unary,
   readonly service: {
     readonly typeName: "players.v1.private.PrivatePlayersService"

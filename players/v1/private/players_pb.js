@@ -140,6 +140,43 @@ export const ListPlayersResponse = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
+ * @generated from message players.v1.private.AddPlayerExclusionRequest
+ */
+export const AddPlayerExclusionRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "players.v1.private.AddPlayerExclusionRequest",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "exclusion", kind: "message", T: Exclusion },
+  ],
+);
+
+/**
+ * @generated from message players.v1.private.AddPlayerExclusionResponse
+ */
+export const AddPlayerExclusionResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "players.v1.private.AddPlayerExclusionResponse",
+  [],
+);
+
+/**
+ * @generated from message players.v1.private.RemovePlayerExclusionRequest
+ */
+export const RemovePlayerExclusionRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "players.v1.private.RemovePlayerExclusionRequest",
+  () => [
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message players.v1.private.RemovePlayerExclusionResponse
+ */
+export const RemovePlayerExclusionResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "players.v1.private.RemovePlayerExclusionResponse",
+  [],
+);
+
+/**
  * @generated from message players.v1.private.GetPlayerRequest
  */
 export const GetPlayerRequest = /*@__PURE__*/ proto3.makeMessageType(

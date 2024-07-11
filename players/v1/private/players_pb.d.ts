@@ -361,6 +361,97 @@ export declare class ListPlayersResponse extends Message<ListPlayersResponse> {
 }
 
 /**
+ * @generated from message players.v1.private.AddPlayerExclusionRequest
+ */
+export declare class AddPlayerExclusionRequest extends Message<AddPlayerExclusionRequest> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: players.v1.private.Exclusion exclusion = 2;
+   */
+  exclusion?: Exclusion;
+
+  constructor(data?: PartialMessage<AddPlayerExclusionRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "players.v1.private.AddPlayerExclusionRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AddPlayerExclusionRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AddPlayerExclusionRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AddPlayerExclusionRequest;
+
+  static equals(a: AddPlayerExclusionRequest | PlainMessage<AddPlayerExclusionRequest> | undefined, b: AddPlayerExclusionRequest | PlainMessage<AddPlayerExclusionRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message players.v1.private.AddPlayerExclusionResponse
+ */
+export declare class AddPlayerExclusionResponse extends Message<AddPlayerExclusionResponse> {
+  constructor(data?: PartialMessage<AddPlayerExclusionResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "players.v1.private.AddPlayerExclusionResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AddPlayerExclusionResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AddPlayerExclusionResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AddPlayerExclusionResponse;
+
+  static equals(a: AddPlayerExclusionResponse | PlainMessage<AddPlayerExclusionResponse> | undefined, b: AddPlayerExclusionResponse | PlainMessage<AddPlayerExclusionResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message players.v1.private.RemovePlayerExclusionRequest
+ */
+export declare class RemovePlayerExclusionRequest extends Message<RemovePlayerExclusionRequest> {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  constructor(data?: PartialMessage<RemovePlayerExclusionRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "players.v1.private.RemovePlayerExclusionRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RemovePlayerExclusionRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RemovePlayerExclusionRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RemovePlayerExclusionRequest;
+
+  static equals(a: RemovePlayerExclusionRequest | PlainMessage<RemovePlayerExclusionRequest> | undefined, b: RemovePlayerExclusionRequest | PlainMessage<RemovePlayerExclusionRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message players.v1.private.RemovePlayerExclusionResponse
+ */
+export declare class RemovePlayerExclusionResponse extends Message<RemovePlayerExclusionResponse> {
+  constructor(data?: PartialMessage<RemovePlayerExclusionResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "players.v1.private.RemovePlayerExclusionResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RemovePlayerExclusionResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RemovePlayerExclusionResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RemovePlayerExclusionResponse;
+
+  static equals(a: RemovePlayerExclusionResponse | PlainMessage<RemovePlayerExclusionResponse> | undefined, b: RemovePlayerExclusionResponse | PlainMessage<RemovePlayerExclusionResponse> | undefined): boolean;
+}
+
+/**
  * @generated from message players.v1.private.GetPlayerRequest
  */
 export declare class GetPlayerRequest extends Message<GetPlayerRequest> {
