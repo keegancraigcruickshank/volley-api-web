@@ -38,9 +38,10 @@ export const PlayerDetails = /*@__PURE__*/ proto3.makeMessageType(
 export const Exclusion = /*@__PURE__*/ proto3.makeMessageType(
   "players.v1.private.Exclusion",
   () => [
-    { no: 1, name: "start_exclusion", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 2, name: "finish_exclusion", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 3, name: "day", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "start_exclusion", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 3, name: "finish_exclusion", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 4, name: "day", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 

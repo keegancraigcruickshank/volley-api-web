@@ -80,17 +80,22 @@ export declare class PlayerDetails extends Message<PlayerDetails> {
  */
 export declare class Exclusion extends Message<Exclusion> {
   /**
-   * @generated from field: int32 start_exclusion = 1;
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: int32 start_exclusion = 2;
    */
   startExclusion: number;
 
   /**
-   * @generated from field: int32 finish_exclusion = 2;
+   * @generated from field: int32 finish_exclusion = 3;
    */
   finishExclusion: number;
 
   /**
-   * @generated from field: string day = 3;
+   * @generated from field: string day = 4;
    */
   day: string;
 
