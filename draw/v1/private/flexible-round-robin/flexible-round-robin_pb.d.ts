@@ -129,6 +129,41 @@ export declare class FlexibleRoundRobinDraw extends Message<FlexibleRoundRobinDr
    */
   divisionId: string;
 
+  /**
+   * @generated from field: google.protobuf.Timestamp start_date = 5;
+   */
+  startDate?: Timestamp;
+
+  /**
+   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.Frequency frequency = 6;
+   */
+  frequency: Frequency;
+
+  /**
+   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.Points points = 7;
+   */
+  points?: Points;
+
+  /**
+   * @generated from field: int32 rounds = 8;
+   */
+  rounds: number;
+
+  /**
+   * @generated from field: int32 runtime_length = 9;
+   */
+  runtimeLength: number;
+
+  /**
+   * @generated from field: int32 intermission_length = 10;
+   */
+  intermissionLength: number;
+
+  /**
+   * @generated from field: int32 break_length = 11;
+   */
+  breakLength: number;
+
   constructor(data?: PartialMessage<FlexibleRoundRobinDraw>);
 
   static readonly runtime: typeof proto3;
@@ -291,19 +326,9 @@ export declare class CreateFlexibleRoundRobinDrawResponse extends Message<Create
  */
 export declare class UpdateFlexibleRoundRobinDrawRequest extends Message<UpdateFlexibleRoundRobinDrawRequest> {
   /**
-   * @generated from field: string id = 1;
+   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDraw draw = 1;
    */
-  id: string;
-
-  /**
-   * @generated from field: string name = 2;
-   */
-  name: string;
-
-  /**
-   * @generated from field: repeated string teams = 3;
-   */
-  teams: string[];
+  draw?: FlexibleRoundRobinDraw;
 
   constructor(data?: PartialMessage<UpdateFlexibleRoundRobinDrawRequest>);
 
@@ -373,34 +398,9 @@ export declare class GetFlexibleRoundRobinDrawRequest extends Message<GetFlexibl
  */
 export declare class GetFlexibleRoundRobinDrawResponse extends Message<GetFlexibleRoundRobinDrawResponse> {
   /**
-   * @generated from field: string id = 1;
+   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDraw draw = 1;
    */
-  id: string;
-
-  /**
-   * @generated from field: string division_id = 2;
-   */
-  divisionId: string;
-
-  /**
-   * @generated from field: optional google.protobuf.Timestamp start_date = 3;
-   */
-  startDate?: Timestamp;
-
-  /**
-   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.Frequency frequency = 4;
-   */
-  frequency: Frequency;
-
-  /**
-   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.Points points = 5;
-   */
-  points?: Points;
-
-  /**
-   * @generated from field: int32 rounds = 6;
-   */
-  rounds: number;
+  draw?: FlexibleRoundRobinDraw;
 
   constructor(data?: PartialMessage<GetFlexibleRoundRobinDrawResponse>);
 

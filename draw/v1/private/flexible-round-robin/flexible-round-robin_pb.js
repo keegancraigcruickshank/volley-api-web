@@ -56,6 +56,13 @@ export const FlexibleRoundRobinDraw = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "modified", kind: "message", T: Timestamp },
     { no: 4, name: "division_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: "start_date", kind: "message", T: Timestamp },
+    { no: 6, name: "frequency", kind: "enum", T: proto3.getEnumType(Frequency) },
+    { no: 7, name: "points", kind: "message", T: Points },
+    { no: 8, name: "rounds", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 9, name: "runtime_length", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 10, name: "intermission_length", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 11, name: "break_length", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 
@@ -109,9 +116,7 @@ export const CreateFlexibleRoundRobinDrawResponse = /*@__PURE__*/ proto3.makeMes
 export const UpdateFlexibleRoundRobinDrawRequest = /*@__PURE__*/ proto3.makeMessageType(
   "draw.v1.private.draw.flexibleRoundRobin.UpdateFlexibleRoundRobinDrawRequest",
   () => [
-    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "teams", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 1, name: "draw", kind: "message", T: FlexibleRoundRobinDraw },
   ],
 );
 
@@ -141,12 +146,7 @@ export const GetFlexibleRoundRobinDrawRequest = /*@__PURE__*/ proto3.makeMessage
 export const GetFlexibleRoundRobinDrawResponse = /*@__PURE__*/ proto3.makeMessageType(
   "draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawResponse",
   () => [
-    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "division_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "start_date", kind: "message", T: Timestamp, opt: true },
-    { no: 4, name: "frequency", kind: "enum", T: proto3.getEnumType(Frequency) },
-    { no: 5, name: "points", kind: "message", T: Points },
-    { no: 6, name: "rounds", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 1, name: "draw", kind: "message", T: FlexibleRoundRobinDraw },
   ],
 );
 
