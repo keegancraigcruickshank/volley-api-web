@@ -17,6 +17,18 @@ export const SortDirection = /*@__PURE__*/ proto3.makeEnum(
 );
 
 /**
+ * @generated from message divisions.v1.private.GameSettings
+ */
+export const GameSettings = /*@__PURE__*/ proto3.makeMessageType(
+  "divisions.v1.private.GameSettings",
+  () => [
+    { no: 1, name: "duration", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 2, name: "buffer", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 3, name: "break", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+);
+
+/**
  * @generated from message divisions.v1.private.Bound
  */
 export const Bound = /*@__PURE__*/ proto3.makeMessageType(
@@ -50,6 +62,7 @@ export const Division = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "playing_spaces", kind: "message", T: PlayingSpaceWithBounds, repeated: true },
     { no: 4, name: "modified", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 5, name: "game_settings", kind: "message", T: GameSettings },
   ],
 );
 
@@ -61,6 +74,7 @@ export const AddDivisionRequest = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "playing_spaces", kind: "message", T: PlayingSpaceWithBounds, repeated: true },
+    { no: 3, name: "game_settings", kind: "message", T: GameSettings },
   ],
 );
 
@@ -83,6 +97,7 @@ export const UpdateDivisionRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "playing_spaces", kind: "message", T: PlayingSpaceWithBounds, repeated: true },
+    { no: 4, name: "game_settings", kind: "message", T: GameSettings },
   ],
 );
 

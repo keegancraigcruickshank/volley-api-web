@@ -22,6 +22,40 @@ export declare enum SortDirection {
 }
 
 /**
+ * @generated from message divisions.v1.private.GameSettings
+ */
+export declare class GameSettings extends Message<GameSettings> {
+  /**
+   * @generated from field: int32 duration = 1;
+   */
+  duration: number;
+
+  /**
+   * @generated from field: int32 buffer = 2;
+   */
+  buffer: number;
+
+  /**
+   * @generated from field: int32 break = 3;
+   */
+  break: number;
+
+  constructor(data?: PartialMessage<GameSettings>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "divisions.v1.private.GameSettings";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GameSettings;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GameSettings;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GameSettings;
+
+  static equals(a: GameSettings | PlainMessage<GameSettings> | undefined, b: GameSettings | PlainMessage<GameSettings> | undefined): boolean;
+}
+
+/**
  * @generated from message divisions.v1.private.Bound
  */
 export declare class Bound extends Message<Bound> {
@@ -113,6 +147,11 @@ export declare class Division extends Message<Division> {
    */
   modified: number;
 
+  /**
+   * @generated from field: divisions.v1.private.GameSettings game_settings = 5;
+   */
+  gameSettings?: GameSettings;
+
   constructor(data?: PartialMessage<Division>);
 
   static readonly runtime: typeof proto3;
@@ -141,6 +180,11 @@ export declare class AddDivisionRequest extends Message<AddDivisionRequest> {
    * @generated from field: repeated divisions.v1.private.PlayingSpaceWithBounds playing_spaces = 2;
    */
   playingSpaces: PlayingSpaceWithBounds[];
+
+  /**
+   * @generated from field: divisions.v1.private.GameSettings game_settings = 3;
+   */
+  gameSettings?: GameSettings;
 
   constructor(data?: PartialMessage<AddDivisionRequest>);
 
@@ -199,6 +243,11 @@ export declare class UpdateDivisionRequest extends Message<UpdateDivisionRequest
    * @generated from field: repeated divisions.v1.private.PlayingSpaceWithBounds playing_spaces = 3;
    */
   playingSpaces: PlayingSpaceWithBounds[];
+
+  /**
+   * @generated from field: divisions.v1.private.GameSettings game_settings = 4;
+   */
+  gameSettings?: GameSettings;
 
   constructor(data?: PartialMessage<UpdateDivisionRequest>);
 
