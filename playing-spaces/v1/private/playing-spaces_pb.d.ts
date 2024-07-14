@@ -215,6 +215,35 @@ export declare class ModifyPlayingSpaceResponse extends Message<ModifyPlayingSpa
 }
 
 /**
+ * @generated from message playing_spaces.v1.private.ListPlayingSpacesFilter
+ */
+export declare class ListPlayingSpacesFilter extends Message<ListPlayingSpacesFilter> {
+  /**
+   * @generated from field: repeated string playing_space_ids = 1;
+   */
+  playingSpaceIds: string[];
+
+  /**
+   * @generated from field: repeated string division_ids = 2;
+   */
+  divisionIds: string[];
+
+  constructor(data?: PartialMessage<ListPlayingSpacesFilter>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "playing_spaces.v1.private.ListPlayingSpacesFilter";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListPlayingSpacesFilter;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListPlayingSpacesFilter;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListPlayingSpacesFilter;
+
+  static equals(a: ListPlayingSpacesFilter | PlainMessage<ListPlayingSpacesFilter> | undefined, b: ListPlayingSpacesFilter | PlainMessage<ListPlayingSpacesFilter> | undefined): boolean;
+}
+
+/**
  * @generated from message playing_spaces.v1.private.ListPlayingSpacesRequest
  */
 export declare class ListPlayingSpacesRequest extends Message<ListPlayingSpacesRequest> {
@@ -237,6 +266,11 @@ export declare class ListPlayingSpacesRequest extends Message<ListPlayingSpacesR
    * @generated from field: optional playing_spaces.v1.private.SortDirection sortDirection = 4;
    */
   sortDirection?: SortDirection;
+
+  /**
+   * @generated from field: optional playing_spaces.v1.private.ListPlayingSpacesFilter filter = 5;
+   */
+  filter?: ListPlayingSpacesFilter;
 
   constructor(data?: PartialMessage<ListPlayingSpacesRequest>);
 

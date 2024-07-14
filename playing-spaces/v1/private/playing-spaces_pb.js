@@ -91,6 +91,17 @@ export const ModifyPlayingSpaceResponse = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
+ * @generated from message playing_spaces.v1.private.ListPlayingSpacesFilter
+ */
+export const ListPlayingSpacesFilter = /*@__PURE__*/ proto3.makeMessageType(
+  "playing_spaces.v1.private.ListPlayingSpacesFilter",
+  () => [
+    { no: 1, name: "playing_space_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 2, name: "division_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+  ],
+);
+
+/**
  * @generated from message playing_spaces.v1.private.ListPlayingSpacesRequest
  */
 export const ListPlayingSpacesRequest = /*@__PURE__*/ proto3.makeMessageType(
@@ -100,6 +111,7 @@ export const ListPlayingSpacesRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "page", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
     { no: 3, name: "pageSize", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
     { no: 4, name: "sortDirection", kind: "enum", T: proto3.getEnumType(SortDirection), opt: true },
+    { no: 5, name: "filter", kind: "message", T: ListPlayingSpacesFilter, opt: true },
   ],
 );
 
