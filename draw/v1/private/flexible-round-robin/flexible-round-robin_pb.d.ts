@@ -219,9 +219,9 @@ export declare class FlexibleRoundRobinMatch extends Message<FlexibleRoundRobinM
   teamTwoScore: number;
 
   /**
-   * @generated from field: int32 game_start_time = 8;
+   * @generated from field: int32 timeslot = 8;
    */
-  gameStartTime: number;
+  timeslot: number;
 
   /**
    * @generated from field: string playing_space_id = 9;
