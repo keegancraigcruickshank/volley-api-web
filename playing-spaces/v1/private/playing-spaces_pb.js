@@ -97,7 +97,6 @@ export const ListPlayingSpacesFilter = /*@__PURE__*/ proto3.makeMessageType(
   "playing_spaces.v1.private.ListPlayingSpacesFilter",
   () => [
     { no: 1, name: "playing_space_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-    { no: 2, name: "division_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ],
 );
 

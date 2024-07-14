@@ -223,11 +223,6 @@ export declare class ListPlayingSpacesFilter extends Message<ListPlayingSpacesFi
    */
   playingSpaceIds: string[];
 
-  /**
-   * @generated from field: repeated string division_ids = 2;
-   */
-  divisionIds: string[];
-
   constructor(data?: PartialMessage<ListPlayingSpacesFilter>);
 
   static readonly runtime: typeof proto3;
