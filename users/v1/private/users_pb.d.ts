@@ -866,3 +866,56 @@ export declare class GetSubscriptionResponse extends Message<GetSubscriptionResp
   static equals(a: GetSubscriptionResponse | PlainMessage<GetSubscriptionResponse> | undefined, b: GetSubscriptionResponse | PlainMessage<GetSubscriptionResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message users.v1.private.GetTokenRequest
+ */
+export declare class GetTokenRequest extends Message<GetTokenRequest> {
+  /**
+   * @generated from field: string username = 1;
+   */
+  username: string;
+
+  /**
+   * @generated from field: string password = 2;
+   */
+  password: string;
+
+  constructor(data?: PartialMessage<GetTokenRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.GetTokenRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetTokenRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetTokenRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetTokenRequest;
+
+  static equals(a: GetTokenRequest | PlainMessage<GetTokenRequest> | undefined, b: GetTokenRequest | PlainMessage<GetTokenRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message users.v1.private.GetTokenResponse
+ */
+export declare class GetTokenResponse extends Message<GetTokenResponse> {
+  /**
+   * @generated from field: string token = 1;
+   */
+  token: string;
+
+  constructor(data?: PartialMessage<GetTokenResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "users.v1.private.GetTokenResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetTokenResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetTokenResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetTokenResponse;
+
+  static equals(a: GetTokenResponse | PlainMessage<GetTokenResponse> | undefined, b: GetTokenResponse | PlainMessage<GetTokenResponse> | undefined): boolean;
+}
+
