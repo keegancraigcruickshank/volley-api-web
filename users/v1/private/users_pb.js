@@ -344,24 +344,3 @@ export const GetSubscriptionResponse = /*@__PURE__*/ proto3.makeMessageType(
   ],
 );
 
-/**
- * @generated from message users.v1.private.GetTokenRequest
- */
-export const GetTokenRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "users.v1.private.GetTokenRequest",
-  () => [
-    { no: 1, name: "username", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "password", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
-);
-
-/**
- * @generated from message users.v1.private.GetTokenResponse
- */
-export const GetTokenResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "users.v1.private.GetTokenResponse",
-  () => [
-    { no: 1, name: "token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
-);
-
