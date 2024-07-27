@@ -7,13 +7,13 @@ import { GetTokenRequest, GetTokenResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
- * @generated from service users.v1.public.PrivateUsersService
+ * @generated from service users.v1.public.PublicUsersService
  */
-export declare const PrivateUsersService: {
-  readonly typeName: "users.v1.public.PrivateUsersService",
+export declare const PublicUsersService: {
+  readonly typeName: "users.v1.public.PublicUsersService",
   readonly methods: {
     /**
-     * @generated from rpc users.v1.public.PrivateUsersService.GetToken
+     * @generated from rpc users.v1.public.PublicUsersService.GetToken
      */
     readonly getToken: {
       readonly name: "GetToken",

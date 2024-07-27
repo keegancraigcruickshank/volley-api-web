@@ -7,7 +7,7 @@ import { GetTokenRequest, GetTokenResponse } from "./users_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
- * @generated from rpc users.v1.public.PrivateUsersService.GetToken
+ * @generated from rpc users.v1.public.PublicUsersService.GetToken
  */
 export const getToken: {
       readonly name: "GetToken",
@@ -15,6 +15,6 @@ export const getToken: {
       readonly O: typeof GetTokenResponse,
       readonly kind: MethodKind.Unary,
   readonly service: {
-    readonly typeName: "users.v1.public.PrivateUsersService"
+    readonly typeName: "users.v1.public.PublicUsersService"
   }
 };

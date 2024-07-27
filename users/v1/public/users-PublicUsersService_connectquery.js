@@ -7,7 +7,7 @@ import { MethodKind } from "@bufbuild/protobuf";
 import { GetTokenRequest, GetTokenResponse } from "./users_pb.js";
 
 /**
- * @generated from rpc users.v1.public.PrivateUsersService.GetToken
+ * @generated from rpc users.v1.public.PublicUsersService.GetToken
  */
 export const getToken = {
   localName: "getToken",
@@ -16,6 +16,6 @@ export const getToken = {
   I: GetTokenRequest,
   O: GetTokenResponse,
   service: {
-    typeName: "users.v1.public.PrivateUsersService"
+    typeName: "users.v1.public.PublicUsersService"
   }
 };
