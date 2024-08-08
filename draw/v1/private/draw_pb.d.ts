@@ -143,11 +143,6 @@ export declare class DeleteDrawRequest extends Message<DeleteDrawRequest> {
  * @generated from message draw.v1.private.DeleteDrawResponse
  */
 export declare class DeleteDrawResponse extends Message<DeleteDrawResponse> {
-  /**
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
   constructor(data?: PartialMessage<DeleteDrawResponse>);
 
   static readonly runtime: typeof proto3;

@@ -65,9 +65,7 @@ export const DeleteDrawRequest = /*@__PURE__*/ proto3.makeMessageType(
  */
 export const DeleteDrawResponse = /*@__PURE__*/ proto3.makeMessageType(
   "draw.v1.private.DeleteDrawResponse",
-  () => [
-    { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
+  [],
 );
 
 /**
