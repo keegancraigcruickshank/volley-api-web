@@ -79,7 +79,6 @@ export const FlexibleRoundRobinMatch = /*@__PURE__*/ proto3.makeMessageType(
     { no: 5, name: "team_two", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 6, name: "team_one_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 7, name: "team_two_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 8, name: "timeslot", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 9, name: "playing_space_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 10, name: "modified", kind: "message", T: Timestamp },
   ],
