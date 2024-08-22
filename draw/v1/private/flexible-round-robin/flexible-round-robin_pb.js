@@ -174,3 +174,41 @@ export const GetFlexibleRoundRobinDrawRoundResponse = /*@__PURE__*/ proto3.makeM
   ],
 );
 
+/**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawLeaderboardTeam
+ */
+export const FlexibleRoundRobinDrawLeaderboardTeam = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawLeaderboardTeam",
+  () => [
+    { no: 1, name: "team_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "team_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "wins", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 4, name: "ties", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 5, name: "losses", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 6, name: "forfeits", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 7, name: "points", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 8, name: "placement", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+);
+
+/**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawLeaderboardRequest
+ */
+export const GetFlexibleRoundRobinDrawLeaderboardRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawLeaderboardRequest",
+  () => [
+    { no: 1, name: "draw_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawLeaderboardResponse
+ */
+export const GetFlexibleRoundRobinDrawLeaderboardResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawLeaderboardResponse",
+  () => [
+    { no: 1, name: "draw_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "teams", kind: "message", T: FlexibleRoundRobinDrawLeaderboardTeam, repeated: true },
+  ],
+);
+

@@ -485,3 +485,115 @@ export declare class GetFlexibleRoundRobinDrawRoundResponse extends Message<GetF
   static equals(a: GetFlexibleRoundRobinDrawRoundResponse | PlainMessage<GetFlexibleRoundRobinDrawRoundResponse> | undefined, b: GetFlexibleRoundRobinDrawRoundResponse | PlainMessage<GetFlexibleRoundRobinDrawRoundResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawLeaderboardTeam
+ */
+export declare class FlexibleRoundRobinDrawLeaderboardTeam extends Message<FlexibleRoundRobinDrawLeaderboardTeam> {
+  /**
+   * @generated from field: string team_id = 1;
+   */
+  teamId: string;
+
+  /**
+   * @generated from field: string team_name = 2;
+   */
+  teamName: string;
+
+  /**
+   * @generated from field: int32 wins = 3;
+   */
+  wins: number;
+
+  /**
+   * @generated from field: int32 ties = 4;
+   */
+  ties: number;
+
+  /**
+   * @generated from field: int32 losses = 5;
+   */
+  losses: number;
+
+  /**
+   * @generated from field: int32 forfeits = 6;
+   */
+  forfeits: number;
+
+  /**
+   * @generated from field: int32 points = 7;
+   */
+  points: number;
+
+  /**
+   * @generated from field: int32 placement = 8;
+   */
+  placement: number;
+
+  constructor(data?: PartialMessage<FlexibleRoundRobinDrawLeaderboardTeam>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawLeaderboardTeam";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): FlexibleRoundRobinDrawLeaderboardTeam;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): FlexibleRoundRobinDrawLeaderboardTeam;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): FlexibleRoundRobinDrawLeaderboardTeam;
+
+  static equals(a: FlexibleRoundRobinDrawLeaderboardTeam | PlainMessage<FlexibleRoundRobinDrawLeaderboardTeam> | undefined, b: FlexibleRoundRobinDrawLeaderboardTeam | PlainMessage<FlexibleRoundRobinDrawLeaderboardTeam> | undefined): boolean;
+}
+
+/**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawLeaderboardRequest
+ */
+export declare class GetFlexibleRoundRobinDrawLeaderboardRequest extends Message<GetFlexibleRoundRobinDrawLeaderboardRequest> {
+  /**
+   * @generated from field: string draw_id = 1;
+   */
+  drawId: string;
+
+  constructor(data?: PartialMessage<GetFlexibleRoundRobinDrawLeaderboardRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawLeaderboardRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetFlexibleRoundRobinDrawLeaderboardRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetFlexibleRoundRobinDrawLeaderboardRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetFlexibleRoundRobinDrawLeaderboardRequest;
+
+  static equals(a: GetFlexibleRoundRobinDrawLeaderboardRequest | PlainMessage<GetFlexibleRoundRobinDrawLeaderboardRequest> | undefined, b: GetFlexibleRoundRobinDrawLeaderboardRequest | PlainMessage<GetFlexibleRoundRobinDrawLeaderboardRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawLeaderboardResponse
+ */
+export declare class GetFlexibleRoundRobinDrawLeaderboardResponse extends Message<GetFlexibleRoundRobinDrawLeaderboardResponse> {
+  /**
+   * @generated from field: string draw_id = 1;
+   */
+  drawId: string;
+
+  /**
+   * @generated from field: repeated draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawLeaderboardTeam teams = 2;
+   */
+  teams: FlexibleRoundRobinDrawLeaderboardTeam[];
+
+  constructor(data?: PartialMessage<GetFlexibleRoundRobinDrawLeaderboardResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawLeaderboardResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetFlexibleRoundRobinDrawLeaderboardResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetFlexibleRoundRobinDrawLeaderboardResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetFlexibleRoundRobinDrawLeaderboardResponse;
+
+  static equals(a: GetFlexibleRoundRobinDrawLeaderboardResponse | PlainMessage<GetFlexibleRoundRobinDrawLeaderboardResponse> | undefined, b: GetFlexibleRoundRobinDrawLeaderboardResponse | PlainMessage<GetFlexibleRoundRobinDrawLeaderboardResponse> | undefined): boolean;
+}
+
