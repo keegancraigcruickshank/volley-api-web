@@ -525,7 +525,12 @@ export declare class FlexibleRoundRobinDrawLeaderboardTeam extends Message<Flexi
   points: number;
 
   /**
-   * @generated from field: int32 placement = 8;
+   * @generated from field: int32 differential = 8;
+   */
+  differential: number;
+
+  /**
+   * @generated from field: int32 placement = 9;
    */
   placement: number;
 

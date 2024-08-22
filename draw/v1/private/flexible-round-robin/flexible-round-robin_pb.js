@@ -187,7 +187,8 @@ export const FlexibleRoundRobinDrawLeaderboardTeam = /*@__PURE__*/ proto3.makeMe
     { no: 5, name: "losses", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 6, name: "forfeits", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 7, name: "points", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 8, name: "placement", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 8, name: "differential", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 9, name: "placement", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 
