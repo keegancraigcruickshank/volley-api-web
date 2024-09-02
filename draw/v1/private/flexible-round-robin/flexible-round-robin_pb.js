@@ -148,6 +148,18 @@ export const GetFlexibleRoundRobinDrawRoundRequest = /*@__PURE__*/ proto3.makeMe
 );
 
 /**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawRoundMetadata
+ */
+export const FlexibleRoundRobinDrawRoundMetadata = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawRoundMetadata",
+  () => [
+    { no: 1, name: "draw_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "round", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 3, name: "round_date", kind: "message", T: Timestamp },
+  ],
+);
+
+/**
  * @generated from message draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawRoundResponse
  */
 export const GetFlexibleRoundRobinDrawRoundResponse = /*@__PURE__*/ proto3.makeMessageType(
@@ -155,8 +167,8 @@ export const GetFlexibleRoundRobinDrawRoundResponse = /*@__PURE__*/ proto3.makeM
   () => [
     { no: 1, name: "draw_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "round", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 4, name: "matches", kind: "message", T: FlexibleRoundRobinMatch, repeated: true },
-    { no: 5, name: "round_date", kind: "message", T: Timestamp },
+    { no: 3, name: "matches", kind: "message", T: FlexibleRoundRobinMatch, repeated: true },
+    { no: 4, name: "metadata", kind: "message", T: FlexibleRoundRobinDrawRoundMetadata },
   ],
 );
 

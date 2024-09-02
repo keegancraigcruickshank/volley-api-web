@@ -417,6 +417,40 @@ export declare class GetFlexibleRoundRobinDrawRoundRequest extends Message<GetFl
 }
 
 /**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawRoundMetadata
+ */
+export declare class FlexibleRoundRobinDrawRoundMetadata extends Message<FlexibleRoundRobinDrawRoundMetadata> {
+  /**
+   * @generated from field: string draw_id = 1;
+   */
+  drawId: string;
+
+  /**
+   * @generated from field: int32 round = 2;
+   */
+  round: number;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp round_date = 3;
+   */
+  roundDate?: Timestamp;
+
+  constructor(data?: PartialMessage<FlexibleRoundRobinDrawRoundMetadata>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawRoundMetadata";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): FlexibleRoundRobinDrawRoundMetadata;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): FlexibleRoundRobinDrawRoundMetadata;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): FlexibleRoundRobinDrawRoundMetadata;
+
+  static equals(a: FlexibleRoundRobinDrawRoundMetadata | PlainMessage<FlexibleRoundRobinDrawRoundMetadata> | undefined, b: FlexibleRoundRobinDrawRoundMetadata | PlainMessage<FlexibleRoundRobinDrawRoundMetadata> | undefined): boolean;
+}
+
+/**
  * @generated from message draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawRoundResponse
  */
 export declare class GetFlexibleRoundRobinDrawRoundResponse extends Message<GetFlexibleRoundRobinDrawRoundResponse> {
@@ -431,14 +465,14 @@ export declare class GetFlexibleRoundRobinDrawRoundResponse extends Message<GetF
   round: number;
 
   /**
-   * @generated from field: repeated draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinMatch matches = 4;
+   * @generated from field: repeated draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinMatch matches = 3;
    */
   matches: FlexibleRoundRobinMatch[];
 
   /**
-   * @generated from field: google.protobuf.Timestamp round_date = 5;
+   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawRoundMetadata metadata = 4;
    */
-  roundDate?: Timestamp;
+  metadata?: FlexibleRoundRobinDrawRoundMetadata;
 
   constructor(data?: PartialMessage<GetFlexibleRoundRobinDrawRoundResponse>);
 
