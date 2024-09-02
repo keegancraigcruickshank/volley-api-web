@@ -42,31 +42,6 @@ export declare enum Frequency {
 }
 
 /**
- * @generated from enum draw.v1.private.draw.flexibleRoundRobin.RoundStatus
- */
-export declare enum RoundStatus {
-  /**
-   * @generated from enum value: ROUND_STATUS_UNSPECIFIED = 0;
-   */
-  UNSPECIFIED = 0,
-
-  /**
-   * @generated from enum value: ROUND_STATUS_PREVIEW = 1;
-   */
-  PREVIEW = 1,
-
-  /**
-   * @generated from enum value: ROUND_STATUS_DRAFT = 2;
-   */
-  DRAFT = 2,
-
-  /**
-   * @generated from enum value: ROUND_STATUS_PUBLISHED = 3;
-   */
-  PUBLISHED = 3,
-}
-
-/**
  * @generated from message draw.v1.private.draw.flexibleRoundRobin.Points
  */
 export declare class Points extends Message<Points> {
@@ -454,11 +429,6 @@ export declare class GetFlexibleRoundRobinDrawRoundResponse extends Message<GetF
    * @generated from field: int32 round = 2;
    */
   round: number;
-
-  /**
-   * @generated from field: draw.v1.private.draw.flexibleRoundRobin.RoundStatus status = 3;
-   */
-  status: RoundStatus;
 
   /**
    * @generated from field: repeated draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinMatch matches = 4;

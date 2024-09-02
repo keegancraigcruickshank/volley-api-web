@@ -21,19 +21,6 @@ export const Frequency = /*@__PURE__*/ proto3.makeEnum(
 );
 
 /**
- * @generated from enum draw.v1.private.draw.flexibleRoundRobin.RoundStatus
- */
-export const RoundStatus = /*@__PURE__*/ proto3.makeEnum(
-  "draw.v1.private.draw.flexibleRoundRobin.RoundStatus",
-  [
-    {no: 0, name: "ROUND_STATUS_UNSPECIFIED", localName: "UNSPECIFIED"},
-    {no: 1, name: "ROUND_STATUS_PREVIEW", localName: "PREVIEW"},
-    {no: 2, name: "ROUND_STATUS_DRAFT", localName: "DRAFT"},
-    {no: 3, name: "ROUND_STATUS_PUBLISHED", localName: "PUBLISHED"},
-  ],
-);
-
-/**
  * @generated from message draw.v1.private.draw.flexibleRoundRobin.Points
  */
 export const Points = /*@__PURE__*/ proto3.makeMessageType(
@@ -168,7 +155,6 @@ export const GetFlexibleRoundRobinDrawRoundResponse = /*@__PURE__*/ proto3.makeM
   () => [
     { no: 1, name: "draw_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "round", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 3, name: "status", kind: "enum", T: proto3.getEnumType(RoundStatus) },
     { no: 4, name: "matches", kind: "message", T: FlexibleRoundRobinMatch, repeated: true },
     { no: 5, name: "round_date", kind: "message", T: Timestamp },
   ],
