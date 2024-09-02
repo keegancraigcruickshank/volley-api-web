@@ -388,6 +388,64 @@ export declare class GetFlexibleRoundRobinDrawResponse extends Message<GetFlexib
 }
 
 /**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawChangeRoundDateRequest
+ */
+export declare class FlexibleRoundRobinDrawChangeRoundDateRequest extends Message<FlexibleRoundRobinDrawChangeRoundDateRequest> {
+  /**
+   * @generated from field: string draw_id = 1;
+   */
+  drawId: string;
+
+  /**
+   * @generated from field: int32 round = 2;
+   */
+  round: number;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp round_date = 3;
+   */
+  roundDate?: Timestamp;
+
+  constructor(data?: PartialMessage<FlexibleRoundRobinDrawChangeRoundDateRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawChangeRoundDateRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): FlexibleRoundRobinDrawChangeRoundDateRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): FlexibleRoundRobinDrawChangeRoundDateRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): FlexibleRoundRobinDrawChangeRoundDateRequest;
+
+  static equals(a: FlexibleRoundRobinDrawChangeRoundDateRequest | PlainMessage<FlexibleRoundRobinDrawChangeRoundDateRequest> | undefined, b: FlexibleRoundRobinDrawChangeRoundDateRequest | PlainMessage<FlexibleRoundRobinDrawChangeRoundDateRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawChangeRoundDateResponse
+ */
+export declare class FlexibleRoundRobinDrawChangeRoundDateResponse extends Message<FlexibleRoundRobinDrawChangeRoundDateResponse> {
+  /**
+   * @generated from field: string draw_id = 1;
+   */
+  drawId: string;
+
+  constructor(data?: PartialMessage<FlexibleRoundRobinDrawChangeRoundDateResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawChangeRoundDateResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): FlexibleRoundRobinDrawChangeRoundDateResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): FlexibleRoundRobinDrawChangeRoundDateResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): FlexibleRoundRobinDrawChangeRoundDateResponse;
+
+  static equals(a: FlexibleRoundRobinDrawChangeRoundDateResponse | PlainMessage<FlexibleRoundRobinDrawChangeRoundDateResponse> | undefined, b: FlexibleRoundRobinDrawChangeRoundDateResponse | PlainMessage<FlexibleRoundRobinDrawChangeRoundDateResponse> | undefined): boolean;
+}
+
+/**
  * @generated from message draw.v1.private.draw.flexibleRoundRobin.GetFlexibleRoundRobinDrawRoundRequest
  */
 export declare class GetFlexibleRoundRobinDrawRoundRequest extends Message<GetFlexibleRoundRobinDrawRoundRequest> {
