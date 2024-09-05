@@ -5,7 +5,7 @@
 
 import { DeleteDrawRequest, DeleteDrawResponse, GetDrawRequest, GetDrawResponse, ListDrawsRequest, ListDrawsResponse } from "./draw_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
-import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, FlexibleRoundRobinDrawChangeRoundDateRequest, FlexibleRoundRobinDrawChangeRoundDateResponse, GetFlexibleRoundRobinDrawLeaderboardRequest, GetFlexibleRoundRobinDrawLeaderboardResponse, GetFlexibleRoundRobinDrawRequest, GetFlexibleRoundRobinDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./flexible-round-robin/flexible-round-robin_pb.js";
+import { CreateFlexibleRoundRobinDrawRequest, CreateFlexibleRoundRobinDrawResponse, FlexibleRoundRobinDrawChangeRoundDateRequest, FlexibleRoundRobinDrawChangeRoundDateResponse, GetFlexibleRoundRobinDrawLeaderboardRequest, GetFlexibleRoundRobinDrawLeaderboardResponse, GetFlexibleRoundRobinDrawRequest, GetFlexibleRoundRobinDrawResponse, GetFlexibleRoundRobinDrawRoundRequest, GetFlexibleRoundRobinDrawRoundResponse, SetFlexibleRoundRobinDrawFixtureScoreRequest, SetFlexibleRoundRobinDrawFixtureScoreResponse, UpdateFlexibleRoundRobinDrawRequest, UpdateFlexibleRoundRobinDrawResponse } from "./flexible-round-robin/flexible-round-robin_pb.js";
 
 /**
  * @generated from service draw.v1.private.PrivateDrawService
@@ -96,6 +96,15 @@ export declare const PrivateDrawService: {
       readonly name: "FlexibleRoundRobinDrawChangeRoundDate",
       readonly I: typeof FlexibleRoundRobinDrawChangeRoundDateRequest,
       readonly O: typeof FlexibleRoundRobinDrawChangeRoundDateResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc draw.v1.private.PrivateDrawService.SetFlexibleRoundRobinDrawFixtureScore
+     */
+    readonly setFlexibleRoundRobinDrawFixtureScore: {
+      readonly name: "SetFlexibleRoundRobinDrawFixtureScore",
+      readonly I: typeof SetFlexibleRoundRobinDrawFixtureScoreRequest,
+      readonly O: typeof SetFlexibleRoundRobinDrawFixtureScoreResponse,
       readonly kind: MethodKind.Unary,
     },
   }

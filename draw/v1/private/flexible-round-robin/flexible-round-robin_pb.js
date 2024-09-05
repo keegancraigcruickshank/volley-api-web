@@ -137,6 +137,28 @@ export const GetFlexibleRoundRobinDrawResponse = /*@__PURE__*/ proto3.makeMessag
 );
 
 /**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.SetFlexibleRoundRobinDrawFixtureScoreRequest
+ */
+export const SetFlexibleRoundRobinDrawFixtureScoreRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.draw.flexibleRoundRobin.SetFlexibleRoundRobinDrawFixtureScoreRequest",
+  () => [
+    { no: 1, name: "match_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "team_one_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "team_two_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "team_one_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 5, name: "team_two_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+);
+
+/**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.SetFlexibleRoundRobinDrawFixtureScoreResponse
+ */
+export const SetFlexibleRoundRobinDrawFixtureScoreResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "draw.v1.private.draw.flexibleRoundRobin.SetFlexibleRoundRobinDrawFixtureScoreResponse",
+  [],
+);
+
+/**
  * @generated from message draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawChangeRoundDateRequest
  */
 export const FlexibleRoundRobinDrawChangeRoundDateRequest = /*@__PURE__*/ proto3.makeMessageType(

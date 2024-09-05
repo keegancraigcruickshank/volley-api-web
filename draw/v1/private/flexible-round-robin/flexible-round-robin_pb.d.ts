@@ -388,6 +388,69 @@ export declare class GetFlexibleRoundRobinDrawResponse extends Message<GetFlexib
 }
 
 /**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.SetFlexibleRoundRobinDrawFixtureScoreRequest
+ */
+export declare class SetFlexibleRoundRobinDrawFixtureScoreRequest extends Message<SetFlexibleRoundRobinDrawFixtureScoreRequest> {
+  /**
+   * @generated from field: string match_id = 1;
+   */
+  matchId: string;
+
+  /**
+   * @generated from field: string team_one_id = 2;
+   */
+  teamOneId: string;
+
+  /**
+   * @generated from field: string team_two_id = 3;
+   */
+  teamTwoId: string;
+
+  /**
+   * @generated from field: int32 team_one_score = 4;
+   */
+  teamOneScore: number;
+
+  /**
+   * @generated from field: int32 team_two_score = 5;
+   */
+  teamTwoScore: number;
+
+  constructor(data?: PartialMessage<SetFlexibleRoundRobinDrawFixtureScoreRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.draw.flexibleRoundRobin.SetFlexibleRoundRobinDrawFixtureScoreRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SetFlexibleRoundRobinDrawFixtureScoreRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SetFlexibleRoundRobinDrawFixtureScoreRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SetFlexibleRoundRobinDrawFixtureScoreRequest;
+
+  static equals(a: SetFlexibleRoundRobinDrawFixtureScoreRequest | PlainMessage<SetFlexibleRoundRobinDrawFixtureScoreRequest> | undefined, b: SetFlexibleRoundRobinDrawFixtureScoreRequest | PlainMessage<SetFlexibleRoundRobinDrawFixtureScoreRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message draw.v1.private.draw.flexibleRoundRobin.SetFlexibleRoundRobinDrawFixtureScoreResponse
+ */
+export declare class SetFlexibleRoundRobinDrawFixtureScoreResponse extends Message<SetFlexibleRoundRobinDrawFixtureScoreResponse> {
+  constructor(data?: PartialMessage<SetFlexibleRoundRobinDrawFixtureScoreResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "draw.v1.private.draw.flexibleRoundRobin.SetFlexibleRoundRobinDrawFixtureScoreResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SetFlexibleRoundRobinDrawFixtureScoreResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SetFlexibleRoundRobinDrawFixtureScoreResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SetFlexibleRoundRobinDrawFixtureScoreResponse;
+
+  static equals(a: SetFlexibleRoundRobinDrawFixtureScoreResponse | PlainMessage<SetFlexibleRoundRobinDrawFixtureScoreResponse> | undefined, b: SetFlexibleRoundRobinDrawFixtureScoreResponse | PlainMessage<SetFlexibleRoundRobinDrawFixtureScoreResponse> | undefined): boolean;
+}
+
+/**
  * @generated from message draw.v1.private.draw.flexibleRoundRobin.FlexibleRoundRobinDrawChangeRoundDateRequest
  */
 export declare class FlexibleRoundRobinDrawChangeRoundDateRequest extends Message<FlexibleRoundRobinDrawChangeRoundDateRequest> {
