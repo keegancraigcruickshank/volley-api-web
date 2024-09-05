@@ -4,7 +4,6 @@
 // @ts-nocheck
 
 import { proto3 } from "@bufbuild/protobuf";
-import { Code } from "../google/rpc/code_pb.js";
 
 /**
  * @generated from message common.v1.VolleyError
@@ -14,8 +13,7 @@ export const VolleyError = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "display_message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "internal_message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "code", kind: "enum", T: proto3.getEnumType(Code) },
-    { no: 4, name: "status", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 3, name: "status_code", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 5, name: "metadata", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 9 /* ScalarType.STRING */} },
   ],
 );

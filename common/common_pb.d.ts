@@ -5,7 +5,6 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
-import type { Code } from "../google/rpc/code_pb.js";
 
 /**
  * @generated from message common.v1.VolleyError
@@ -22,14 +21,9 @@ export declare class VolleyError extends Message<VolleyError> {
   internalMessage: string;
 
   /**
-   * @generated from field: google.rpc.Code code = 3;
+   * @generated from field: int32 status_code = 3;
    */
-  code: Code;
-
-  /**
-   * @generated from field: int32 status = 4;
-   */
-  status: number;
+  statusCode: number;
 
   /**
    * @generated from field: map<string, string> metadata = 5;
