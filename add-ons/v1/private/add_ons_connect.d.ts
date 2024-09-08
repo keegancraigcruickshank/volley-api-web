@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { EnableAddonRequest, EnableAddonResponse } from "./add_ons_pb.js";
+import { EnableAddonRequest, EnableAddonResponse, ListAddonsRequest, ListAddonsResponse } from "./add_ons_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -19,6 +19,15 @@ export declare const PrivateAddonsService: {
       readonly name: "EnableAddon",
       readonly I: typeof EnableAddonRequest,
       readonly O: typeof EnableAddonResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc addons.v1.private.PrivateAddonsService.ListAddons
+     */
+    readonly listAddons: {
+      readonly name: "ListAddons",
+      readonly I: typeof ListAddonsRequest,
+      readonly O: typeof ListAddonsResponse,
       readonly kind: MethodKind.Unary,
     },
   }

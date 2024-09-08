@@ -34,3 +34,32 @@ export const EnableAddonResponse = /*@__PURE__*/ proto3.makeMessageType(
   [],
 );
 
+/**
+ * @generated from message addons.v1.private.Addon
+ */
+export const Addon = /*@__PURE__*/ proto3.makeMessageType(
+  "addons.v1.private.Addon",
+  () => [
+    { no: 1, name: "addon_type", kind: "enum", T: proto3.getEnumType(AddonType) },
+    { no: 2, name: "enabled", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+  ],
+);
+
+/**
+ * @generated from message addons.v1.private.ListAddonsRequest
+ */
+export const ListAddonsRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "addons.v1.private.ListAddonsRequest",
+  [],
+);
+
+/**
+ * @generated from message addons.v1.private.ListAddonsResponse
+ */
+export const ListAddonsResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "addons.v1.private.ListAddonsResponse",
+  () => [
+    { no: 1, name: "addons", kind: "message", T: Addon, repeated: true },
+  ],
+);
+

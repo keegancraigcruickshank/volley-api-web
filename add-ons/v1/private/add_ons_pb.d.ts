@@ -64,3 +64,75 @@ export declare class EnableAddonResponse extends Message<EnableAddonResponse> {
   static equals(a: EnableAddonResponse | PlainMessage<EnableAddonResponse> | undefined, b: EnableAddonResponse | PlainMessage<EnableAddonResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message addons.v1.private.Addon
+ */
+export declare class Addon extends Message<Addon> {
+  /**
+   * @generated from field: addons.v1.private.AddonType addon_type = 1;
+   */
+  addonType: AddonType;
+
+  /**
+   * @generated from field: bool enabled = 2;
+   */
+  enabled: boolean;
+
+  constructor(data?: PartialMessage<Addon>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "addons.v1.private.Addon";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Addon;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Addon;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Addon;
+
+  static equals(a: Addon | PlainMessage<Addon> | undefined, b: Addon | PlainMessage<Addon> | undefined): boolean;
+}
+
+/**
+ * @generated from message addons.v1.private.ListAddonsRequest
+ */
+export declare class ListAddonsRequest extends Message<ListAddonsRequest> {
+  constructor(data?: PartialMessage<ListAddonsRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "addons.v1.private.ListAddonsRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListAddonsRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListAddonsRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListAddonsRequest;
+
+  static equals(a: ListAddonsRequest | PlainMessage<ListAddonsRequest> | undefined, b: ListAddonsRequest | PlainMessage<ListAddonsRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message addons.v1.private.ListAddonsResponse
+ */
+export declare class ListAddonsResponse extends Message<ListAddonsResponse> {
+  /**
+   * @generated from field: repeated addons.v1.private.Addon addons = 1;
+   */
+  addons: Addon[];
+
+  constructor(data?: PartialMessage<ListAddonsResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "addons.v1.private.ListAddonsResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListAddonsResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListAddonsResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListAddonsResponse;
+
+  static equals(a: ListAddonsResponse | PlainMessage<ListAddonsResponse> | undefined, b: ListAddonsResponse | PlainMessage<ListAddonsResponse> | undefined): boolean;
+}
+
