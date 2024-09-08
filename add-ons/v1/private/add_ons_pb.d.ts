@@ -16,9 +16,9 @@ export declare enum AddonType {
   UNSPECIFIED = 0,
 
   /**
-   * @generated from enum value: ADDON_TYPE_CLOUD_SCORING = 1;
+   * @generated from enum value: ADDON_TYPE_REMOTE_SCORING = 1;
    */
-  CLOUD_SCORING = 1,
+  REMOTE_SCORING = 1,
 }
 
 /**

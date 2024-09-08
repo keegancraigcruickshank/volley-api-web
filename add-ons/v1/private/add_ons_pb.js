@@ -12,7 +12,7 @@ export const AddonType = /*@__PURE__*/ proto3.makeEnum(
   "addons.v1.private.AddonType",
   [
     {no: 0, name: "ADDON_TYPE_UNSPECIFIED", localName: "UNSPECIFIED"},
-    {no: 1, name: "ADDON_TYPE_CLOUD_SCORING", localName: "CLOUD_SCORING"},
+    {no: 1, name: "ADDON_TYPE_REMOTE_SCORING", localName: "REMOTE_SCORING"},
   ],
 );
 
