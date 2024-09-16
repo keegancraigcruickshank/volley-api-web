@@ -122,27 +122,32 @@ export declare class ListScoresResponse extends Message<ListScoresResponse> {
  */
 export declare class ListScoresResponse_Score extends Message<ListScoresResponse_Score> {
   /**
-   * @generated from field: string team_one_id = 1;
+   * @generated from field: string score_id = 1;
+   */
+  scoreId: string;
+
+  /**
+   * @generated from field: string team_one_id = 2;
    */
   teamOneId: string;
 
   /**
-   * @generated from field: string team_two_id = 2;
+   * @generated from field: string team_two_id = 3;
    */
   teamTwoId: string;
 
   /**
-   * @generated from field: int32 team_one_score = 3;
+   * @generated from field: int32 team_one_score = 4;
    */
   teamOneScore: number;
 
   /**
-   * @generated from field: int32 team_two_score = 4;
+   * @generated from field: int32 team_two_score = 5;
    */
   teamTwoScore: number;
 
   /**
-   * @generated from field: google.protobuf.Timestamp played_at = 5;
+   * @generated from field: google.protobuf.Timestamp played_at = 6;
    */
   playedAt?: Timestamp;
 
@@ -159,5 +164,48 @@ export declare class ListScoresResponse_Score extends Message<ListScoresResponse
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListScoresResponse_Score;
 
   static equals(a: ListScoresResponse_Score | PlainMessage<ListScoresResponse_Score> | undefined, b: ListScoresResponse_Score | PlainMessage<ListScoresResponse_Score> | undefined): boolean;
+}
+
+/**
+ * @generated from message remote_scoring.v1.private.DeleteScoreRequest
+ */
+export declare class DeleteScoreRequest extends Message<DeleteScoreRequest> {
+  /**
+   * @generated from field: string score_id = 1;
+   */
+  scoreId: string;
+
+  constructor(data?: PartialMessage<DeleteScoreRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "remote_scoring.v1.private.DeleteScoreRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DeleteScoreRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DeleteScoreRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DeleteScoreRequest;
+
+  static equals(a: DeleteScoreRequest | PlainMessage<DeleteScoreRequest> | undefined, b: DeleteScoreRequest | PlainMessage<DeleteScoreRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message remote_scoring.v1.private.DeleteScoreResponse
+ */
+export declare class DeleteScoreResponse extends Message<DeleteScoreResponse> {
+  constructor(data?: PartialMessage<DeleteScoreResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "remote_scoring.v1.private.DeleteScoreResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DeleteScoreResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DeleteScoreResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DeleteScoreResponse;
+
+  static equals(a: DeleteScoreResponse | PlainMessage<DeleteScoreResponse> | undefined, b: DeleteScoreResponse | PlainMessage<DeleteScoreResponse> | undefined): boolean;
 }
 

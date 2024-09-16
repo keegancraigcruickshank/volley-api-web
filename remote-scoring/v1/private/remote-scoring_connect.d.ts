@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { ListScoresRequest, ListScoresResponse, UploadScoreRequest, UploadScoreResponse } from "./remote-scoring_pb.js";
+import { DeleteScoreRequest, DeleteScoreResponse, ListScoresRequest, ListScoresResponse, UploadScoreRequest, UploadScoreResponse } from "./remote-scoring_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -28,6 +28,15 @@ export declare const PrivateRemoteScoringService: {
       readonly name: "ListScores",
       readonly I: typeof ListScoresRequest,
       readonly O: typeof ListScoresResponse,
+      readonly kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc remote_scoring.v1.private.PrivateRemoteScoringService.DeleteScore
+     */
+    readonly deleteScore: {
+      readonly name: "DeleteScore",
+      readonly I: typeof DeleteScoreRequest,
+      readonly O: typeof DeleteScoreResponse,
       readonly kind: MethodKind.Unary,
     },
   }

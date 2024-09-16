@@ -53,12 +53,31 @@ export const ListScoresResponse = /*@__PURE__*/ proto3.makeMessageType(
 export const ListScoresResponse_Score = /*@__PURE__*/ proto3.makeMessageType(
   "remote_scoring.v1.private.ListScoresResponse.Score",
   () => [
-    { no: 1, name: "team_one_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "team_two_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "team_one_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 4, name: "team_two_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 5, name: "played_at", kind: "message", T: Timestamp },
+    { no: 1, name: "score_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "team_one_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "team_two_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "team_one_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 5, name: "team_two_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 6, name: "played_at", kind: "message", T: Timestamp },
   ],
   {localName: "ListScoresResponse_Score"},
+);
+
+/**
+ * @generated from message remote_scoring.v1.private.DeleteScoreRequest
+ */
+export const DeleteScoreRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "remote_scoring.v1.private.DeleteScoreRequest",
+  () => [
+    { no: 1, name: "score_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message remote_scoring.v1.private.DeleteScoreResponse
+ */
+export const DeleteScoreResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "remote_scoring.v1.private.DeleteScoreResponse",
+  [],
 );
 
