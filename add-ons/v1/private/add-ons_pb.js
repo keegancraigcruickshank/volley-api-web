@@ -63,3 +63,21 @@ export const ListAddonsResponse = /*@__PURE__*/ proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message addons.v1.private.DisableAddonRequest
+ */
+export const DisableAddonRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "addons.v1.private.DisableAddonRequest",
+  () => [
+    { no: 1, name: "addon_type", kind: "enum", T: proto3.getEnumType(AddonType) },
+  ],
+);
+
+/**
+ * @generated from message addons.v1.private.DisableAddonResponse
+ */
+export const DisableAddonResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "addons.v1.private.DisableAddonResponse",
+  [],
+);
+

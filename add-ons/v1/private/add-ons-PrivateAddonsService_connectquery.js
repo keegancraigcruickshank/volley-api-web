@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import { MethodKind } from "@bufbuild/protobuf";
-import { EnableAddonRequest, EnableAddonResponse, ListAddonsRequest, ListAddonsResponse } from "./add-ons_pb.js";
+import { DisableAddonRequest, DisableAddonResponse, EnableAddonRequest, EnableAddonResponse, ListAddonsRequest, ListAddonsResponse } from "./add-ons_pb.js";
 
 /**
  * @generated from rpc addons.v1.private.PrivateAddonsService.EnableAddon
@@ -15,6 +15,20 @@ export const enableAddon = {
   kind: MethodKind.Unary,
   I: EnableAddonRequest,
   O: EnableAddonResponse,
+  service: {
+    typeName: "addons.v1.private.PrivateAddonsService"
+  }
+};
+
+/**
+ * @generated from rpc addons.v1.private.PrivateAddonsService.DisableAddon
+ */
+export const disableAddon = {
+  localName: "disableAddon",
+  name: "DisableAddon",
+  kind: MethodKind.Unary,
+  I: DisableAddonRequest,
+  O: DisableAddonResponse,
   service: {
     typeName: "addons.v1.private.PrivateAddonsService"
   }

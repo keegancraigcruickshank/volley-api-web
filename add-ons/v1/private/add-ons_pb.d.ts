@@ -136,3 +136,46 @@ export declare class ListAddonsResponse extends Message<ListAddonsResponse> {
   static equals(a: ListAddonsResponse | PlainMessage<ListAddonsResponse> | undefined, b: ListAddonsResponse | PlainMessage<ListAddonsResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message addons.v1.private.DisableAddonRequest
+ */
+export declare class DisableAddonRequest extends Message<DisableAddonRequest> {
+  /**
+   * @generated from field: addons.v1.private.AddonType addon_type = 1;
+   */
+  addonType: AddonType;
+
+  constructor(data?: PartialMessage<DisableAddonRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "addons.v1.private.DisableAddonRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DisableAddonRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DisableAddonRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DisableAddonRequest;
+
+  static equals(a: DisableAddonRequest | PlainMessage<DisableAddonRequest> | undefined, b: DisableAddonRequest | PlainMessage<DisableAddonRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message addons.v1.private.DisableAddonResponse
+ */
+export declare class DisableAddonResponse extends Message<DisableAddonResponse> {
+  constructor(data?: PartialMessage<DisableAddonResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "addons.v1.private.DisableAddonResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DisableAddonResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DisableAddonResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DisableAddonResponse;
+
+  static equals(a: DisableAddonResponse | PlainMessage<DisableAddonResponse> | undefined, b: DisableAddonResponse | PlainMessage<DisableAddonResponse> | undefined): boolean;
+}
+
