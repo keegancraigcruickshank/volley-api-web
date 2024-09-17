@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import { MethodKind } from "@bufbuild/protobuf";
-import { DeleteScoreRequest, DeleteScoreResponse, ListScoresRequest, ListScoresResponse, UploadScoreRequest, UploadScoreResponse } from "./remote-scoring_pb.js";
+import { DeleteScoreRequest, DeleteScoreResponse, ListScoresRequest, ListScoresResponse, UpdateScoreRequest, UpdateScoreResponse, UploadScoreRequest, UploadScoreResponse } from "./remote-scoring_pb.js";
 
 /**
  * @generated from rpc remote_scoring.v1.private.PrivateRemoteScoringService.UploadScore
@@ -43,6 +43,20 @@ export const deleteScore = {
   kind: MethodKind.Unary,
   I: DeleteScoreRequest,
   O: DeleteScoreResponse,
+  service: {
+    typeName: "remote_scoring.v1.private.PrivateRemoteScoringService"
+  }
+};
+
+/**
+ * @generated from rpc remote_scoring.v1.private.PrivateRemoteScoringService.UpdateScore
+ */
+export const updateScore = {
+  localName: "updateScore",
+  name: "UpdateScore",
+  kind: MethodKind.Unary,
+  I: UpdateScoreRequest,
+  O: UpdateScoreResponse,
   service: {
     typeName: "remote_scoring.v1.private.PrivateRemoteScoringService"
   }

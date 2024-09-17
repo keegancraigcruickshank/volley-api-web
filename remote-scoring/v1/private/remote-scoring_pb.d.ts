@@ -209,3 +209,66 @@ export declare class DeleteScoreResponse extends Message<DeleteScoreResponse> {
   static equals(a: DeleteScoreResponse | PlainMessage<DeleteScoreResponse> | undefined, b: DeleteScoreResponse | PlainMessage<DeleteScoreResponse> | undefined): boolean;
 }
 
+/**
+ * @generated from message remote_scoring.v1.private.UpdateScoreRequest
+ */
+export declare class UpdateScoreRequest extends Message<UpdateScoreRequest> {
+  /**
+   * @generated from field: string score_id = 1;
+   */
+  scoreId: string;
+
+  /**
+   * @generated from field: string team_one_id = 2;
+   */
+  teamOneId: string;
+
+  /**
+   * @generated from field: string team_two_id = 3;
+   */
+  teamTwoId: string;
+
+  /**
+   * @generated from field: int32 team_one_score = 4;
+   */
+  teamOneScore: number;
+
+  /**
+   * @generated from field: int32 team_two_score = 5;
+   */
+  teamTwoScore: number;
+
+  constructor(data?: PartialMessage<UpdateScoreRequest>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "remote_scoring.v1.private.UpdateScoreRequest";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateScoreRequest;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateScoreRequest;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateScoreRequest;
+
+  static equals(a: UpdateScoreRequest | PlainMessage<UpdateScoreRequest> | undefined, b: UpdateScoreRequest | PlainMessage<UpdateScoreRequest> | undefined): boolean;
+}
+
+/**
+ * @generated from message remote_scoring.v1.private.UpdateScoreResponse
+ */
+export declare class UpdateScoreResponse extends Message<UpdateScoreResponse> {
+  constructor(data?: PartialMessage<UpdateScoreResponse>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "remote_scoring.v1.private.UpdateScoreResponse";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateScoreResponse;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateScoreResponse;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateScoreResponse;
+
+  static equals(a: UpdateScoreResponse | PlainMessage<UpdateScoreResponse> | undefined, b: UpdateScoreResponse | PlainMessage<UpdateScoreResponse> | undefined): boolean;
+}
+

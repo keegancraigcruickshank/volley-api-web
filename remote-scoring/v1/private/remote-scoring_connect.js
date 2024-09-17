@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { DeleteScoreRequest, DeleteScoreResponse, ListScoresRequest, ListScoresResponse, UploadScoreRequest, UploadScoreResponse } from "./remote-scoring_pb.js";
+import { DeleteScoreRequest, DeleteScoreResponse, ListScoresRequest, ListScoresResponse, UpdateScoreRequest, UpdateScoreResponse, UploadScoreRequest, UploadScoreResponse } from "./remote-scoring_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -37,6 +37,15 @@ export const PrivateRemoteScoringService = {
       name: "DeleteScore",
       I: DeleteScoreRequest,
       O: DeleteScoreResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc remote_scoring.v1.private.PrivateRemoteScoringService.UpdateScore
+     */
+    updateScore: {
+      name: "UpdateScore",
+      I: UpdateScoreRequest,
+      O: UpdateScoreResponse,
       kind: MethodKind.Unary,
     },
   }

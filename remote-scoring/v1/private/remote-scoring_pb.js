@@ -81,3 +81,25 @@ export const DeleteScoreResponse = /*@__PURE__*/ proto3.makeMessageType(
   [],
 );
 
+/**
+ * @generated from message remote_scoring.v1.private.UpdateScoreRequest
+ */
+export const UpdateScoreRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "remote_scoring.v1.private.UpdateScoreRequest",
+  () => [
+    { no: 1, name: "score_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "team_one_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "team_two_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "team_one_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 5, name: "team_two_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ],
+);
+
+/**
+ * @generated from message remote_scoring.v1.private.UpdateScoreResponse
+ */
+export const UpdateScoreResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "remote_scoring.v1.private.UpdateScoreResponse",
+  [],
+);
+
