@@ -1,40 +1,56 @@
-name: main
+name: Create Release on Push to Main
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
-    name: 🆙 Increase version
+    name: 🆙 Update and Publish Version
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - run: git config --global user.email "keegan@cloudpixel.com.au"
-      - run: git config --global user.name "Keegan Cruickshank"
-      - name: 'Get Previous tag'
-        id: previoustag
-        uses: "WyriHaximus/github-action-get-previous-tag@v1"
-        with:
-          fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
-      - name: 'Get next minor version'
-        id: semvers
-        uses: "WyriHaximus/github-action-next-semvers@v1"
-        with:
-          version: ${{ steps.previoustag.outputs.tag }}
+
+      - name: Set up Git
+        run: |
+          git config --global user.email "keegan@cloudpixel.com.au"
+          git config --global user.name "Keegan Cruickshank"
+
+      - name: Extract version from commit message
+        id: extract-version
+        run: |
+          commit_message=$(git log -1 --pretty=%B)
+          if [[ $commit_message =~ \[v([0-9]+\.[0-9]+\.[0-9]+)\] ]]; then
+            version="${BASH_REMATCH[1]}"
+            echo "version=v$version" >> $GITHUB_OUTPUT
+          else
+            echo "No version found in commit message. Exiting."
+            exit 1
+          fi
+
       - name: Update npm package
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
+
       - name: Create new tag
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: ${{ steps.semvers.outputs.patch }}
-          message: "Latest release"
-      - run: npm version ${{ steps.semvers.outputs.patch }}
-      - run: yarn install
-      - run: yarn publish
+          tag: ${{ steps.extract-version.outputs.version }}
+          message: "Release ${{ steps.extract-version.outputs.version }}"
+
+      - name: Update package version
+        run: npm version ${{ steps.extract-version.outputs.version }} --no-git-tag-version
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Publish to NPM
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
