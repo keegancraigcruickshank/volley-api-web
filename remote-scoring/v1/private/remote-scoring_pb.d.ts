@@ -54,6 +54,11 @@ export declare class UploadScoreRequest extends Message<UploadScoreRequest> {
  * @generated from message remote_scoring.v1.private.UploadScoreResponse
  */
 export declare class UploadScoreResponse extends Message<UploadScoreResponse> {
+  /**
+   * @generated from field: string score_id = 1;
+   */
+  scoreId: string;
+
   constructor(data?: PartialMessage<UploadScoreResponse>);
 
   static readonly runtime: typeof proto3;

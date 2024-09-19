@@ -24,7 +24,9 @@ export const UploadScoreRequest = /*@__PURE__*/ proto3.makeMessageType(
  */
 export const UploadScoreResponse = /*@__PURE__*/ proto3.makeMessageType(
   "remote_scoring.v1.private.UploadScoreResponse",
-  [],
+  () => [
+    { no: 1, name: "score_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
 );
 
 /**
