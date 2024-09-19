@@ -238,6 +238,11 @@ export declare class UpdateScoreRequest extends Message<UpdateScoreRequest> {
    */
   teamTwoScore: number;
 
+  /**
+   * @generated from field: google.protobuf.Timestamp played_at = 6;
+   */
+  playedAt?: Timestamp;
+
   constructor(data?: PartialMessage<UpdateScoreRequest>);
 
   static readonly runtime: typeof proto3;

@@ -92,6 +92,7 @@ export const UpdateScoreRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 3, name: "team_two_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "team_one_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 5, name: "team_two_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 6, name: "played_at", kind: "message", T: Timestamp },
   ],
 );
 
