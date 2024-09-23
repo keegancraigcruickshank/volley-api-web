@@ -75,13 +75,52 @@ export declare class UploadScoreResponse extends Message<UploadScoreResponse> {
 }
 
 /**
- * @generated from message remote_scoring.v1.private.ListScoresRequest
+ * @generated from message remote_scoring.v1.private.ListScoresFilter
  */
-export declare class ListScoresRequest extends Message<ListScoresRequest> {
+export declare class ListScoresFilter extends Message<ListScoresFilter> {
   /**
    * @generated from field: google.protobuf.Timestamp date = 1;
    */
   date?: Timestamp;
+
+  constructor(data?: PartialMessage<ListScoresFilter>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "remote_scoring.v1.private.ListScoresFilter";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListScoresFilter;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListScoresFilter;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListScoresFilter;
+
+  static equals(a: ListScoresFilter | PlainMessage<ListScoresFilter> | undefined, b: ListScoresFilter | PlainMessage<ListScoresFilter> | undefined): boolean;
+}
+
+/**
+ * @generated from message remote_scoring.v1.private.ListScoresRequest
+ */
+export declare class ListScoresRequest extends Message<ListScoresRequest> {
+  /**
+   * @generated from field: string query = 1;
+   */
+  query: string;
+
+  /**
+   * @generated from field: optional int32 page = 2;
+   */
+  page?: number;
+
+  /**
+   * @generated from field: optional int32 pageSize = 3;
+   */
+  pageSize?: number;
+
+  /**
+   * @generated from field: optional remote_scoring.v1.private.ListScoresFilter filter = 5;
+   */
+  filter?: ListScoresFilter;
 
   constructor(data?: PartialMessage<ListScoresRequest>);
 
