@@ -36,6 +36,7 @@ export const ListScoresFilter = /*@__PURE__*/ proto3.makeMessageType(
   "remote_scoring.v1.private.ListScoresFilter",
   () => [
     { no: 1, name: "date", kind: "message", T: Timestamp },
+    { no: 2, name: "team_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ],
 );
 

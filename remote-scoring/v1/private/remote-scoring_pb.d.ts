@@ -83,6 +83,11 @@ export declare class ListScoresFilter extends Message<ListScoresFilter> {
    */
   date?: Timestamp;
 
+  /**
+   * @generated from field: repeated string team_ids = 2;
+   */
+  teamIds: string[];
+
   constructor(data?: PartialMessage<ListScoresFilter>);
 
   static readonly runtime: typeof proto3;
