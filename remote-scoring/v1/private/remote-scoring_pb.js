@@ -60,6 +60,7 @@ export const ListScoresResponse = /*@__PURE__*/ proto3.makeMessageType(
   "remote_scoring.v1.private.ListScoresResponse",
   () => [
     { no: 1, name: "scores", kind: "message", T: ListScoresResponse_Score, repeated: true },
+    { no: 2, name: "total_count", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ],
 );
 

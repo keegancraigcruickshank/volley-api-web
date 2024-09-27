@@ -151,6 +151,11 @@ export declare class ListScoresResponse extends Message<ListScoresResponse> {
    */
   scores: ListScoresResponse_Score[];
 
+  /**
+   * @generated from field: int32 total_count = 2;
+   */
+  totalCount: number;
+
   constructor(data?: PartialMessage<ListScoresResponse>);
 
   static readonly runtime: typeof proto3;
