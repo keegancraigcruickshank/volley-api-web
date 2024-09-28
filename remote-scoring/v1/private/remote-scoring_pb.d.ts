@@ -123,7 +123,7 @@ export declare class ListScoresRequest extends Message<ListScoresRequest> {
   pageSize?: number;
 
   /**
-   * @generated from field: optional remote_scoring.v1.private.ListScoresFilter filter = 5;
+   * @generated from field: optional remote_scoring.v1.private.ListScoresFilter filter = 4;
    */
   filter?: ListScoresFilter;
 
