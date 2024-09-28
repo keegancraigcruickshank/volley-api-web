@@ -79,9 +79,9 @@ export declare class UploadScoreResponse extends Message<UploadScoreResponse> {
  */
 export declare class ListScoresFilter extends Message<ListScoresFilter> {
   /**
-   * @generated from field: google.protobuf.Timestamp date = 1;
+   * @generated from field: google.protobuf.Timestamp recorded_date = 1;
    */
-  date?: Timestamp;
+  recordedDate?: Timestamp;
 
   /**
    * @generated from field: repeated string team_ids = 2;
@@ -123,9 +123,9 @@ export declare class ListScoresRequest extends Message<ListScoresRequest> {
   pageSize?: number;
 
   /**
-   * @generated from field: optional remote_scoring.v1.private.ListScoresFilter filter = 4;
+   * @generated from field: optional remote_scoring.v1.private.ListScoresFilter score_filter = 4;
    */
-  filter?: ListScoresFilter;
+  scoreFilter?: ListScoresFilter;
 
   constructor(data?: PartialMessage<ListScoresRequest>);
 
