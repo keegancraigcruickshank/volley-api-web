@@ -205,6 +205,16 @@ export declare class ListScoresResponse_Score extends Message<ListScoresResponse
    */
   playedAt?: Timestamp;
 
+  /**
+   * @generated from field: string team_one_name = 7;
+   */
+  teamOneName: string;
+
+  /**
+   * @generated from field: string team_two_name = 8;
+   */
+  teamTwoName: string;
+
   constructor(data?: PartialMessage<ListScoresResponse_Score>);
 
   static readonly runtime: typeof proto3;

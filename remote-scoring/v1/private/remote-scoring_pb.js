@@ -76,6 +76,8 @@ export const ListScoresResponse_Score = /*@__PURE__*/ proto3.makeMessageType(
     { no: 4, name: "team_one_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 5, name: "team_two_score", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 6, name: "played_at", kind: "message", T: Timestamp },
+    { no: 7, name: "team_one_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 8, name: "team_two_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
   {localName: "ListScoresResponse_Score"},
 );
