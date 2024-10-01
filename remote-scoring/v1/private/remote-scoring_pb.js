@@ -30,12 +30,23 @@ export const UploadScoreResponse = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
+ * @generated from message remote_scoring.v1.private.DateFilter
+ */
+export const DateFilter = /*@__PURE__*/ proto3.makeMessageType(
+  "remote_scoring.v1.private.DateFilter",
+  () => [
+    { no: 1, name: "date", kind: "message", T: Timestamp },
+    { no: 2, name: "timezone", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
  * @generated from message remote_scoring.v1.private.ListScoresFilter
  */
 export const ListScoresFilter = /*@__PURE__*/ proto3.makeMessageType(
   "remote_scoring.v1.private.ListScoresFilter",
   () => [
-    { no: 1, name: "recorded_date", kind: "message", T: Timestamp },
+    { no: 1, name: "recorded_date", kind: "message", T: DateFilter },
     { no: 2, name: "team_ids", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ],
 );
