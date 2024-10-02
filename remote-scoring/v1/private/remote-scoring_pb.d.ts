@@ -75,42 +75,13 @@ export declare class UploadScoreResponse extends Message<UploadScoreResponse> {
 }
 
 /**
- * @generated from message remote_scoring.v1.private.DateFilter
- */
-export declare class DateFilter extends Message<DateFilter> {
-  /**
-   * @generated from field: google.protobuf.Timestamp date = 1;
-   */
-  date?: Timestamp;
-
-  /**
-   * @generated from field: string timezone = 2;
-   */
-  timezone: string;
-
-  constructor(data?: PartialMessage<DateFilter>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "remote_scoring.v1.private.DateFilter";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DateFilter;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DateFilter;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DateFilter;
-
-  static equals(a: DateFilter | PlainMessage<DateFilter> | undefined, b: DateFilter | PlainMessage<DateFilter> | undefined): boolean;
-}
-
-/**
  * @generated from message remote_scoring.v1.private.ListScoresFilter
  */
 export declare class ListScoresFilter extends Message<ListScoresFilter> {
   /**
-   * @generated from field: remote_scoring.v1.private.DateFilter recorded_date = 1;
+   * @generated from field: google.protobuf.Timestamp recorded_date = 1;
    */
-  recordedDate?: DateFilter;
+  recordedDate?: Timestamp;
 
   /**
    * @generated from field: repeated string team_ids = 2;
