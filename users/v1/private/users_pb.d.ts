@@ -11,85 +11,61 @@ import { Message, proto3 } from "@bufbuild/protobuf";
  */
 export declare class User extends Message<User> {
   /**
-   * The user's unique identifier
-   *
    * @generated from field: string user_id = 1;
    */
   userId: string;
 
   /**
-   * The user's first name
-   *
    * @generated from field: string first_name = 2;
    */
   firstName: string;
 
   /**
-   * The user's last name
-   *
    * @generated from field: string last_name = 3;
    */
   lastName: string;
 
   /**
-   * The user's email address
-   *
    * @generated from field: string email = 4;
    */
   email: string;
 
   /**
-   * The organisations the user is a member of
-   *
    * @generated from field: repeated string org_ids = 5;
    */
   orgIds: string[];
 
   /**
-   * The user's last login time
-   *
    * @generated from field: int32 last_logout = 6;
    */
   lastLogout: number;
 
   /**
-   * The time the user was created
-   *
    * @generated from field: int32 created_at = 7;
    */
   createdAt: number;
 
   /**
-   * The time the user was last updated
-   *
    * @generated from field: int32 updated_at = 8;
    */
   updatedAt: number;
 
   /**
-   * The user's default organisation
-   *
    * @generated from field: string default_org = 9;
    */
   defaultOrg: string;
 
   /**
-   * The user's active organisation
-   *
    * @generated from field: string active_org = 10;
    */
   activeOrg: string;
 
   /**
-   * The name of the user's active organisation
-   *
    * @generated from field: string active_org_name = 11;
    */
   activeOrgName: string;
 
   /**
-   * Whether the user has verified their email address
-   *
    * @generated from field: bool verified = 12;
    */
   verified: boolean;
